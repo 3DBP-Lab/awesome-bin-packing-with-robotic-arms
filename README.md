@@ -551,15 +551,6 @@ Bin packing is a long-lasting NP-hard optimization problem with many application
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
   > 📝 **Abstract:** Every year, at least 100 million tons of solid waste globally comes from packaging waste, in which partly created by inefficient packaging. Multiple box arrangement or bin packing solution directly addresses this problem which also affects storing sp... <br>
-- ❤️ **Online 3D Bin Packing with Constrained Deep Reinforcement Learning** : "Online 3D Bin Packing with Constrained Deep Reinforcement Learning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://ojs.aaai.org/index.php/AAAI/article/view/16155) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/alexfrom0815/Online-3D-BPP-DRL)
-  > 👨‍🔬 **Authors:** Zhao, Hang; She, Qijin; Zhu, Chenyang; Yang, Yin; Xu, Kai | 📅 **Year:** 2021 | 🏢 **Venue:** Proc. AAAI Conf. Artif. Intell. <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-  > 📝 **Abstract:** We solve a challenging yet practically useful variant of 3D Bin Packing Problem (3D-BPP). In our problem, the agent has limited information about the items to be packed into a single bin, and an item must be packed immediately after its arrival witho... <br>
 - ❤️ **Learning practically feasible policies for online 3D bin packing** : "Learning practically feasible policies for online 3D bin packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/article/10.1007/s11432-021-3348-6)
   > 👨‍🔬 **Authors:** Zhao, Hang; Zhu, Chenyang; Xu, Xin; Huang, Hui; Xu, Kai | 📅 **Year:** 2021 | 🏢 **Venue:** Sci. China Inf. Sci. <br>
   > 🔑 **Keywords:** RL in Digital Environments <br>
