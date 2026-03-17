@@ -10,6 +10,7 @@
 
   - 🎯 [Aim of the project](#aim-of-the-project)
   - 📚 [Investigation scope](#investigation-scope)
+  - 🧮 [Algorithms and Methods](#Algorithms-and-Methods)
   - 📖 [Surveys of Bin Packing with Robotic Arms](#surveys-of-bin-packing-with-robotic-arms)
   - 🎮 [Benchmarks of Bin Packing with Robotic Arms](#benchmarks-of-bin-packing-with-robotic-arms)
   - 🚗 [Normal Studies of Bin Packing with Robotic Arms](#normal-studies-of-bin-packing-with-robotic-arms)
