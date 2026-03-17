@@ -4,7 +4,7 @@
 
 </div>
 
-
+![本地路径](cover_pic.png) 
 ---
 ## Overview
 
