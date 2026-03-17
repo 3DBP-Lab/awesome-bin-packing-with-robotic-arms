@@ -28,3 +28,11 @@ The ordering of papers is recommended to be chronological: _older papers should 
 - For papers without arXiv, OpenReview, ACM or IEEE, use a generic Paper badge with the same format
 
 ### 🧵 Examples
+ - ❤️ **A hybrid xxxx....** : "A hybrid xxxx....". [![Paper](https://img.shields.io/badge/Paper-4682B4)](#)   [![Code](https://img.shields.io/badge/Code-GitHub-green)](#)
+  > 👨‍🔬 **Authors:** xxxx... | 📅 **Year:** xxxx | 🏢 **Venue:** xxxx <br>
+  > 🔑 **Keywords:** xxxx... <br>
+  > ⚙️ **Settings & Setup:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** [Online / Offline] | [Single / Multi-Bin] | [Item Type] <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  [State Space] | [Action Space & DoF] | [Reward Design] <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** [Observation Input] | [Stability Criteria] | [Robotic / Execution Constraints] <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** [Core Algorithm / Architecture] | [Dataset Source] | [Optimization Objective] <br>
