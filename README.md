@@ -4,7 +4,7 @@
 
 </div>
 
-![本地路径](cover_pic.png) 
+![cover_pic](cover_pic.png) 
 ---
 ## Overview
 
@@ -524,14 +524,6 @@ Bin packing is a long-lasting NP-hard optimization problem with many application
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Solving Packing Problems by Conditional Query Learning-new：One model Packs Thousands of Items with Recurrent Conditional Query Learning--71** : "Solving Packing Problems by Conditional Query Learning-new：One model Packs Thousands of Items with Recurrent Conditional Query Learning--71". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2111.06726) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/dongdongbh/RCQL) [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/forum?id=BkgTwRNtPB)
-  > 👨‍🔬 **Authors:** Li, Dongda; Ren, Changwei; Gu, Zhaoquan; Wang, Yuexuan; Lau, Francis | 📅 **Year:** 2021 | 🏢 **Venue:** arXiv preprint arXiv:1804.06896 <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
 - ❤️ **A Novel Heuristic Algorithm for Online 3D Bin Packing** : "A Novel Heuristic Algorithm for Online 3D Bin Packing". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://ieeexplore.ieee.org/document/9649790)
   > 👨‍🔬 **Authors:** Nguyen, Thanh-Hung; Tran, Viet-Thang; Doan, Phan-Quan; Mac, Thi-Thoa | 📅 **Year:** 2021 | 🏢 **Venue:** arXiv preprint arXiv:2501.04291 <br>
   > 🔑 **Keywords:** Digital Environment Heuristics <br>
@@ -607,14 +599,6 @@ Bin packing is a long-lasting NP-hard optimization problem with many application
 - ❤️ **Deep Reinforcement Learning for Packaging Optimization** : "Deep Reinforcement Learning for Packaging Optimization". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://queensu.scholaris.ca/bitstreams/81730d80-05bc-45cd-a19b-5632b52c616f/download)
   > 👨‍🔬 **Authors:** EC Dowdell | 📅 **Year:** 2021 | 🏢 **Venue:** Queen's University <br>
   > 🔑 **Keywords:** DRL, Packaging optimization, Optimization methods <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **One model packs thousands of items with Recurrent Conditional Query Learning** : "One model packs thousands of items with Recurrent Conditional Query Learning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S095070512100945X) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/dongdongbh/RCQL)
-  > 👨‍🔬 **Authors:** Dongda Li a , Zhaoquan Gu a , Yuexuan Wang b c ,  Changwei Ren b , Francis C.M. Lau c | 📅 **Year:** 2022 | 🏢 **Venue:** Knowl.-Based Syst. <br>
-  > 🔑 **Keywords:** N/A <br>
   > ⚙️ **Settings & Setup:** <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
@@ -828,7 +812,7 @@ Bin packing is a long-lasting NP-hard optimization problem with many application
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Simulation-Assisted Learning for Efficient Bin-Packing of Deformable Packages in a Bimanual Robotic Cell** : "Simulation-Assisted Learning for Efficient Bin-Packing of Deformable Packages in a Bimanual Robotic Cell". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10802246/)
+- ❤️ **Simulation-Assisted Learning for Efficient Bin-Packing of Deformable Packages in a Bimanual Robotic Cell** : "Simulation-Assisted Learning for Efficient Bin-Packing of Deformable Packages in a Bimanual Robotic Cell". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10802246/)  [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/RROS-Lab/IROS2024-Bin-Packing)
   > 👨‍🔬 **Authors:** Omey M. Manyar∗1 , Hantao Ye∗1 , Meghana Sagare1 , Siddharth Mayya2 , Fan Wang2 , and Satyandra K. Gupta1 | 📅 **Year:** 2024 | 🏢 **Venue:** arXiv preprint arXiv:2512.04415 <br>
   > 🔑 **Keywords:** N/A <br>
   > ⚙️ **Settings & Setup:** <br>
