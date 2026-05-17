@@ -129,6 +129,15 @@ Bin packing is a long-lasting NP-hard optimization problem with many application
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
 
+- ❤️ **Packrift Packaging Optimization Benchmark Corpus** : Public SKU and carton dataset for carton-fit boundaries, dimensional-weight checks, cube-utilization, and warehouse packaging planning scenarios. [![Dataset](https://img.shields.io/badge/Dataset-4682B4.svg)](https://packrift.github.io/packaging-optimization-benchmark-corpus/dataset-metadata.html) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Packrift/packaging-optimization-benchmark-corpus)
+  > 👨‍🔬 **Authors:** Packrift | 📅 **Year:** 2026 | 🏢 **Venue:** Public benchmark corpus <br>
+  > 🔑 **Keywords:** 3D bin packing, carton selection, dimensional weight, SKU packaging, warehouse planning <br>
+  > ⚙️ **Settings & Setup:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Industrial carton selection and packaging-fit benchmarking <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** N/A | N/A <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** SKU/carton dimensions, dimensional weight, cube-utilization, packaging-fit cases <br>
+
 - ❤️ **RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation** : "RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2512.04415) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://robot-bin-packing-benchmark.github.io/)
   > 👨‍🔬 **Authors:** Zhoufeng Wang1 Hang Zhao3 Juzhan Xu4 Shishun Zhang1 Zeyu Xiong1 Ruizhen Hu4 Chenyang Zhu1 Zecui Zeng5 | 📅 **Year:** 2026 | 🏢 **Venue:** arXiv preprint arXiv:2512.04415 <br>
   > 🔑 **Keywords:** N/A <br>
