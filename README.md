@@ -1,1144 +1,1105 @@
-<div align="center"> 
+<div align="center">
 
-# 🤖 Awesome Bin Packing with Robotic Arms 🦾
+# 📦 Awesome Bin Packing with Robotic Arms 🦾
+
+A reviewed catalog of geometric bin packing, learning-based packing, physical stability, and robotic execution.
 
 </div>
 
-![cover_pic](cover_pic.png) 
----
+![cover](cover_pic.png)
+
 ## Overview
 
-  - 🎯 [Aim of the project](#aim-of-the-project)
-  - 📚 [Investigation scope](#investigation-scope)
-  - 🧮 [Algorithms and Methods](#Algorithms-and-Methods)
-  - 📖 [Surveys of Bin Packing with Robotic Arms](#surveys-of-bin-packing-with-robotic-arms)
-  - 🎮 [Benchmarks of Bin Packing with Robotic Arms](#benchmarks-of-bin-packing-with-robotic-arms)
-  - 🚗 [Normal Studies of Bin Packing with Robotic Arms](#normal-studies-of-bin-packing-with-robotic-arms)
----
+- [Aim of the project](#aim-of-the-project)
+- [Investigation scope](#investigation-scope)
+- [Surveys](#surveys-of-bin-packing-with-robotic-arms)
+- [Benchmarks](#benchmarks-of-bin-packing-with-robotic-arms)
+- [Algorithms and methods](#algorithms-and-methods)
+- [Contributing](CONTRIBUTE.md)
 
 ## Aim of the Project
 
-With the widespread achievements of virtual intelligence, represented by LLM, in virtual application fields such as intelligent customer service, more and more researchers hope to apply embodied intelligence to more physical application fields. Bin Packing, as one of the most critical cost control links in logistics, has attracted much attention from practitioners and researchers.
+Bin packing is a core cost and feasibility problem in logistics. Robotic execution adds perception error, physical stability, reachability, collision avoidance, and real-time decision constraints that do not appear in a purely geometric formulation.
 
-This project aims to 
-
-
-- 💁‍♂️ **Serve** as a one-stop resource for researchers, practitioners, and enthusiasts interested in bin packing with robotic arms.
-- 🚀 **Track** the latest developments and breakthroughs in this exciting field
-
+This project provides a single, evidence-backed index for researchers and practitioners and tracks classical foundations, modern optimization and learning methods, and systems that execute packing with robotic arms.
 
 ## Investigation Scope
 
-Bin packing is a long-lasting NP-hard optimization problem with many application across different domains like cloud computing, resource scheduling, logistics. Here we focus on 2D/3D Bin Packing problem with robotic arms, which needs great **reasoning ability** as well as **spatial and physical understanding**.
-
+The catalog includes 1D/2D/3D foundations when they directly define the methods or evaluation used by robotic packing research; online and offline packing; regular, irregular, and deformable items; stability and physics; perception; and robot execution. Scope-adjacent perception or manipulation papers are retained only when present in the local corpus and are explicitly marked as not proposing a packing policy.
 
 ## Surveys of Bin Packing with Robotic Arms
-- ❤️ On-line three-dimensional packing problems: A review of off-line and on-line solution approaches. [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1016/j.cie.2022.108122)](https://scholar.google.com) [![Paper](https://img.shields.io/badge/Paper-4682B4)](https://www.sciencedirect.com/science/article/pii/S0360835222001929)
 
-- ❤️ **Two-dimensional packing problems: A survey** : "Two-dimensional packing problems: A survey". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0377221702001236)
-  > 👨‍🔬 **Authors:** A Lodi, S Martello, M Monaci | 📅 **Year:** 2002 | 🏢 **Venue:** Eur. J. Oper. Res. <br>
-  > 🔑 **Keywords:** 2D packing, Survey, Bin packing, Strip packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Two-dimensional packing problems: A survey** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fs0377-2217%2802%2900123-6-blue.svg)](https://doi.org/10.1016/s0377-2217(02)00123-6) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1016%2Fs0377-2217%2802%2900123-6)](https://scholar.google.com/scholar?q=Two-dimensional%20packing%20problems%3A%20A%20survey)
+  > 👨‍🔬 **Authors:** Andrea Lodi; Silvano Martello; Michele Monaci | 📅 **Year:** 2002 | 🏢 **Venue:** European Journal of Operational Research <br>
+  > 🔑 **Keywords:** Survey, 2D packing, Cuboids, Approximation algorithms <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Problem-family survey \| 2D bin/strip packing <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy, approximation algorithms, heuristic search \| Data: reviewed literature and reported benchmarks \| Objective: maximize utilization/minimize waste, minimize packing height <br>
 
-- ❤️ **Constraints in container loading – A state-of-the-art review** : "Constraints in container loading – A state-of-the-art review". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S037722171200937X)
-  > 👨‍🔬 **Authors:** Bortfeldt, Andreas; Wäscher, Gerhard | 📅 **Year:** 2013 | 🏢 **Venue:** Eur. J. Oper. Res. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Three Dimensional Bin-Packing Issues and Solutions** [![Paper](https://img.shields.io/badge/Paper-Link-4682B4.svg)](https://www.micsymposium.org/mics_2004/Sweep.pdf)
+  > 👨‍🔬 **Authors:** Sweep, Seth | 📅 **Year:** 2004 | 🏢 **Venue:** MICS <br>
+  > 🔑 **Keywords:** Survey, 3D bin packing, Approximation algorithms, Heuristics <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Offline 3D bin-packing formulations and solution approaches \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: tutorial review and comparative synthesis \| Data: published examples and benchmark instances \| Objective: characterize formulations, bounds, and solution quality <br>
 
-- ❤️ **Bin Packing Approximation Algorithms: Survey and Classification** : "Bin Packing Approximation Algorithms: Survey and Classification". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://cris.unibo.it/handle/11585/146356)
-  > 👨‍🔬 **Authors:** Coffman, Edward G.; Csirik, János; Galambos, Gábor; Martello, Silvano; Vigo, Daniele | 📅 **Year:** 2013 | 🏢 **Venue:** Handbook of Combinatorial Optimization <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **An improved typology of cutting and packing problems** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ejor.2005.12.047-blue.svg)](https://doi.org/10.1016/j.ejor.2005.12.047) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1016%2Fj.ejor.2005.12.047)](https://scholar.google.com/scholar?q=An%20improved%20typology%20of%20cutting%20and%20packing%20problems)
+  > 👨‍🔬 **Authors:** Gerhard Wäscher; Heike Haußner; Holger Schumann | 📅 **Year:** 2007 | 🏢 **Venue:** European Journal of Operational Research <br>
+  > 🔑 **Keywords:** Survey <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Problem-family survey \| Cutting-and-packing problem taxonomy <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy \| Data: reviewed literature and reported benchmarks \| Objective: optimize paper-defined packing performance <br>
 
-- ❤️ **Bin packing approximation algorithms: Survey and classification** : "Bin packing approximation algorithms: Survey and classification". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://cris.unibo.it/handle/11585/146356)
-  > 👨‍🔬 **Authors:** EG Coffman, J Csirik, G Galambos, S Martello | 📅 **Year:** 2013 | 🏢 **Venue:** Handb. Comb. Optim. <br>
-  > 🔑 **Keywords:** Approximation algorithms, Bin packing, Performance guarantees, Survey <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Bin Packing Approximation Algorithms: Survey and Classification** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-1-4419-7997-1_35-blue.svg)](https://doi.org/10.1007/978-1-4419-7997-1_35) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1007%2F978-1-4419-7997-1_35)](https://scholar.google.com/scholar?q=Bin%20Packing%20Approximation%20Algorithms%3A%20Survey%20and%20Classification)
+  > 👨‍🔬 **Authors:** Edward G. Coffman; János Csirik; Gábor Galambos; Silvano Martello; Daniele Vigo | 📅 **Year:** 2013 | 🏢 **Venue:** Handbook of Combinatorial Optimization <br>
+  > 🔑 **Keywords:** Survey, Online packing, Offline packing, Approximation algorithms <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Online and offline \| Cutting-and-packing problem taxonomy <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy, approximation algorithms \| Data: reviewed literature and reported benchmarks \| Objective: minimize bin count <br>
 
-- ❤️ **A comparative review of 3D container loading algorithms** : "A comparative review of 3D container loading algorithms". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12094)
-  > 👨‍🔬 **Authors:** Zhao, Xiaozhou; Bennell, Julia A.; Bektaş, Tolga; Dowsland, Kath | 📅 **Year:** 2016 | 🏢 **Venue:** Int. Trans. Oper. Res. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A comparative review of 3D container loading algorithms** [![DOI](https://img.shields.io/badge/DOI-10.1111%2Fitor.12094-blue.svg)](https://doi.org/10.1111/itor.12094) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1111%2Fitor.12094)](https://scholar.google.com/scholar?q=A%20comparative%20review%20of%203D%20container%20loading%20algorithms)
+  > 👨‍🔬 **Authors:** Xiaozhou Zhao; Julia A. Bennell; Tolga Bektaş; Kath Dowsland | 📅 **Year:** 2016 | 🏢 **Venue:** International Transactions in Operational Research <br>
+  > 🔑 **Keywords:** Survey, 3D bin packing, Container loading <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Problem-family survey \| 3D container loading <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy \| Data: reviewed literature and reported benchmarks \| Objective: optimize paper-defined packing performance <br>
 
-- ❤️ **Approximation and online algorithms for multidimensional bin packing: A survey** : "Approximation and online algorithms for multidimensional bin packing: A survey". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://cris.unibo.it/handle/11585/146356)
-  > 👨‍🔬 **Authors:** Christensen, Henrik I.; Khan, Arindam; Pokutta, Sebastian; Tetali, Prasad | 📅 **Year:** 2017 | 🏢 **Venue:** Computer Science Review <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Bin packing and cutting stock problems: Mathematical models and exact algorithms** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ejor.2016.04.030-blue.svg)](https://doi.org/10.1016/j.ejor.2016.04.030) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1016%2Fj.ejor.2016.04.030)](https://scholar.google.com/scholar?q=Bin%20packing%20and%20cutting%20stock%20problems%3A%20Mathematical%20models%20and%20exact%20algorithms)
+  > 👨‍🔬 **Authors:** Maxence Delorme; Manuel Iori; Silvano Martello | 📅 **Year:** 2016 | 🏢 **Venue:** European Journal of Operational Research <br>
+  > 🔑 **Keywords:** Survey, 1D bin packing, Cutting stock, Mathematical programming, Exact algorithms <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| One-dimensional bin packing and cutting-stock formulations \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: formulation taxonomy and review of exact algorithms \| Data: published models and benchmark families \| Objective: compare formulations, bounds, and exact solution methods <br>
 
-- ❤️ **On-line three-dimensional packing problems: A review of off-line and on-line solution approaches** : "On-line three-dimensional packing problems: A review of off-line and on-line solution approaches". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0360835222001929)
-  > 👨‍🔬 **Authors:** Ali, Sara; Ramos, António Galrão; Carravilla, Maria Antónia; Oliveira, José Fernando | 📅 **Year:** 2022 | 🏢 **Venue:** Comput. Ind. Eng. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Approximation and online algorithms for multidimensional bin packing: A survey** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cosrev.2016.12.001-blue.svg)](https://doi.org/10.1016/j.cosrev.2016.12.001) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1016%2Fj.cosrev.2016.12.001)](https://scholar.google.com/scholar?q=Approximation%20and%20online%20algorithms%20for%20multidimensional%20bin%20packing%3A%20A%20survey)
+  > 👨‍🔬 **Authors:** Henrik I. Christensen; Arindam Khan; Sebastian Pokutta; Prasad Tetali | 📅 **Year:** 2017 | 🏢 **Venue:** Computer Science Review <br>
+  > 🔑 **Keywords:** Survey, Multi-dimensional packing, Online packing, Approximation algorithms <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Online and offline \| Multi-dimensional bin packing <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy \| Data: reviewed literature and reported benchmarks \| Objective: optimize paper-defined packing performance <br>
 
-- ❤️ **Machine Learning for the Multi-Dimensional Bin Packing Problem: Literature Review and Empirical Evaluation** : "Machine Learning for the Multi-Dimensional Bin Packing Problem: Literature Review and Empirical Evaluation". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2312.08103)
+- ❤️ **Cargo Stability in the Container Loading Problem - State-of-the-Art and Future Research Directions** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-3-319-71583-4_23-blue.svg)](https://doi.org/10.1007/978-3-319-71583-4_23) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1007%2F978-3-319-71583-4_23)](https://scholar.google.com/scholar?q=Cargo%20Stability%20in%20the%20Container%20Loading%20Problem%20-%20State-of-the-Art%20and%20Future%20Research%20Directions)
+  > 👨‍🔬 **Authors:** António G. Ramos; José Fernando Oliveira | 📅 **Year:** 2018 | 🏢 **Venue:** Springer Proceedings in Mathematics & Statistics <br>
+  > 🔑 **Keywords:** Survey, Dynamic packing, Container loading, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Problem-family survey \| 3D container loading <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy \| Data: reviewed literature and reported benchmarks \| Objective: maintain stability <br>
+
+- ❤️ **On-line three-dimensional packing problems: A review of off-line and on-line solution approaches** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cie.2022.108122-blue.svg)](https://doi.org/10.1016/j.cie.2022.108122) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1016%2Fj.cie.2022.108122)](https://scholar.google.com/scholar?q=On-line%20three-dimensional%20packing%20problems%3A%20A%20review%20of%20off-line%20and%20on-line%20solution%20approaches)
+  > 👨‍🔬 **Authors:** Sara Ali; António Galrão Ramos; Maria Antónia Carravilla; José Fernando Oliveira | 📅 **Year:** 2022 | 🏢 **Venue:** Computers & Industrial Engineering <br>
+  > 🔑 **Keywords:** Survey, 3D bin packing, Online packing, Offline packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Online and offline \| Cutting-and-packing problem taxonomy <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy \| Data: reviewed literature and reported benchmarks \| Objective: optimize paper-defined packing performance <br>
+
+- ❤️ **Machine Learning for the Multi-Dimensional Bin Packing Problem: Literature Review and Empirical Evaluation** [![arXiv](https://img.shields.io/badge/arXiv-2312.08103-b31b1b.svg)](https://arxiv.org/abs/2312.08103)
   > 👨‍🔬 **Authors:** Wu, Wenjie; Fan, Changjun; Huang, Jincai; Liu, Zhong; Yan, Junchi | 📅 **Year:** 2023 | 🏢 **Venue:** arXiv preprint arXiv:2312.08103 <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+  > 🔑 **Keywords:** Survey, 3D bin packing, Online packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Online and offline \| Cutting-and-packing problem taxonomy <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy \| Data: reviewed literature and reported benchmarks \| Objective: optimize paper-defined packing performance <br>
+
+- ❤️ **Deep Study on the Application of Machine Learning in Bin Packing Problems** [![DOI](https://img.shields.io/badge/DOI-10.13053%2Fcys-28-3-5184-blue.svg)](https://doi.org/10.13053/cys-28-3-5184) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.13053%2Fcys-28-3-5184)](https://scholar.google.com/scholar?q=Deep%20Study%20on%20the%20Application%20of%20Machine%20Learning%20in%20Bin%20Packing%20Problems)
+  > 👨‍🔬 **Authors:** Jessica González-San-Martín; Laura Cruz-Reyes; Bernabé Dorronsoro; Héctor Fraire-Huacuja; Fausto Balderas-Jaramillo; Marcela Quiroz-Castellanos; Nelson Rangel-Valdez | 📅 **Year:** 2024 | 🏢 **Venue:** Computación y Sistemas <br>
+  > 🔑 **Keywords:** Survey, 2D packing, 3D bin packing, Dynamic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Problem-family survey \| 2D bin/strip packing <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy, heuristic search \| Data: reviewed literature and reported benchmarks \| Objective: optimize paper-defined packing performance <br>
 
 ## Benchmarks of Bin Packing with Robotic Arms
 
-- ❤️ BED-BPP: Benchmarking dataset for robotic bin packing problems. [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1177/02783649231193048)](https://scholar.google.com) [![Paper](https://img.shields.io/badge/Paper-4682B4)](https://journals.sagepub.com/doi/abs/10.1177/02783649231193048)
+- ❤️ **Benchmarking Dynamic Three-Dimensional Bin Packing Problems Using Discrete-Event Simulation** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-3-319-31153-1_18-blue.svg)](https://doi.org/10.1007/978-3-319-31153-1_18) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1007%2F978-3-319-31153-1_18)](https://scholar.google.com/scholar?q=Benchmarking%20Dynamic%20Three-Dimensional%20Bin%20Packing%20Problems%20Using%20Discrete-Event%20Simulation)
+  > 👨‍🔬 **Authors:** Ran Wang; Trung Thanh Nguyen; Shayan Kavakeb; Zaili Yang; Changhe Li | 📅 **Year:** 2016 | 🏢 **Venue:** Lecture Notes in Computer Science <br>
+  > 🔑 **Keywords:** Benchmark, 3D bin packing, Dynamic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline and online/dynamic \| Single or multiple bins \| Rigid cuboids with uncertain attributes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: benchmark/environment design, simulation \| Data: real-world/industrial data with paper-reported evaluation \| Objective: optimize paper-defined packing performance <br>
 
-- ❤️ **Benchmarking Dynamic Three-Dimensional Bin Packing Problems Using Discrete-Event Simulation** : "Benchmarking Dynamic Three-Dimensional Bin Packing Problems Using Discrete-Event Simulation". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/chapter/10.1007/978-3-319-31153-1_18)
-  > 👨‍🔬 **Authors:** Wang, Ran; Nguyen, Trung Thanh; Kavakeb, Shayan; Yang, Zaili; Li, Changhe | 📅 **Year:** 2016 | 🏢 **Venue:** European Conference on the Application of Information and Communication Technologies in Agriculture, Food and Environment <br>
-  > 🔑 **Keywords:** Physics-based RL in Simulated Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **PackIt: A virtual environment for geometric planning** : "PackIt: A virtual environment for geometric planning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](http://proceedings.mlr.press/v119/goyal20b.html) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/princeton-vl/PackIt)
+- ❤️ **PackIt: A virtual environment for geometric planning** [![arXiv](https://img.shields.io/badge/arXiv-2007.11121-b31b1b.svg)](https://arxiv.org/abs/2007.11121) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/princeton-vl/PackIt)
   > 👨‍🔬 **Authors:** A Goyal, J Deng | 📅 **Year:** 2020 | 🏢 **Venue:** ICML <br>
-  > 🔑 **Keywords:** Virtual environment, Geometric planning, Packing, Learning <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+  > 🔑 **Keywords:** Benchmark <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-box geometric planning \| Arbitrarily shaped 3D objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: benchmark/environment design, heuristic search \| Data: paper-reported benchmark/synthetic instances \| Objective: optimize paper-defined packing performance <br>
 
-- ❤️ **Packrift Packaging Optimization Benchmark Corpus** : Public SKU and carton dataset for carton-fit boundaries, dimensional-weight checks, cube-utilization, and warehouse packaging planning scenarios. [![Dataset](https://img.shields.io/badge/Dataset-4682B4.svg)](https://packrift.github.io/packaging-optimization-benchmark-corpus/dataset-metadata.html) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Packrift/packaging-optimization-benchmark-corpus)
-  > 👨‍🔬 **Authors:** Packrift | 📅 **Year:** 2026 | 🏢 **Venue:** Public benchmark corpus <br>
-  > 🔑 **Keywords:** 3D bin packing, carton selection, dimensional weight, SKU packaging, warehouse planning <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Industrial carton selection and packaging-fit benchmarking <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** SKU/carton dimensions, dimensional weight, cube-utilization, packaging-fit cases <br>
+- ❤️ **DeepPack3D: A Python package for online 3D bin packing optimization by deep reinforcement learning and constructive heuristics** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.simpa.2024.100732-blue.svg)](https://doi.org/10.1016/j.simpa.2024.100732) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1016%2Fj.simpa.2024.100732)](https://scholar.google.com/scholar?q=DeepPack3D%3A%20A%20Python%20package%20for%20online%203D%20bin%20packing%20optimization%20by%20deep%20reinforcement%20learning%20and%20constructive%20heuristics) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/yptsang/DeepPack3D)
+  > 👨‍🔬 **Authors:** Y. P. Tsang; D. Y. Mo; K. T. Chung; C. K. M. Lee | 📅 **Year:** 2025 | 🏢 **Venue:** Software Impacts <br>
+  > 🔑 **Keywords:** Benchmark, Online packing, 3D bin packing, Deep reinforcement learning, Constructive heuristics, Python <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with configurable lookahead \| Single-container/pallet loading benchmark \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: candidate cargo dimensions plus bin height maps \| Action: choose candidate/orientation/placement in the included DRL solver \| Reward: compactness / space utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: software package containing a Deep Q-network and four constructive heuristics \| Data: customizable item lists and bundled benchmark examples \| Objective: compare online utilization across solvers <br>
 
-- ❤️ **RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation** : "RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2512.04415) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://robot-bin-packing-benchmark.github.io/)
+- ❤️ **RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation** [![arXiv](https://img.shields.io/badge/arXiv-2512.04415-b31b1b.svg)](https://arxiv.org/abs/2512.04415) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://robot-bin-packing-benchmark.github.io/)
   > 👨‍🔬 **Authors:** Zhoufeng Wang1 Hang Zhao3 Juzhan Xu4 Shishun Zhang1 Zeyu Xiong1 Ruizhen Hu4 Chenyang Zhu1 Zecui Zeng5 | 📅 **Year:** 2026 | 🏢 **Venue:** arXiv preprint arXiv:2512.04415 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+  > 🔑 **Keywords:** Benchmark, Online packing, Robotic packing, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-bin robotic packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: physics/dynamics simulation, explicit stability checks \| Execution: robot manipulator, collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: benchmark/environment design, simulation \| Data: real-world/industrial data with paper-reported evaluation \| Objective: maintain stability <br>
 
 ## Algorithms and Methods
 
-- ❤️ **The three-dimensional bin packing problem.** : "The three-dimensional bin packing problem.". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://pubsonline.informs.org/doi/abs/10.1287/opre.48.2.256.12386)
-  > 👨‍🔬 **Authors:** S Martello, D Pisinger, D Vigo | 📅 **Year:** 2000 | 🏢 **Venue:** Oper. Res. <br>
-  > 🔑 **Keywords:** 3D bin packing, Lower bounds, Exact algorithm, Branch-and-bound <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **The Three-Dimensional Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.1287%2Fopre.48.2.256.12386-blue.svg)](https://doi.org/10.1287/opre.48.2.256.12386)
+  > 👨‍🔬 **Authors:** Silvano Martello; David Pisinger; Daniele Vigo | 📅 **Year:** 2000 | 🏢 **Venue:** Operations Research <br>
+  > 🔑 **Keywords:** 3D bin packing, Exact algorithm, Branch-and-bound, Approximation algorithms, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D-BPP \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: lower bounds, single-bin exact packing, and branch-and-bound \| Data: generated instances up to 60 boxes \| Objective: minimize bin count <br>
 
-- ❤️ **Heuristics for the container loading problem** : "Heuristics for the container loading problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0377221702001327)
-  > 👨‍🔬 **Authors:** D Pisinger | 📅 **Year:** 2002 | 🏢 **Venue:** Eur. J. Oper. Res. <br>
-  > 🔑 **Keywords:** Container loading, Heuristics, Wall-building, Weight distribution <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Heuristic algorithms for the three-dimensional bin packing problem** [![Paper](https://img.shields.io/badge/Paper-Link-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0377221702001340)
+  > 👨‍🔬 **Authors:** Andrea Lodi; Silvano Martello; Daniele Vigo | 📅 **Year:** 2002 | 🏢 **Venue:** European Journal of Operational Research <br>
+  > 🔑 **Keywords:** 3D bin packing, Cuboids, Tabu search <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D-BPP \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: constructive and improvement heuristics \| Data: standard 3D-BPP benchmark instances \| Objective: minimize bin count <br>
 
-- ❤️ **Heuristic algorithms for the three-dimensional bin packing problem** : "Heuristic algorithms for the three-dimensional bin packing problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0377221702001340)
-  > 👨‍🔬 **Authors:** A Lodi, S Martello, D Vigo | 📅 **Year:** 2002 | 🏢 **Venue:** Eur. J. Oper. Res. <br>
-  > 🔑 **Keywords:** 3D bin packing, Heuristic algorithms, Layer packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Guided Local Search for the Three-Dimensional Bin-Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.1287%2Fijoc.15.3.267.16080-blue.svg)](https://doi.org/10.1287/ijoc.15.3.267.16080)
+  > 👨‍🔬 **Authors:** Oluf Faroe; David Pisinger; Martin Zachariasen | 📅 **Year:** 2003 | 🏢 **Venue:** INFORMS Journal on Computing <br>
+  > 🔑 **Keywords:** 3D bin packing, Guided local search, Heuristics, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D-BPP \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: guided local search \| Data: standard 3D-BPP benchmark instances \| Objective: minimize bin count <br>
 
-- ❤️ **Solving container loading problems by block arrangement** : "Solving container loading problems by block arrangement". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0377221702001339)
-  > 👨‍🔬 **Authors:** M Eley | 📅 **Year:** 2002 | 🏢 **Venue:** Eur. J. Oper. Res. <br>
-  > 🔑 **Keywords:** Container loading, Block arrangement, Load stability, Weight distribution <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A Combinatorial Characterization of Higher-Dimensional Orthogonal Packing** [![DOI](https://img.shields.io/badge/DOI-10.1287%2Fmoor.1030.0079-blue.svg)](https://doi.org/10.1287/moor.1030.0079)
+  > 👨‍🔬 **Authors:** Sándor P. Fekete; Jörg Schepers | 📅 **Year:** 2004 | 🏢 **Venue:** Mathematics of Operations Research <br>
+  > 🔑 **Keywords:** Multi-dimensional packing, Orthogonal packing, Packing classes, Feasibility <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Fixed-container higher-dimensional orthogonal-packing feasibility \| Axis-aligned d-dimensional boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: packing-class/interval-graph characterization \| Data: theoretical instances \| Objective: decide orthogonal-packing feasibility <br>
 
-- ❤️ **Guided local search for the three-dimensional bin-packing problem** : "Guided local search for the three-dimensional bin-packing problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://pubsonline.informs.org/doi/abs/10.1287/ijoc.15.3.267.16080)
-  > 👨‍🔬 **Authors:** S Faroqi | 📅 **Year:** 2003 | 🏢 **Venue:** INFORMS J. Comput. <br>
-  > 🔑 **Keywords:** Guided local search, 3D bin packing, Metaheuristic <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **TSpack: A Unified Tabu Search Code for Multi-Dimensional Bin Packing Problems** [![DOI](https://img.shields.io/badge/DOI-10.1023%2Fb%3Aanor.0000039519.03572.08-blue.svg)](https://doi.org/10.1023/b:anor.0000039519.03572.08)
+  > 👨‍🔬 **Authors:** Andrea Lodi; Silvano Martello; Daniele Vigo | 📅 **Year:** 2004 | 🏢 **Venue:** Annals of Operations Research <br>
+  > 🔑 **Keywords:** 2D packing, 3D bin packing, Multi-dimensional packing, Tabu search <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 2D/3D and higher-dimensional orthogonal packing \| Rectangles and cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: unified tabu-search implementation \| Data: standard published benchmark instances \| Objective: minimize bin count <br>
 
-- ❤️ **Three Dimensional Bin-Packing Issues and Solutions** : "Three Dimensional Bin-Packing Issues and Solutions". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.micsymposium.org/mics_2004/Sweep.pdf)
-  > 👨‍🔬 **Authors:** Sweep, Seth | 📅 **Year:** 2004 | 🏢 **Venue:** MICS <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Algorithm 864: General and robot-packable variants of the three-dimensional bin packing problem** [![DOI](https://img.shields.io/badge/DOI-10.1145%2F1206040.1206047-blue.svg)](https://doi.org/10.1145/1206040.1206047)
+  > 👨‍🔬 **Authors:** Silvano Martello; David Pisinger; Daniele Vigo; Edgar den Boef; Jan Korst | 📅 **Year:** 2007 | 🏢 **Venue:** ACM Transactions on Mathematical Software <br>
+  > 🔑 **Keywords:** 3D bin packing, Exact algorithm, Robotic packing, Robot-packability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D-BPP with general and robot-packable variants \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: exact branch-and-bound algorithms and reference software \| Data: generated and literature benchmark instances \| Objective: minimize bin count subject to optional robot-packability <br>
 
-- ❤️ **TSpack: A unified tabu search code for multi-dimensional bin packing problems** : "TSpack: A unified tabu search code for multi-dimensional bin packing problems". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/article/10.1023/B:ANOR.0000039519.03572.08)
-  > 👨‍🔬 **Authors:** A Lodi, S Martello, D Vigo | 📅 **Year:** 2004 | 🏢 **Venue:** Ann. Oper. Res. <br>
-  > 🔑 **Keywords:** Tabu search, Multi-dimensional bin packing, TSpack <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **An Exact Algorithm for Higher-Dimensional Orthogonal Packing** [![DOI](https://img.shields.io/badge/DOI-10.1287%2Fopre.1060.0369-blue.svg)](https://doi.org/10.1287/opre.1060.0369)
+  > 👨‍🔬 **Authors:** Sándor P. Fekete; Jörg Schepers; Jan C. van der Veen | 📅 **Year:** 2007 | 🏢 **Venue:** Operations Research <br>
+  > 🔑 **Keywords:** Multi-dimensional packing, Orthogonal packing, Exact algorithm, Feasibility <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Fixed-container higher-dimensional orthogonal-packing feasibility \| Axis-aligned d-dimensional boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: exact branch-and-bound over packing classes \| Data: theoretical and benchmark instances \| Objective: decide feasibility <br>
 
-- ❤️ **A combinatorial characterization of higher-dimensional orthogonal packing** : "A combinatorial characterization of higher-dimensional orthogonal packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://pubsonline.informs.org/doi/abs/10.1287/moor.1030.0079)
-  > 👨‍🔬 **Authors:** F Fekete, S Schepers | 📅 **Year:** 2004 | 🏢 **Venue:** Math. Oper. Res. <br>
-  > 🔑 **Keywords:** Orthogonal packing, Combinatorial characterization, Higher-dimensional <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A Maximal-Space Algorithm for the Container Loading Problem** [![DOI](https://img.shields.io/badge/DOI-10.1287%2Fijoc.1070.0254-blue.svg)](https://doi.org/10.1287/ijoc.1070.0254)
+  > 👨‍🔬 **Authors:** F. Parreño; R. Alvarez-Valdes; J. M. Tamarit; J. F. Oliveira | 📅 **Year:** 2008 | 🏢 **Venue:** INFORMS Journal on Computing <br>
+  > 🔑 **Keywords:** Container loading <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container loading \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: maximal-space constructive algorithm \| Data: standard container-loading benchmarks \| Objective: maximize loaded volume <br>
 
-- ❤️ **Algorithm 864: General and robot-packable variants of the three-dimensional bin packing problem** : "Algorithm 864: General and robot-packable variants of the three-dimensional bin packing problem". [![ACM](https://img.shields.io/badge/ACM-Paper-yellow.svg)](https://dl.acm.org/doi/abs/10.1145/1206040.1206047)
-  > 👨‍🔬 **Authors:** S Martello, D Pisinger, D Vigo, E den Boef | 📅 **Year:** 2007 | 🏢 **Venue:** ACM Trans. Math. Softw. <br>
-  > 🔑 **Keywords:** Robot-packable, 3D bin packing, Exact algorithm, Branch-and-bound <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Extreme Point-Based Heuristics for Three-Dimensional Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.1287%2Fijoc.1070.0250-blue.svg)](https://doi.org/10.1287/ijoc.1070.0250)
+  > 👨‍🔬 **Authors:** Teodor Gabriel Crainic; Guido Perboli; Roberto Tadei | 📅 **Year:** 2008 | 🏢 **Venue:** INFORMS Journal on Computing <br>
+  > 🔑 **Keywords:** 3D bin packing, Extreme points, Heuristics, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D-BPP \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: extreme-point placement heuristics \| Data: standard 3D-BPP benchmark instances \| Objective: minimize bin count and improve utilization <br>
 
-- ❤️ **An exact algorithm for higher-dimensional orthogonal packing** : "An exact algorithm for higher-dimensional orthogonal packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://pubsonline.informs.org/doi/abs/10.1287/opre.1060.0369)
-  > 👨‍🔬 **Authors:** SP Fekete, S Schepers | 📅 **Year:** 2007 | 🏢 **Venue:** Oper. Res. <br>
-  > 🔑 **Keywords:** Orthogonal packing, Exact algorithm, Higher-dimensional, Combinatorial characterization <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A Hybrid CD/VND Algorithm for Three-Dimensional Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ficcms.2010.460-blue.svg)](https://doi.org/10.1109/iccms.2010.460)
+  > 👨‍🔬 **Authors:** Huizhi Yang; Jianguo Shi | 📅 **Year:** 2010 | 🏢 **Venue:** 2010 Second International Conference on Computer Modeling and Simulation <br>
+  > 🔑 **Keywords:** 3D bin packing, Caving degree, Variable-neighborhood descent, Heuristics <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D-BPP \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: caving-degree construction plus variable-neighborhood descent \| Data: standard literature test instances \| Objective: minimize bin count <br>
 
-- ❤️ **Extreme Point-Based Heuristics for Three-Dimensional Bin Packing** : "Extreme Point-Based Heuristics for Three-Dimensional Bin Packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://pubsonline.informs.org/doi/abs/10.1287/ijoc.1070.0250)
-  > 👨‍🔬 **Authors:** Crainic, Teodor Gabriel; Perboli, Guido; Tadei, Roberto | 📅 **Year:** 2008 | 🏢 **Venue:** INFORMS J. Comput. <br>
-  > 🔑 **Keywords:** 3D bin packing, Extreme points, Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A Tree Search Algorithm for Solving the Container Loading Problem** [![DOI](https://img.shields.io/badge/DOI-10.1287%2Fijoc.1090.0338-blue.svg)](https://doi.org/10.1287/ijoc.1090.0338)
+  > 👨‍🔬 **Authors:** Tobias Fanslau; Andreas Bortfeldt | 📅 **Year:** 2010 | 🏢 **Venue:** INFORMS Journal on Computing <br>
+  > 🔑 **Keywords:** Container loading, Cuboids, Tree search <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container loading \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: tree search \| Data: paper-reported benchmark/synthetic instances \| Objective: optimize paper-defined packing performance <br>
 
-- ❤️ **A Maximal-Space Algorithm for the Container Loading Problem** : "A Maximal-Space Algorithm for the Container Loading Problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://pubsonline.informs.org/doi/abs/10.1287/ijoc.1070.0254)
-  > 👨‍🔬 **Authors:** Parreño, Francisco; Alvarez-Valdés, Ramon; Oliveira, José F.; Tamarit, José M. | 📅 **Year:** 2008 | 🏢 **Venue:** INFORMS J. Comput. <br>
-  > 🔑 **Keywords:** Container loading, Maximal-space, Heuristic <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A hybrid genetic algorithm with a new packing strategy for the three-dimensional bin packing problem** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.amc.2012.07.036-blue.svg)](https://doi.org/10.1016/j.amc.2012.07.036)
+  > 👨‍🔬 **Authors:** Kyungdaw Kang; Ilkyeong Moon; Hongfeng Wang | 📅 **Year:** 2012 | 🏢 **Venue:** Applied Mathematics and Computation <br>
+  > 🔑 **Keywords:** 3D knapsack packing, Genetic algorithm, Cuboids, Single bin <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-bin 3D knapsack-style packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: hybrid genetic algorithm with cuboid-space matching \| Data: published computational benchmarks \| Objective: maximize the number/value of items packed <br>
 
-- ❤️ **A Tree Search Algorithm for Solving the Container Loading Problem** : "A Tree Search Algorithm for Solving the Container Loading Problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://pubsonline.informs.org/doi/abs/10.1287/ijoc.1090.0338)
-  > 👨‍🔬 **Authors:** Fanslau, Tobias; Bortfeldt, Andreas | 📅 **Year:** 2009 | 🏢 **Venue:** INFORMS J. Comput. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A biased random key genetic algorithm for 2D and 3D bin packing problems** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ijpe.2013.04.019-blue.svg)](https://doi.org/10.1016/j.ijpe.2013.04.019) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/rfrancotoso/brkgaAPI)
+  > 👨‍🔬 **Authors:** José Fernando Gonçalves; Mauricio G.C. Resende | 📅 **Year:** 2013 | 🏢 **Venue:** International Journal of Production Economics <br>
+  > 🔑 **Keywords:** 2D packing, 3D bin packing, Genetic algorithm, Maximal spaces <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 2D and 3D packing \| Rectangles and cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: biased random-key genetic algorithm plus maximal-space placement \| Data: 858 published problem instances \| Objective: minimize bin count <br>
 
-- ❤️ **A hybrid GRASP/VND algorithm for two- and three-dimensional bin packing** : "A hybrid GRASP/VND algorithm for two- and three-dimensional bin packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/article/10.1007/s10479-008-0449-4)
-  > 👨‍🔬 **Authors:** F Parreño, R Alvarez-Valdés, JF Oliveira | 📅 **Year:** 2010 | 🏢 **Venue:** Ann. Oper. Res. <br>
-  > 🔑 **Keywords:** GRASP, VND, 2D bin packing, 3D bin packing, Metaheuristic <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Interior-Point Based Online Stochastic Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.2139%2Fssrn.2673951-blue.svg)](https://doi.org/10.2139/ssrn.2673951)
+  > 👨‍🔬 **Authors:** Varun Gupta; Ana Radovanovic | 📅 **Year:** 2015 | 🏢 **Venue:** SSRN Electronic Journal <br>
+  > 🔑 **Keywords:** Online packing, Stochastic bin packing, Interior-point method, Scalar items <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online stochastic \| Multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: interior-point/linear-programming-based online policy \| Data: stochastic synthetic instances \| Objective: minimize expected bin usage/cost <br>
 
-- ❤️ **A hybrid genetic algorithm with a new packing strategy for the three-dimensional bin packing problem** : "A hybrid genetic algorithm with a new packing strategy for the three-dimensional bin packing problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0096300312007369)
-  > 👨‍🔬 **Authors:** Kang, Kyungdaw; Moon, Ilkyeong; Wang, Hongfeng | 📅 **Year:** 2012 | 🏢 **Venue:** Appl. Math. Comput. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **An Online Packing Heuristic for the Three-Dimensional Container Loading Problem in Dynamic Environments and the Physical Internet** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-3-319-55792-2_10-blue.svg)](https://doi.org/10.1007/978-3-319-55792-2_10)
+  > 👨‍🔬 **Authors:** Chi Trung Ha; Trung Thanh Nguyen; Lam Thu Bui; Ran Wang | 📅 **Year:** 2017 | 🏢 **Venue:** Lecture Notes in Computer Science <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Dynamic packing, Container loading <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container loading \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: heuristic search \| Data: real-world/industrial data with paper-reported evaluation \| Objective: optimize paper-defined packing performance <br>
 
-- ❤️ **A biased random key genetic algorithm for 2D and 3D bin packing problems** : "A biased random key genetic algorithm for 2D and 3D bin packing problems". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0925527313001837) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/rfrancotoso/brkgaAPI)
-  > 👨‍🔬 **Authors:** Gonçalves, José Fernando; Resende, Mauricio G. C. | 📅 **Year:** 2013 | 🏢 **Venue:** Int. J. Prod. Econ. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Small Boxes Big Data: A Deep Learning Approach to Optimize Variable Sized Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Fbigdataservice.2017.18-blue.svg)](https://doi.org/10.1109/bigdataservice.2017.18)
+  > 👨‍🔬 **Authors:** Feng Mao; Edgar Blanco; Mingang Fu; Rohit Jain; Anurag Gupta; Sebastien Mancel; Rong Yuan; Stephen Guo; Sai Kumar; Yayang Tian | 📅 **Year:** 2017 | 🏢 **Venue:** 2017 IEEE Third International Conference on Big Data Computing Service and Applications (BigDataService) <br>
+  > 🔑 **Keywords:** Variable-sized bin packing, Deep learning, Offline packing, Scalar items <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Variable-sized multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deep classifier coupled to a bin-allocation heuristic \| Data: large synthetic training/evaluation sets \| Objective: minimize packing cost and bin usage <br>
 
-- ❤️ **Bin packing and cutting stock problems: Mathematical models and exact algorithms** : "Bin packing and cutting stock problems: Mathematical models and exact algorithms". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0377221716302491)
-  > 👨‍🔬 **Authors:** M Delorme, M Iori, S Martello | 📅 **Year:** 2016 | 🏢 **Venue:** Eur. J. Oper. Res. <br>
-  > 🔑 **Keywords:** Bin packing, Cutting stock, Exact algorithms, Mathematical models <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **Online bounded analysis** : "Online bounded analysis". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/chapter/10.1007/978-3-319-34171-2_10)
-  > 👨‍🔬 **Authors:** J Boyar, L Epstein, L Favrholdt, K Jansen | 📅 **Year:** 2016 | 🏢 **Venue:** Algorithms and Complexity <br>
-  > 🔑 **Keywords:** Online algorithms, Bounded analysis, Competitive ratio, Bin packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **An Online Packing Heuristic for the Three-Dimensional Container Loading Problem in Dynamic Environments and the Physical Internet** : "An Online Packing Heuristic for the Three-Dimensional Container Loading Problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/chapter/10.1007/978-3-319-55792-2_10)
-  > 👨‍🔬 **Authors:** Ha, Chi Trung; Nguyen, Trung Thanh; Bui, Lam Thu; Wang, Ran | 📅 **Year:** 2017 | 🏢 **Venue:** Applications of Evolutionary Computation (EvoApplications 2017) <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method** : "Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/1708.05930)
+- ❤️ **Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method** [![arXiv](https://img.shields.io/badge/arXiv-1708.05930-b31b1b.svg)](https://arxiv.org/abs/1708.05930)
   > 👨‍🔬 **Authors:** Hu, Haoyuan; Zhang, Xiaodong; Yan, Xiaowei; Wang, Longfei; Xu, Yinghui | 📅 **Year:** 2017 | 🏢 **Venue:** arXiv preprint arXiv:1708.05930 <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+  > 🔑 **Keywords:** 3D flexible bin packing, Deep reinforcement learning, Pointer network, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single variable-size/wrapping-bin 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: item-dimension sequence \| Action: choose the next item in the packing order \| Reward: negative enclosing-bin surface area / solution cost <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: pointer-network reinforcement learning for item order \| Data: generated cuboid instances \| Objective: minimize enclosing-bin surface area <br>
 
-- ❤️ **Small boxes big data: A deep learning approach to optimize variable sized bin packing** : "Small boxes big data: A deep learning approach to optimize variable sized bin packing". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/7944923/)
-  > 👨‍🔬 **Authors:** A Vinyals, M Fortunato, N Jaitly | 📅 **Year:** 2017 | 🏢 **Venue:** IEEE International Conference on Big Data <br>
-  > 🔑 **Keywords:** Variable sized, Bin packing, Deep learning, Big data <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **Quasi-Monte-Carlo Tree Search for 3D Bin Packing** : "Quasi-Monte-Carlo Tree Search for 3D Bin Packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/chapter/10.1007/978-3-030-03398-9_33)
-  > 👨‍🔬 **Authors:** Li, Hailiang; Wang, Yan; Ma, DanPeng; Fang, Yang; Lei, Zhibin | 📅 **Year:** 2018 | 🏢 **Venue:** Chinese Conference on Pattern Recognition and Computer Vision <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **Cargo Stability in the Container Loading Problem - State-of-the-Art and Future Research Directions** : "Cargo Stability in the Container Loading Problem - State-of-the-Art and Future Research Directions". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/chapter/10.1007/978-3-319-71583-4_23)
-  > 👨‍🔬 **Authors:** António G. Ramos & José Fernando Oliveira | 📅 **Year:** 2018 | 🏢 **Venue:** Operational Research <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **A Multi-task Selected Learning Approach for Solving New Type 3D Bin Packing Problem** : "A Multi-task Selected Learning Approach for Solving New Type 3D Bin Packing Problem". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/1804.06896)
+- ❤️ **A Multi-task Selected Learning Approach for Solving New Type 3D Bin Packing Problem** [![arXiv](https://img.shields.io/badge/arXiv-1804.06896-b31b1b.svg)](https://arxiv.org/abs/1804.06896)
   > 👨‍🔬 **Authors:** L Duan, H Hu, Y Qian, Y Gong, X Zhang, Y Xu, J Wei | 📅 **Year:** 2018 | 🏢 **Venue:** arXiv <br>
-  > 🔑 **Keywords:** Multi-task learning, Selected learning, 3D bin packing, Deep reinforcement learning <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+  > 🔑 **Keywords:** 3D flexible bin packing, Selected learning, Multi-task learning, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single variable-size/wrapping-bin 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: item dimensions and current partial solution \| Action: jointly choose next item and orientation \| Reward: negative enclosing-bin surface area, combined with supervised loss during selected learning <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: selected supervised/reinforcement multi-task learning for order and orientation \| Data: released large-scale generated order dataset \| Objective: minimize enclosing-bin surface area <br>
 
-- ❤️ **Ranked reward: Enabling self-play reinforcement learning for combinatorial optimization** : "Ranked reward: Enabling self-play reinforcement learning for combinatorial optimization". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/1807.01672)
+- ❤️ **Online-bounded analysis** [![DOI](https://img.shields.io/badge/DOI-10.1007%2Fs10951-017-0536-y-blue.svg)](https://doi.org/10.1007/s10951-017-0536-y)
+  > 👨‍🔬 **Authors:** Joan Boyar; Leah Epstein; Lene M. Favrholdt; Kim S. Larsen; Asaf Levin | 📅 **Year:** 2018 | 🏢 **Venue:** Journal of Scheduling <br>
+  > 🔑 **Keywords:** Online algorithms, Competitive analysis, Online-bounded analysis, Theory <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Analysis framework \| Online one-dimensional optimization problems including bin packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: online-bounded performance analysis \| Data: adversarial theoretical instances \| Objective: compare online algorithms against a constrained offline optimum <br>
+
+- ❤️ **Packing Irregular Objects in 3D Space via Hybrid Optimization** [![DOI](https://img.shields.io/badge/DOI-10.1111%2Fcgf.13490-blue.svg)](https://doi.org/10.1111/cgf.13490) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/MbBrainz/irregular-object-packing)
+  > 👨‍🔬 **Authors:** Y. Ma; Z. Chen; W. Hu; W. Wang | 📅 **Year:** 2018 | 🏢 **Venue:** Computer Graphics Forum <br>
+  > 🔑 **Keywords:** 3D bin packing, Irregular objects <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container geometric packing \| Irregular/general 3D objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: heuristic search \| Data: paper-reported benchmark/synthetic instances \| Objective: optimize paper-defined packing performance <br>
+
+- ❤️ **Quasi-Monte-Carlo Tree Search for 3D Bin Packing** [![Paper](https://img.shields.io/badge/Paper-Link-4682B4.svg)](https://link.springer.com/chapter/10.1007/978-3-030-03398-9_33)
+  > 👨‍🔬 **Authors:** Li, Hailiang; Wang, Yan; Ma, DanPeng; Fang, Yang; Lei, Zhibin | 📅 **Year:** 2018 | 🏢 **Venue:** Chinese Conference on Pattern Recognition and Computer Vision <br>
+  > 🔑 **Keywords:** 3D bin packing, Monte Carlo tree search, Quasi-Monte Carlo, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container/open-dimension 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: quasi-Monte-Carlo tree search \| Data: generated and standard 3D packing instances \| Objective: maximize utilization and reduce packing height <br>
+
+- ❤️ **Ranked reward: Enabling self-play reinforcement learning for combinatorial optimization** [![arXiv](https://img.shields.io/badge/arXiv-1807.01672-b31b1b.svg)](https://arxiv.org/abs/1807.01672)
   > 👨‍🔬 **Authors:** A Laterre, Y Sun, K Beguir, C Rousseau, T Inst | 📅 **Year:** 2018 | 🏢 **Venue:** arXiv <br>
-  > 🔑 **Keywords:** Ranked reward, Self-play, Reinforcement learning, Combinatorial optimization, Bin packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+  > 🔑 **Keywords:** Reinforcement learning, Self-play, Combinatorial optimization, Bin packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Combinatorial packing benchmark within a general self-play framework \| Paper-defined regular items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: all items plus current placements \| Action: choose an unplaced item, position, and orientation \| Reward: terminal solution quality reshaped to a percentile-ranked reward <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: self-play reinforcement learning with percentile-ranked rewards \| Data: generated combinatorial-optimization instances \| Objective: improve terminal solution quality without labeled optima <br>
 
-- ❤️ **Multi-objective 3D bin-packing problem** : "Multi-objective 3D bin-packing problem". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/8880442/)
-  > 👨‍🔬 **Authors:** Hasan, Jasim; Kaabi, Jihene; Harrath, Youssef | 📅 **Year:** 2019 | 🏢 **Venue:** ICMSAO 2019 <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.65109%2Fphej7266-blue.svg)](https://doi.org/10.65109/phej7266)
+  > 👨‍🔬 **Authors:** Lu Duan; Haoyuan Hu; Yu Qian; Yu Gong; Xiaodong Zhang; Jiangwen Wei; Yinghui Xu | 📅 **Year:** 2019 | 🏢 **Venue:** International Joint Conference on Autonomous Agents and Multiagent Systems <br>
+  > 🔑 **Keywords:** 3D flexible bin packing, Selected learning, Multi-task learning, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single variable-size/wrapping-bin 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: selected multi-task learning for order and orientation \| Data: real e-commerce orders and synthetic instances \| Objective: minimize enclosing-bin surface area/cost <br>
 
-- ❤️ **A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem** : "A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem". [![ACM](https://img.shields.io/badge/ACM-Paper-yellow.svg)](https://dl.acm.org/doi/10.5555/3306127.3331847)
-  > 👨‍🔬 **Authors:** Duan, Lu; Hu, Haoyuan; Qian, Yu; Gong, Yu; Zhang, Xiaodong; Xu, Yinghui; Wei, Jiangwen | 📅 **Year:** 2019 | 🏢 **Venue:** Comput. Sci. Rev. <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Deep-Pack: A Vision-Based 2D Online Bin Packing Algorithm with Deep Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Fro-man46459.2019.8956393-blue.svg)](https://doi.org/10.1109/ro-man46459.2019.8956393) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/JeepWay/DeepPack)
+  > 👨‍🔬 **Authors:** Olyvia Kundu; Samrat Dutta; Swagat Kumar | 📅 **Year:** 2019 | 🏢 **Venue:** 2019 28th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN) <br>
+  > 🔑 **Keywords:** 2D packing, Online packing, Deep reinforcement learning, Double DQN, Vision <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-bin 2D placement \| Rectangles <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: binary images of current bin occupancy and incoming rectangle \| Action: choose a placement pixel (or reject/terminate) \| Reward: compact adjacency and retained grouped empty area <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: image-based Double DQN placement policy \| Data: generated rectangle streams \| Objective: maximize packing density and preserve usable empty space <br>
 
-- ❤️ **Stable Bin Packing of Non-convex 3D Objects with a Robot Manipulator** : "Stable Bin Packing of Non-convex 3D Objects with a Robot Manipulator". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/8794049/)
-  > 👨‍🔬 **Authors:** C Zhao, M Shibata | 📅 **Year:** 2019 | 🏢 **Venue:** IEEE International Conference on Robotics and Automation <br>
-  > 🔑 **Keywords:** Non-convex objects, Stable bin packing, Robot manipulator <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Multi-objective 3D bin-packing problem** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ficmsao.2019.8880442-blue.svg)](https://doi.org/10.1109/icmsao.2019.8880442)
+  > 👨‍🔬 **Authors:** Jasim Hasan; Jihene Kaabi; Youssef Harrath | 📅 **Year:** 2019 | 🏢 **Venue:** 2019 8th International Conference on Modeling Simulation and Applied Optimization (ICMSAO) <br>
+  > 🔑 **Keywords:** 3D bin packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D packing with weight balance \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: two-phase layer-combination constructive algorithm \| Data: FedEx real-world cases \| Objective: minimize bin count and balance bin weight <br>
 
-- ❤️ **Packing Irregular Objects in 3D Space via Hybrid Optimization** : "Packing Irregular Objects in 3D Space via Hybrid Optimization". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13490) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/MbBrainz/irregular-object-packing)
-  > 👨‍🔬 **Authors:** Y Li, P Wonka | 📅 **Year:** 2019 | 🏢 **Venue:** Comput. Graph. Forum <br>
-  > 🔑 **Keywords:** Irregular objects, Hybrid optimization, 3D packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Stable Bin Packing of Non-convex 3D Objects with a Robot Manipulator** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ficra.2019.8794049-blue.svg)](https://doi.org/10.1109/icra.2019.8794049)
+  > 👨‍🔬 **Authors:** Fan Wang; Kris Hauser | 📅 **Year:** 2019 | 🏢 **Venue:** 2019 International Conference on Robotics and Automation (ICRA) <br>
+  > 🔑 **Keywords:** 3D packing, Irregular objects, Robotic packing, Stability, Non-convex objects <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container robotic packing \| Rigid non-convex 3D objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known 3D meshes \| Stability: support and static-stability constraints \| Execution: robot-manipulator reachability and collision constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: stability-aware geometric search and robot-motion feasibility filtering \| Data: simulated and physical object sets \| Objective: maximize packing density while preserving stable, executable placements <br>
 
-- ❤️ **Online computation with untrusted advice** : "Online computation with untrusted advice". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/1905.05655)
-  > 👨‍🔬 **Authors:** S Angelopoulos, C Dürr, S Jin, S Kamali | 📅 **Year:** 2019 | 🏢 **Venue:** arXiv <br>
-  > 🔑 **Keywords:** Online computation, Untrusted advice, Bin packing, Competitive analysis <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A Generalized Reinforcement Learning Algorithm for Online 3D Bin-Packing** [![arXiv](https://img.shields.io/badge/arXiv-2007.00463-b31b1b.svg)](https://arxiv.org/abs/2007.00463) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://nsidn98.github.io/publication/packman)
+  > 👨‍🔬 **Authors:** Richa Verma; Aniruddha Singhal; Harshad Khadilkar; Ansuma Basumatary; Siddharth Nayak; Harsh Vardhan Singh; Swagat Kumar; Rajesh Sinha | 📅 **Year:** 2020 | 🏢 **Venue:** arXiv preprint arXiv:2007.00463 <br>
+  > 🔑 **Keywords:** Online packing, 3D bin packing, Deep reinforcement learning, Lookahead, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with fixed lookahead \| One or more bins of arbitrary size \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current bin packing plus a fixed lookahead of upcoming box dimensions \| Action: choose bin, location, and orientation for the next box \| Reward: packed-volume efficiency with a bin-count/competitive-ratio objective <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: generalized deep reinforcement learning placement policy \| Data: simulated streams and laboratory robot validation \| Objective: maximize volume efficiency and empirical competitive ratio <br>
 
-- ❤️ **Deep-pack: A vision-based 2d online bin packing algorithm with deep reinforcement learning** : "Deep-pack: A vision-based 2d online bin packing algorithm with deep reinforcement learning". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/8956393/) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/JeepWay/DeepPack)
-  > 👨‍🔬 **Authors:** O Kundu, S Dutta, S Kumar | 📅 **Year:** 2019 | 🏢 **Venue:** IEEE International Conference on Image Processing <br>
-  > 🔑 **Keywords:** Deep-pack, Vision-based, 2D bin packing, Double DQN <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Fully dynamic bin packing revisited** [![DOI](https://img.shields.io/badge/DOI-10.1007%2Fs10107-018-1325-x-blue.svg)](https://doi.org/10.1007/s10107-018-1325-x)
+  > 👨‍🔬 **Authors:** Sebastian Berndt; Klaus Jansen; Kim-Manuel Klein | 📅 **Year:** 2020 | 🏢 **Venue:** Mathematical Programming <br>
+  > 🔑 **Keywords:** Dynamic packing, 1D bin packing, Repacking, Approximation algorithms <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Fully dynamic \| Multi-bin packing with arrivals, departures, and repacking \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: dynamic rounding and approximation algorithms \| Data: adversarial theoretical sequences \| Objective: minimize bin count while bounding migration/repacking <br>
 
-- ❤️ **Interior-point-based online stochastic bin packing** : "Interior-point-based online stochastic bin packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://pubsonline.informs.org/doi/abs/10.1287/opre.2019.1914)
-  > 👨‍🔬 **Authors:** V Gupta, A Radovanović | 📅 **Year:** 2020 | 🏢 **Venue:** Oper. Res. <br>
-  > 🔑 **Keywords:** Interior-point, Online stochastic bin packing, Distribution-oblivious <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Simultaneous Planning for Item Picking and Placing by Deep Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Firos45743.2020.9340929-blue.svg)](https://doi.org/10.1109/iros45743.2020.9340929)
+  > 👨‍🔬 **Authors:** Tatsuya Tanaka; Toshimitsu Kaneko; Masahiro Sekine; Voot Tangkaratt; Masashi Sugiyama | 📅 **Year:** 2020 | 🏢 **Venue:** 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) <br>
+  > 🔑 **Keywords:** Online packing, Container loading, Deep reinforcement learning, Tree search, Approximation algorithms, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-tote robotic pick-and-place packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: tote/container occupancy and local pick-place features \| Action: jointly choose picking and placing positions \| Reward: container occupancy / successful loading <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deep reinforcement learning for joint picking and placing \| Data: simulated tote-packing episodes \| Objective: maximize container occupancy and successful placements <br>
 
-- ❤️ **Smart packing simulator for 3d packing problem using genetic algorithm** : "Smart packing simulator for 3d packing problem using genetic algorithm". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://iopscience.iop.org/article/10.1088/1742-6596/1447/1/012041/meta) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/mcruggiero/Genetic_Bin/tree/master)
-  > 👨‍🔬 **Authors:** U Khairuddin, N Razi, MSZ Abidin | 📅 **Year:** 2020 | 🏢 **Venue:** J. Phys. Conf. Ser. <br>
-  > 🔑 **Keywords:** Genetic algorithm, Smart packing, 3D bin packing, Simulator <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **Smart Packing Simulator for 3D Packing Problem Using Genetic Algorithm** [![DOI](https://img.shields.io/badge/DOI-10.1088%2F1742-6596%2F1447%2F1%2F012041-blue.svg)](https://doi.org/10.1088/1742-6596/1447/1/012041) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/mcruggiero/Genetic_Bin/tree/master)
+  > 👨‍🔬 **Authors:** U. Khairuddin; N. A. Z. M. Razi; M. S. Z. Abidin; R. Yusof | 📅 **Year:** 2020 | 🏢 **Venue:** Journal of Physics: Conference Series <br>
+  > 🔑 **Keywords:** 3D bin packing, Palletization, Genetic algorithm <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single variable-size container arrangement \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: adaptable-chromosome genetic algorithm and 3D simulator \| Data: generated box sets \| Objective: minimize required container size <br>
 
-- ❤️ **Simultaneous Planning for Item Picking and Placing by Deep Reinforcement Learning** : "Simultaneous Planning for Item Picking and Placing by Deep Reinforcement Learning". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/9340929/)
-  > 👨‍🔬 **Authors:** Tanaka, Tatsuya; Kaneko, Toshimitsu; Sekine, Masahiro; Tangkaratt, Voot; Sugiyama, Masashi | 📅 **Year:** 2020 | 🏢 **Venue:** IROS 2020 <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **TAP-Net: Transport-and-Pack using Reinforcement Learning** [![arXiv](https://img.shields.io/badge/arXiv-2009.01469-b31b1b.svg)](https://arxiv.org/abs/2009.01469) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Juzhan/TAP-Net)
+  > 👨‍🔬 **Authors:** Ruizhen Hu, Juzhan Xu, Bin Chen, Minglun Gong, Hao Zhang, Hui Huang | 📅 **Year:** 2020 | 🏢 **Venue:** ACM Trans. Graph <br>
+  > 🔑 **Keywords:** 3D bin packing, Robotic packing, Deep reinforcement learning, Precedence graph, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single target-container transport-and-pack planning \| Rigid cuboids with accessibility constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: transport precedence graph plus current target-container packing \| Action: choose next box and orientation \| Reward: mean of compactness, pyramidality, and stability <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: precedence-graph reinforcement learning \| Data: generated box sets and simulated robot tasks \| Objective: jointly optimize compactness, pyramidality, and stability <br>
 
-- ❤️ **A Generalized Reinforcement Learning Algorithm for Online 3D Bin-Packing** : "A Generalized Reinforcement Learning Algorithm for Online 3D Bin-Packing". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2007.00463) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://nsidn98.github.io/publication/packman)
-  > 👨‍🔬 **Authors:** Verma, Richa; Singhal, Aniruddha; Khadilkar, Harshad; Basumatary, Ansuma; Nayak, Siddharth; Singh, Harsh Vardhan; Kumar, Swagat; Sinha, Rajesh | 📅 **Year:** 2020 | 🏢 **Venue:** arXiv preprint arXiv:2007.00463 <br>
-  > 🔑 **Keywords:** Physics-based RL in Simulated Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A generalized algorithm and framework for online 3-dimensional bin packing in an automated sorting center** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ficc54714.2021.9703142-blue.svg)](https://doi.org/10.1109/icc54714.2021.9703142)
+  > 👨‍🔬 **Authors:** Ankush Ojha; Marichi Agarwal; Aniruddha Singhal; Chayan Sarkar; Supratim Ghosh; Rajesh Sinha | 📅 **Year:** 2021 | 🏢 **Venue:** 2021 Seventh Indian Control Conference (ICC) <br>
+  > 🔑 **Keywords:** Online packing, 3D bin packing, Automated sorting, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Sequential 3D packing in an automated sorting center \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: generalized constructive framework and heuristic \| Data: sorting-center cases and generated streams \| Objective: maximize utilization with stable feasible placements <br>
 
-- ❤️ **Robot Packing with Known Items and Nondeterministic Arrival Order** : "Robot Packing with Known Items and Nondeterministic Arrival Order". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/9205914/)
-  > 👨‍🔬 **Authors:** O Zweig, K Hauser | 📅 **Year:** 2020 | 🏢 **Venue:** IEEE Trans. Autom. Sci. Eng. <br>
-  > 🔑 **Keywords:** Known items, Nondeterministic arrival order, Robot packing, Value iteration <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+- ❤️ **A Novel Heuristic Algorithm for Online 3D Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.23919%2Ficcas52745.2021.9649790-blue.svg)](https://doi.org/10.23919/iccas52745.2021.9649790)
+  > 👨‍🔬 **Authors:** Thanh-Hung Nguyen; Viet-Thang Tran; Phan-Quan Doan; Thi-Thoa Mac | 📅 **Year:** 2021 | 🏢 **Venue:** 2021 21st International Conference on Control, Automation and Systems (ICCAS) <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-bin sequential packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: robot manipulator, palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: heuristic search \| Data: paper-reported benchmark/synthetic instances \| Objective: optimize paper-defined packing performance <br>
 
-- ❤️ **TAP-Net: Transport-and-Pack using Reinforcement Learning** : "TAP-Net: Transport-and-Pack using Reinforcement Learning". [![ACM](https://img.shields.io/badge/ACM-Paper-yellow.svg)](https://dl.acm.org/doi/abs/10.1145/3414685.3417796) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Juzhan/TAP-Net)
-  > 👨‍🔬 **Authors:** Ruizhen Hu, Juzhan Xu, Bin Chen, Minglun Gong, Hao Zhang, Hui Huang | 📅 **Year:** 2020 | 🏢 **Venue:** ACM Trans. Graph. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **Online 3D Bin Packing with Constrained Deep Reinforcement Learning** : "Online 3D Bin Packing with Constrained Deep Reinforcement Learning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://ojs.aaai.org/index.php/AAAI/article/view/16155) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/alexfrom0815/Online-3D-BPP-DRL)
-  > 👨‍🔬 **Authors:** Zhao, Hang; She, Qijin; Zhu, Chenyang; Yang, Yin; Xu, Kai | 📅 **Year:** 2021 | 🏢 **Venue:** Proc. AAAI Conf. Artif. Intell. <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-- ❤️ **Pick-Place With Uncertain Object Instance Segmentation and Shape Completion** : "Pick-Place With Uncertain Object Instance Segmentation and Shape Completion". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.khoury.northeastern.edu/home/mgualti/2021-Gualtieri-PickPlaceWithUncertainObjectInstanceSegmentationAndShapeCompletion.pdf)
-  > 👨‍🔬 **Authors:** M Gualtieri, R Platt | 📅 **Year:** 2021 | 🏢 **Venue:** IEEE Robot. Autom. Lett. <br>
-  > 🔑 **Keywords:** Pick-place, Instance segmentation, Shape completion, Uncertainty <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-
-
-- ❤️ **Smart packing simulator for 3d packing problem using genetic algorithm** : "Smart packing simulator for 3d packing problem using genetic algorithm". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://iopscience.iop.org/article/10.1088/1742-6596/1447/1/012041/meta) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/mcruggiero/Genetic_Bin/tree/master)
-  > 👨‍🔬 **Authors:** U Khairuddin, N Razi, MSZ Abidin | 📅 **Year:** 2020 | 🏢 **Venue:** J. Phys. Conf. Ser. <br>
-  > 🔑 **Keywords:** Genetic algorithm, Smart packing, 3D bin packing, Simulator <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning practically feasible policies for online 3D bin packing** : "Learning practically feasible policies for online 3D bin packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/article/10.1007/s11432-021-3348-6)
-  > 👨‍🔬 **Authors:** Zhao, Hang; Zhu, Chenyang; Xu, Xin; Huang, Hui; Xu, Kai | 📅 **Year:** 2021 | 🏢 **Venue:** Sci. China Inf. Sci. <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning Efficient Online 3D Bin Packing on Packing Configuration Trees** : "Learning Efficient Online 3D Bin Packing on Packing Configuration Trees". [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/forum?id=bfuGjlCwAq) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/alexfrom0815/Online-3D-BPP-PCT)
-  > 👨‍🔬 **Authors:** Zhao, Hang; Yu, Yang; Xu, Kai | 📅 **Year:** 2021 | 🏢 **Venue:** ICLR <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Multi-objective 3D bin packing problem with load balance and product family concerns** : "Multi-objective 3D bin packing problem with load balance and product family concerns". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0360835221004228)
-  > 👨‍🔬 **Authors:** Erbayrak, Seda; Özkır, Vildan; Mahir Yıldırım, U. | 📅 **Year:** 2021 | 🏢 **Venue:** Comput. Ind. Eng. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **A Novel Heuristic Algorithm for Online 3D Bin Packing** : "A Novel Heuristic Algorithm for Online 3D Bin Packing". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://ieeexplore.ieee.org/document/9649790)
-  > 👨‍🔬 **Authors:** Nguyen, Thanh-Hung; Tran, Viet-Thang; Doan, Phan-Quan; Mac, Thi-Thoa | 📅 **Year:** 2021 | 🏢 **Venue:** arXiv preprint arXiv:2501.04291 <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning to Pack: A Data-Driven Tree Search Algorithm for Large-Scale 3D Bin Packing Problem** : "Learning to Pack: A Data-Driven Tree Search Algorithm for Large-Scale 3D Bin Packing Problem". [![ACM](https://img.shields.io/badge/ACM-Paper-yellow.svg)](https://dl.acm.org/doi/10.1145/3459637.3481933)
-  > 👨‍🔬 **Authors:** Zhu, Qianwen; Li, Xihan; Zhang, Zihan; Luo, Zhixing; Tong, Xialiang; Yuan, Mingxuan; Zeng, Jia | 📅 **Year:** 2021 | 🏢 **Venue:** CIKM '21: Proceedings of the 30th ACM International Conference on Information & Knowledge Managemen <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **A generalized algorithm and framework for online 3-dimensional bin packing in an automated sorting center** : "A generalized algorithm and framework for online 3-dimensional bin packing in an automated sorting center". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/document/9703142)
-  > 👨‍🔬 **Authors:** Ojha, Ankush; Agarwal, Marichi; Singhal, Aniruddha; Sarkar, Chayan; Ghosh, Supratim; Sinha, Rajesh | 📅 **Year:** 2021 | 🏢 **Venue:** Control Conference (ICC), 2019 Sixth Indian <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Attend2Pack: Bin Packing through Deep Reinforcement Learning with Attention** : "Attend2Pack: Bin Packing through Deep Reinforcement Learning with Attention". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2107.04333) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/larson-7/RL_Bpp)
+- ❤️ **Attend2Pack: Bin Packing through Deep Reinforcement Learning with Attention** [![arXiv](https://img.shields.io/badge/arXiv-2107.04333-b31b1b.svg)](https://arxiv.org/abs/2107.04333) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/larson-7/RL_Bpp)
   > 👨‍🔬 **Authors:** Jingwei Zhang, Bin Zi, Xiaoyu Ge | 📅 **Year:** 2021 | 🏢 **Venue:** arXiv preprint arXiv:2107.04333 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Solving 3D Bin Packing Problem via Multimodal Deep Reinforcement Learning** : "Solving 3D Bin Packing Problem via Multimodal Deep Reinforcement Learning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://ink.library.smu.edu.sg/sis_research/8134/)
-  > 👨‍🔬 **Authors:** Yuan Jiang, Zhiguang Cao, Jie Zhang | 📅 **Year:** 2021 | 🏢 **Venue:** Adaptive Agents and Multi-Agent Systems <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Jampacker: An Efficient and Reliable Robotic Bin Packing System for Cuboid Objects** : "Jampacker: An Efficient and Reliable Robotic Bin Packing System for Cuboid Objects". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/9286471/)
-  > 👨‍🔬 **Authors:** Marichi Agarwal; Swagata Biswas; Chayan Sarkar; Sayan Paul; Himadri Sekhar Paul | 📅 **Year:** 2021 | 🏢 **Venue:** IEEE Robot. Autom. Lett. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Low Cost Bin Picking Solution for E-Commerce Warehouse Fulfillment Centers** : "Low Cost Bin Picking Solution for E-Commerce Warehouse Fulfillment Centers". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2109.12234)
+  > 🔑 **Keywords:** 3D bin packing, Offline packing, Online packing, Attention, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline with online variant \| Single-container 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: encoded item set plus partial packing configuration \| Action: sequence agent selects the next item; placement agent selects orientation and position \| Reward: terminal bin utility / utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: attention-based sequence and placement policies \| Data: generated 3D packing instances \| Objective: maximize utilization <br>
+
+- ❤️ **Jampacker: An Efficient and Reliable Robotic Bin Packing System for Cuboid Objects** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Flra.2020.3043168-blue.svg)](https://doi.org/10.1109/lra.2020.3043168)
+  > 👨‍🔬 **Authors:** Marichi Agarwal; Swagata Biswas; Chayan Sarkar; Sayan Paul; Himadri Sekhar Paul | 📅 **Year:** 2021 | 🏢 **Venue:** IEEE Robotics and Automation Letters <br>
+  > 🔑 **Keywords:** Robotic packing, 3D bin packing, Cuboids, Fault recovery, Corner points <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robotic packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: internal-corner-point placement with execution monitoring and recovery \| Data: simulation and real-robot box trials \| Objective: maximize utilization and execution reliability <br>
+
+- ❤️ **Learning Efficient Online 3D Bin Packing on Packing Configuration Trees** [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/forum?id=bfuGjlCwAq) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/alexfrom0815/Online-3D-BPP-PCT)
+  > 👨‍🔬 **Authors:** Zhao, Hang; Yu, Yang; Xu, Kai | 📅 **Year:** 2021 | 🏢 **Venue:** ICLR <br>
+  > 🔑 **Keywords:** Online packing, 3D bin packing, Packing configuration tree, Deep reinforcement learning, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container sequential 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: packing-configuration tree for the current bin and incoming item \| Action: choose a feasible tree node / placement \| Reward: incremental packed volume and terminal utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: packing-configuration-tree reinforcement learning \| Data: generated streams and constrained benchmark variants \| Objective: maximize utilization under practical constraints <br>
+
+- ❤️ **Learning to Pack: A Data-Driven Tree Search Algorithm for Large-Scale 3D Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3459637.3481933-blue.svg)](https://doi.org/10.1145/3459637.3481933)
+  > 👨‍🔬 **Authors:** Qianwen Zhu; Xihan Li; Zihan Zhang; Zhixing Luo; Xialiang Tong; Mingxuan Yuan; Jia Zeng | 📅 **Year:** 2021 | 🏢 **Venue:** CIKM '21: Proceedings of the 30th ACM International Conference on Information & Knowledge Management <br>
+  > 🔑 **Keywords:** 3D bin packing, Tree search <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Large-scale 3D container loading \| Heterogeneous cuboid cargo <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: CNN-guided tree search \| Data: large-scale Huawei industrial orders plus synthetic instances \| Objective: maximize loading rate <br>
+
+- ❤️ **Low Cost Bin Picking Solution for E-Commerce Warehouse Fulfillment Centers** [![arXiv](https://img.shields.io/badge/arXiv-2109.12234-b31b1b.svg)](https://arxiv.org/abs/2109.12234)
   > 👨‍🔬 **Authors:** Avnish Gupta, Akash Jadhav, Pradyot VN Korupolu | 📅 **Year:** 2021 | 🏢 **Venue:** arXiv preprint arXiv:2109.12234 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **One model Packs Thousands of Items with Recurrent Conditional Query Learning** : "One model Packs Thousands of Items with Recurrent Conditional Query Learning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S095070512100945X)
-  > 👨‍🔬 **Authors:** Dongda Li, Zhaoquan Gu, Yuexuan Wang, Changwei Ren, Francis C. M. Lau | 📅 **Year:** 2021 | 🏢 **Venue:** Knowl.-Based Syst. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Dense robot packing of irregular and novel 3D object** : "Dense robot packing of irregular and novel 3D object". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/9505314/)
-  > 👨‍🔬 **Authors:** F Wang, K Hauser | 📅 **Year:** 2021 | 🏢 **Venue:** IEEE Trans. Robot. <br>
-  > 🔑 **Keywords:** Dense packing, Irregular objects, Novel objects, Robotic packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Deep Reinforcement Learning for Packaging Optimization** : "Deep Reinforcement Learning for Packaging Optimization". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://queensu.scholaris.ca/bitstreams/81730d80-05bc-45cd-a19b-5632b52c616f/download)
-  > 👨‍🔬 **Authors:** EC Dowdell | 📅 **Year:** 2021 | 🏢 **Venue:** Queen's University <br>
-  > 🔑 **Keywords:** DRL, Packaging optimization, Optimization methods <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Towards Online 3D Bin Packing: Learning Synergies between Packing and Unpacking via DRL** : "Towards Online 3D Bin Packing: Learning Synergies between Packing and Unpacking via DRL". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://proceedings.mlr.press/v205/song23a.html)
-  > 👨‍🔬 **Authors:** Shuai Song, Shuo Yang, Ran Song, Shilei Chu, yibin Li, Wei Zhang | 📅 **Year:** 2022 | 🏢 **Venue:** Knowl.-Based Syst. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Online 3D Bin Packing Reinforcement Learning Solution with Buffer** : "Online 3D Bin Packing Reinforcement Learning Solution with Buffer". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/9982095/)
-  > 👨‍🔬 **Authors:** Aaron Valero Puche, Sukhan Lee | 📅 **Year:** 2022 | 🏢 **Venue:** ACM Trans. Graph. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Planning irregular object packing via hierarchical reinforcement learning** : "Planning irregular object packing via hierarchical reinforcement learning". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2211.09382) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Chiba9/Irregular-Object-Packing)
-  > 👨‍🔬 **Authors:** S Huang, Z Wang, J Zhou, J Lu | 📅 **Year:** 2022 | 🏢 **Venue:** arXiv <br>
-  > 🔑 **Keywords:** Hierarchical RL, Irregular object packing, Sequence planning, Placement planning <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Robot online 3D bin packing strategy based on deep reinforcement learning and 3D vision** : "Robot online 3D bin packing strategy based on deep reinforcement learning and 3D vision". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10004170/)
-  > 👨‍🔬 **Authors:** J Jia, H Shang, X Chen | 📅 **Year:** 2022 | 🏢 **Venue:** IEEE International Conference on Robotics and Biomimetics <br>
-  > 🔑 **Keywords:** DRL, 3D vision, MCTS, Online 3D bin packing, Actor-Critic <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Planning Irregular Object Packing via Hierarchical Reinforcement Learning** : "Planning Irregular Object Packing via Hierarchical Reinforcement Learning". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/document/9954127) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Chiba9/Irregular-Object-Packing)
-  > 👨‍🔬 **Authors:** Huang, Sichao; Wang, Ziwei; Zhou, Jie; Lu, Jiwen | 📅 **Year:** 2023 | 🏢 **Venue:** IEEE Robot. Autom. Lett. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning to Solve 3-D Bin Packing Problem via Deep Reinforcement Learning and Constraint Programming** : "Learning to Solve 3-D Bin Packing Problem via Deep Reinforcement Learning and Constraint Programming". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/9606618/)
-  > 👨‍🔬 **Authors:** Jiang, Yuan; Cao, Zhiguang; Zhang, Jie | 📅 **Year:** 2023 | 🏢 **Venue:** IEEE Trans. Cybern. <br>
-  > 🔑 **Keywords:** Physics-based RL in Simulated Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Online Bin Packing with Predictions** : "Online Bin Packing with Predictions". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.jair.org/index.php/jair/article/view/14820)
-  > 👨‍🔬 **Authors:** Angelopoulos, Spyros; Kamali, Shahin; Shadkami, Kimia | 📅 **Year:** 2023 | 🏢 **Venue:** J. Artif. Intell. Res. <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Adjustable Robust Reinforcement Learning for Online 3D Bin Packing** : "Adjustable Robust Reinforcement Learning for Online 3D Bin Packing". [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/a345ed605675c7c484e740a8ceaa6b45-Abstract-Conference.html) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/panyxy/ar2l_bpp)
-  > 👨‍🔬 **Authors:** Pan, Yuxin; Chen, Yize; Lin, Fangzhen | 📅 **Year:** 2023 | 🏢 **Venue:** NeurIPS <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Towards Online 3D Bin Packing: Learning Synergies between Packing and Unpacking via DRL** : "Towards Online 3D Bin Packing: Learning Synergies between Packing and Unpacking via DRL". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://proceedings.mlr.press/v205/song23a.html)
-  > 👨‍🔬 **Authors:** Song, Shuai; Yang, Shuo; Song, Ran; Chu, Shilei; Li, Yibin; Zhang, Wei | 📅 **Year:** 2023 | 🏢 **Venue:** CoRL 2023 <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Towards reliable robot packing system based on deep reinforcement learning** : "Towards reliable robot packing system based on deep reinforcement learning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S1474034623001568)
-  > 👨‍🔬 **Authors:** Xiong, Heng; Ding, Kai; Ding, Wan; Peng, Jian; Xu, Jianfeng | 📅 **Year:** 2023 | 🏢 **Venue:** Adv. Eng. Inform. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning Physically Realizable Skills for Online Packing of General 3D Shapes** : "Learning Physically Realizable Skills for Online Packing of General 3D Shapes". [![ACM](https://img.shields.io/badge/ACM-Paper-yellow.svg)](https://dl.acm.org/doi/abs/10.1145/3603544) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/alexfrom0815/IR-BPP)
-  > 👨‍🔬 **Authors:** Hang Zhao, Zherong Pan, Yang Yu, Kai Xu | 📅 **Year:** 2023 | 🏢 **Venue:** ACM Trans. Graph. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **SDF-Pack: Towards Compact Bin Packing with Signed-Distance-Field Minimization** : "SDF-Pack: Towards Compact Bin Packing with Signed-Distance-Field Minimization". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/document/10341940) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/kwpoon/SDF-Pack)
-  > 👨‍🔬 **Authors:** Jia-Hui Pan, Ka-Hei Hui, Xiaojie Gao, Shize Zhu, Yun-Hui Liu, Pheng-Ann Heng, Chi-Wing Fu | 📅 **Year:** 2023 | 🏢 **Venue:** IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Solving 3D packing problem using Transformer network and reinforcement learning** : "Solving 3D packing problem using Transformer network and reinforcement learning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0957417422021716)
-  > 👨‍🔬 **Authors:** Quanqing Que , Fang Yang , Defu Zhang | 📅 **Year:** 2023 | 🏢 **Venue:** Expert Syst. Appl. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Adjustable Robust Reinforcement Learning for Online 3D Bin Packing** : "Adjustable Robust Reinforcement Learning for Online 3D Bin Packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/a345ed605675c7c484e740a8ceaa6b45-Abstract-Conference.html) [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://github.com/panyxy/ar2l_bpp)
-  > 👨‍🔬 **Authors:** Yuxin Pan, Yize Chen, Fangzhen Lin | 📅 **Year:** 2023 | 🏢 **Venue:** NeurIPS <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **FamiPacking: a diffusion model for guiding 3D bin packing** : "FamiPacking: a diffusion model for guiding 3D bin packing". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10461157/)
-  > 👨‍🔬 **Authors:** C. -J. Peng National Yang Ming Chiao Tung University, Hsinchu, Taiwan ; L. Lo; H. Xie; C. -C. Chiu; W. -H. Hsueh; S. -C. Huang | 📅 **Year:** 2023 | 🏢 **Venue:** arXiv preprint arXiv:2505.13339 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Compliant-based robotic 3D bin packing with unavoidable uncertainties** : "Compliant-based robotic 3D bin packing with unavoidable uncertainties". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/cth2.12432)
-  > 👨‍🔬 **Authors:** Wei Shuai, Yang Gao, Peichen Wu, Guowei Cui, Qinghao Zhuang, Rongya Chen, Xiaoping Chen | 📅 **Year:** 2023 | 🏢 **Venue:** IET Control Theory Appl. <br>
-  > 🔑 **Keywords:** Reinforcement learning, Curriculum learning, Container loading, PPO <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **The 3D bin packing problem for multiple boxes and irregular items based on deep Q-network** : "The 3D bin packing problem for multiple boxes and irregular items based on deep Q-network". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/article/10.1007/s10489-023-04604-6)
-  > 👨‍🔬 **Authors:** H Liu, L Zhou, J Yang, J Zhao | 📅 **Year:** 2023 | 🏢 **Venue:** Appl. Intell. <br>
-  > 🔑 **Keywords:** DQN, Multiple boxes, Irregular items, 3D bin packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning to multi-vehicle cooperative bin packing problem via sequence-to-sequence policy network with deep reinforcement learning model** : "Learning to multi-vehicle cooperative bin packing problem via sequence-to-sequence policy network with deep reinforcement learning model". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0360835223000220)
-  > 👨‍🔬 **Authors:** R Tian, C Kang, J Bi, Z Ma, Y Liu, S Yang | 📅 **Year:** 2023 | 🏢 **Venue:** Comput. Ind. Eng. <br>
-  > 🔑 **Keywords:** Multi-vehicle, Cooperative bin packing, Seq2Seq, DRL <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Think inside the box: 3D bin packing visualized with spatial AR and automated depth feedback** : "Think inside the box: 3D bin packing visualized with spatial AR and automated depth feedback". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.diva-portal.org/smash/record.jsf?pid=diva2:1801204)
+  > 🔑 **Keywords:** Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Scope-adjacent bin picking/perception \| Not a packing policy \| General objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: point cloud, vision \| Stability: geometric non-overlap only \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported benchmark/synthetic instances \| Objective: estimate 6D object poses <br>
+
+- ❤️ **Multi-objective 3D bin packing problem with load balance and product family concerns** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cie.2021.107518-blue.svg)](https://doi.org/10.1016/j.cie.2021.107518)
+  > 👨‍🔬 **Authors:** Seda Erbayrak; Vildan Özkır; U. Mahir Yıldırım | 📅 **Year:** 2021 | 🏢 **Venue:** Computers & Industrial Engineering <br>
+  > 🔑 **Keywords:** 3D bin packing, Container loading, Cuboids, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D packing with balance and product-family constraints \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: multi-objective mixed-integer programming \| Data: numerical and generated test instances \| Objective: minimize bin count and balance deviation while maximizing family unity <br>
+
+- ❤️ **Online 3D Bin Packing with Constrained Deep Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.1609%2Faaai.v35i1.16155-blue.svg)](https://doi.org/10.1609/aaai.v35i1.16155) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/alexfrom0815/Online-3D-BPP-DRL)
+  > 👨‍🔬 **Authors:** Hang Zhao; Qijin She; Chenyang Zhu; Yin Yang; Kai Xu | 📅 **Year:** 2021 | 🏢 **Venue:** Proceedings of the AAAI Conference on Artificial Intelligence <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Deep reinforcement learning, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container sequential 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height map plus current/lookahead item dimensions \| Action: choose a feasible 2D placement (orientation in the extension) \| Reward: placed-volume fraction / final space utilization; feasibility handled as a constraint mask <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: RGB-D/depth \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: constrained deep reinforcement learning with feasibility masks \| Data: generated streams and paper-reported benchmarks \| Objective: maximize utilization subject to geometric/physical feasibility <br>
+
+- ❤️ **Robot Packing With Known Items and Nondeterministic Arrival Order** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ftase.2020.3024291-blue.svg)](https://doi.org/10.1109/tase.2020.3024291)
+  > 👨‍🔬 **Authors:** Fan Wang; Kris Hauser | 📅 **Year:** 2021 | 🏢 **Venue:** IEEE Transactions on Automation Science and Engineering <br>
+  > 🔑 **Keywords:** Online packing, Irregular objects, Robotic packing, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container geometric packing \| Irregular/general 3D objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: robot manipulator, collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported benchmark/synthetic instances \| Objective: maintain stability <br>
+
+- ❤️ **Robotic Pick-and-Place With Uncertain Object Instance Segmentation and Shape Completion** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Flra.2021.3060669-blue.svg)](https://doi.org/10.1109/lra.2021.3060669)
+  > 👨‍🔬 **Authors:** Marcus Gualtieri; Robert Platt | 📅 **Year:** 2021 | 🏢 **Venue:** IEEE Robotics and Automation Letters <br>
+  > 🔑 **Keywords:** Scope-adjacent, Robotic pick-and-place, Instance segmentation, Shape completion, Regrasp planning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Scope-adjacent manipulation \| Uncertainty-aware pick-place and regrasp planning, not a packing policy \| General objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (uncertainty-aware regrasp planning, not RL) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: RGB-D instance segmentation and shape completion \| Stability: grasp/place uncertainty model \| Execution: robot-manipulator regrasp planning <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: uncertainty-aware perception and regrasp planning \| Data: simulated and physical manipulation scenes \| Objective: improve pick-place success under uncertain object shape <br>
+
+- ❤️ **Solving 3D Bin Packing Problem via Multimodal Deep Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.65109%2Fuxma6584-blue.svg)](https://doi.org/10.65109/uxma6584)
+  > 👨‍🔬 **Authors:** Yuan Jiang; Zhiguang Cao; Jie Zhang | 📅 **Year:** 2021 | 🏢 **Venue:** International Joint Conference on Autonomous Agents and Multiagent Systems <br>
+  > 🔑 **Keywords:** 3D bin packing, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single variable-height/large 3D container \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: box-sequence features plus CNN-encoded spatial view state \| Action: sequentially choose item, orientation, and position \| Reward: utilization-based return optimized with A2C/GAE <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: multimodal deep reinforcement learning for sequence, orientation, and position \| Data: generated instances up to 100+ boxes \| Objective: maximize utilization / minimize packing height <br>
+
+- ❤️ **Dense Robotic Packing of Irregular and Novel 3D Objects** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ftro.2021.3097261-blue.svg)](https://doi.org/10.1109/tro.2021.3097261)
+  > 👨‍🔬 **Authors:** Fan Wang; Kris Hauser | 📅 **Year:** 2022 | 🏢 **Venue:** IEEE Transactions on Robotics <br>
+  > 🔑 **Keywords:** Robotic packing, Irregular objects, 3D vision, Stability, Novel objects <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container robotic packing \| Irregular and previously unseen rigid 3D objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: height map \| Stability: explicit stability checks \| Execution: collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: geometry- and stability-aware robotic packing pipeline \| Data: simulated objects and real-robot trials \| Objective: maximize compactness and stable placement success <br>
+
+- ❤️ **Learning practically feasible policies for online 3D bin packing** [![DOI](https://img.shields.io/badge/DOI-10.1007%2Fs11432-021-3348-6-blue.svg)](https://doi.org/10.1007/s11432-021-3348-6)
+  > 👨‍🔬 **Authors:** Hang Zhao; Chenyang Zhu; Xin Xu; Hui Huang; Kai Xu | 📅 **Year:** 2022 | 🏢 **Venue:** Science China Information Sciences <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Deep reinforcement learning, Robotic packing, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container sequential 3D packing with practical constraints \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height map and current item \| Action: choose a feasibility-masked placement and orientation \| Reward: packed-volume utilization with penalties/constraints for infeasible placements <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: robot manipulator, collision/reachability constraints, palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: feasibility-constrained deep reinforcement learning \| Data: generated streams and real-system constraints \| Objective: maximize utilization while ensuring executable placements <br>
+
+- ❤️ **One model packs thousands of items with Recurrent Conditional Query Learning** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.knosys.2021.107683-blue.svg)](https://doi.org/10.1016/j.knosys.2021.107683)
+  > 👨‍🔬 **Authors:** Dongda Li; Zhaoquan Gu; Yuexuan Wang; Changwei Ren; Francis C.M. Lau | 📅 **Year:** 2022 | 🏢 **Venue:** Knowledge-Based Systems <br>
+  > 🔑 **Keywords:** 2D packing, 3D bin packing, Recurrent conditional query learning, Offline packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container 2D/3D geometric packing \| Rectangles and cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: recurrent conditional query learning \| Data: generated instances containing up to thousands of items \| Objective: maximize utilization at large scale <br>
+
+- ❤️ **Online 3D Bin Packing Reinforcement Learning Solution with Buffer** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Firos47612.2022.9982095-blue.svg)](https://doi.org/10.1109/iros47612.2022.9982095)
+  > 👨‍🔬 **Authors:** Aaron Valero Puche; Sukhan Lee | 📅 **Year:** 2022 | 🏢 **Venue:** 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with finite buffer \| Single-container sequential 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height map, current item, and buffer state \| Action: place the item or defer it to the buffer \| Reward: placed volume minus wasted-space cost <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: buffer-aware deep reinforcement learning \| Data: generated online streams \| Objective: maximize utilization and reduce wasted space <br>
+
+- ❤️ **Robot Online 3D Bin Packing Strategy Based on Deep Reinforcement Learning and 3D Vision** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ficnsc55942.2022.10004170-blue.svg)](https://doi.org/10.1109/icnsc55942.2022.10004170)
+  > 👨‍🔬 **Authors:** Jie Jia; Huiliang Shang; Xiong Chen | 📅 **Year:** 2022 | 🏢 **Venue:** 2022 IEEE International Conference on Networking, Sensing and Control (ICNSC) <br>
+  > 🔑 **Keywords:** Online packing, Robotic palletization, 3D vision, Deep reinforcement learning, Monte Carlo tree search <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with lookahead \| Robotic pallet loading \| Rigid cartons <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: 3D-vision object features plus packing-configuration tree \| Action: choose a feasible placement node and orientation \| Reward: packed-volume / space utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: point-cloud size/pose estimation \| Stability: packing-configuration-tree feasibility \| Execution: intelligent palletizing robot <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: Actor-Critic plus Monte Carlo tree search on a packing configuration tree \| Data: simulated and physical palletizing trials \| Objective: maximize utilization and robust execution <br>
+
+- ❤️ **Towards Online 3D Bin Packing: Learning Synergies between Packing and Unpacking via DRL** [![Paper](https://img.shields.io/badge/Paper-Link-4682B4.svg)](https://proceedings.mlr.press/v205/song23a.html)
+  > 👨‍🔬 **Authors:** Shuai Song, Shuo Yang, Ran Song, Shilei Chu, yibin Li, Wei Zhang | 📅 **Year:** 2022 | 🏢 **Venue:** Knowl.-Based Syst <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robotic packing with corrective unpacking \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current bin configuration plus incoming/buffered items \| Action: pack an item or unpack/reorder placed items \| Reward: compactness/utilization with invalid-action penalties <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: synergistic pack/unpack deep reinforcement learning \| Data: simulated streams and robot evaluation \| Objective: improve utilization and recover from poor placements <br>
+
+- ❤️ **Adjustable Robust Reinforcement Learning for Online 3D Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.52202%2F075280-2262-blue.svg)](https://doi.org/10.52202/075280-2262) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/panyxy/ar2l_bpp)
+  > 👨‍🔬 **Authors:** Yuxin Pan; Yize Chen; Fangzhen Lin | 📅 **Year:** 2023 | 🏢 **Venue:** Advances in Neural Information Processing Systems 36 <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Dynamic packing, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with adjustable robustness \| Single-container sequential 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: packed items, observed incoming items, and potential placement positions \| Action: select an observed item and feasible placement \| Reward: weighted expected and worst-case utilization returns <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: adjustable robust reinforcement learning \| Data: generated online streams and paper-reported real distributions \| Objective: balance expected and worst-case utilization <br>
+
+- ❤️ **Compliant‐based robotic 3D bin packing with unavoidable uncertainties** [![DOI](https://img.shields.io/badge/DOI-10.1049%2Fcth2.12432-blue.svg)](https://doi.org/10.1049/cth2.12432)
+  > 👨‍🔬 **Authors:** Wei Shuai; Yang Gao; Peichen Wu; Guowei Cui; Qinghao Zhuang; Rongya Chen; Xiaoping Chen | 📅 **Year:** 2023 | 🏢 **Venue:** IET Control Theory & Applications <br>
+  > 🔑 **Keywords:** Online packing, Robotic packing, 3D bin packing, Deformed boxes, Compliance, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robotic packing under perception/planning/execution uncertainty \| Deformed cuboid cases <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: low-cost depth sensing and box geometry \| Stability: close-contact/friction strategy \| Execution: compliant end-effector and contact-rich robot motion <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: EMS candidate placement plus dense/deviation-tolerant stacking and compliant motion planning \| Data: simulation and 30 physical packing trials \| Objective: maintain stability, robustness, and high utilization under uncertainty <br>
+
+- ❤️ **Learning Based 2D Irregular Shape Packing** [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3618348-blue.svg)](https://doi.org/10.1145/3618348)
+  > 👨‍🔬 **Authors:** Zeshi Yang; Zherong Pan; Manyi Li; Kui Wu; Xifeng Gao | 📅 **Year:** 2023 | 🏢 **Venue:** ACM Transactions on Graphics <br>
+  > 🔑 **Keywords:** 2D irregular packing, Irregular polygons, Learning-based packing, Offline packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-sheet/atlas 2D irregular packing \| Irregular polygons <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: learning-assisted irregular-shape grouping and placement \| Data: paper-reported polygon datasets \| Objective: maximize packing ratio <br>
+
+- ❤️ **Learning Physically Realizable Skills for Online Packing of General 3D Shapes** [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3603544-blue.svg)](https://doi.org/10.1145/3603544) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/alexfrom0815/IR-BPP)
+  > 👨‍🔬 **Authors:** Hang Zhao; Zherong Pan; Yang Yu; Kai Xu | 📅 **Year:** 2023 | 🏢 **Venue:** ACM Transactions on Graphics <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container geometric packing \| Irregular/general 3D objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: RGB-D/depth \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported benchmark/synthetic instances \| Objective: optimize paper-defined packing performance <br>
+
+- ❤️ **Learning to multi-vehicle cooperative bin packing problem via sequence-to-sequence policy network with deep reinforcement learning model** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cie.2023.108998-blue.svg)](https://doi.org/10.1016/j.cie.2023.108998)
+  > 👨‍🔬 **Authors:** Ran Tian; Chunming Kang; Jiaming Bi; Zhongyu Ma; Yanxing Liu; Saisai Yang; Fangfang Li | 📅 **Year:** 2023 | 🏢 **Venue:** Computers & Industrial Engineering <br>
+  > 🔑 **Keywords:** 3D bin packing, Multi-vehicle loading, Deep reinforcement learning, Sequence-to-sequence <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Cooperative multi-vehicle 3D loading \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: remaining item sequence and current multi-vehicle load state \| Action: choose the next item in the packing sequence; placement uses LBPS/MVCBPS \| Reward: cumulative packed volume / average vehicle utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: sequence-to-sequence policy plus LBPS/MVCBPS placement \| Data: generated multi-vehicle instances \| Objective: maximize average vehicle utilization <br>
+
+- ❤️ **Learning to Solve 3-D Bin Packing Problem via Deep Reinforcement Learning and Constraint Programming** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ftcyb.2021.3121542-blue.svg)](https://doi.org/10.1109/tcyb.2021.3121542)
+  > 👨‍🔬 **Authors:** Yuan Jiang; Zhiguang Cao; Jie Zhang | 📅 **Year:** 2023 | 🏢 **Venue:** IEEE Transactions on Cybernetics <br>
+  > 🔑 **Keywords:** 3D bin packing, Deep reinforcement learning, Constraint programming, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single variable-height 3D container \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: box-sequence state plus CNN-encoded spatial view state \| Action: sequentially choose item, orientation, and position \| Reward: utilization-based return; constraint programming refines the DRL solution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: multimodal deep reinforcement learning refined by constraint programming \| Data: generated and standard benchmark instances \| Objective: maximize utilization and minimize packing height <br>
+
+- ❤️ **Online Bin Packing with Predictions** [![DOI](https://img.shields.io/badge/DOI-10.1613%2Fjair.1.14820-blue.svg)](https://doi.org/10.1613/jair.1.14820)
+  > 👨‍🔬 **Authors:** Spyros Angelopoulos; Shahin Kamali; Kimia Shadkami | 📅 **Year:** 2023 | 🏢 **Venue:** Journal of Artificial Intelligence Research <br>
+  > 🔑 **Keywords:** Online packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with predictions \| Multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported benchmark/synthetic instances \| Objective: minimize bin count <br>
+
+- ❤️ **Planning Irregular Object Packing via Hierarchical Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Flra.2022.3222996-blue.svg)](https://doi.org/10.1109/lra.2022.3222996) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Chiba9/Irregular-Object-Packing)
+  > 👨‍🔬 **Authors:** Sichao Huang; Ziwei Wang; Jie Zhou; Jiwen Lu | 📅 **Year:** 2023 | 🏢 **Venue:** IEEE Robotics and Automation Letters <br>
+  > 🔑 **Keywords:** 3D packing, Irregular objects, Hierarchical reinforcement learning, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container 3D packing \| Irregular rigid objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: irregular-object geometry and current container configuration \| Action: hierarchical object/region selection followed by placement pose \| Reward: compactness and physical stability <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: height map \| Stability: explicit stability checks \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: hierarchical reinforcement learning for object/region/pose decisions \| Data: simulated irregular-object sets \| Objective: maximize compactness while preserving stability <br>
+
+- ❤️ **SDF-Pack: Towards Compact Bin Packing with Signed-Distance-Field Minimization** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Firos55552.2023.10341940-blue.svg)](https://doi.org/10.1109/iros55552.2023.10341940) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/kwpoon/SDF-Pack)
+  > 👨‍🔬 **Authors:** Jia-Hui Pan; Ka-Hei Hui; Xiaojie Gao; Shize Zhu; Yun-Hui Liu; Pheng-Ann Heng; Chi-Wing Fu | 📅 **Year:** 2023 | 🏢 **Venue:** 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) <br>
+  > 🔑 **Keywords:** 3D packing, Irregular objects, Signed-distance field, Optimization <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container/open-dimension 3D packing \| General irregular rigid objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: height map, signed-distance field \| Stability: geometric non-overlap only \| Execution: robot manipulator, collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: signed-distance-field minimization \| Data: simulated mesh-object sets \| Objective: maximize compactness / minimize occupied container volume <br>
+
+- ❤️ **Solving 3D packing problem using Transformer network and reinforcement learning** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.eswa.2022.119153-blue.svg)](https://doi.org/10.1016/j.eswa.2022.119153)
+  > 👨‍🔬 **Authors:** Quanqing Que; Fang Yang; Defu Zhang | 📅 **Year:** 2023 | 🏢 **Venue:** Expert Systems with Applications <br>
+  > 🔑 **Keywords:** 3D packing, Transformer, Deep reinforcement learning, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single variable-height 3D container \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: multi-plane container features plus remaining-box features \| Action: choose box, orientation, and placement position \| Reward: reduction in unused-volume/gap ratio <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: Transformer policy optimized with reinforcement learning \| Data: generated cuboid instances \| Objective: minimize gap ratio and packing height <br>
+
+- ❤️ **Think inside the box: 3D bin packing visualized with spatial AR and automated depth feedback** [![Paper](https://img.shields.io/badge/Paper-Link-4682B4.svg)](https://www.diva-portal.org/smash/record.jsf?pid=diva2:1801204)
   > 👨‍🔬 **Authors:** K Wihl | 📅 **Year:** 2023 | 🏢 **Venue:** DiVA <br>
-  > 🔑 **Keywords:** Spatial AR, Depth feedback, 3D bin packing, Visualization <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **World-Model-Based Control for Industrial box-packing of Multiple Objects using NewtonianVAE** : "World-Model-Based Control for Industrial box-packing of Multiple Objects using NewtonianVAE". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2308.02136)
+  > 🔑 **Keywords:** 3D bin packing, Spatial augmented reality, Human-in-the-loop, Depth feedback <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline plan with interactive execution \| Human-assisted single-container packing \| Rigid cuboids/consumer goods <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: depth feedback and spatial AR \| Stability: plan-defined geometric support \| Execution: human placement guided by projected feedback <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: precomputed 3D packing plan with spatial-AR/depth guidance \| Data: physical user packing trials \| Objective: improve placement accuracy and realized fit <br>
+
+- ❤️ **Towards reliable robot packing system based on deep reinforcement learning** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.aei.2023.102028-blue.svg)](https://doi.org/10.1016/j.aei.2023.102028)
+  > 👨‍🔬 **Authors:** Heng Xiong; Kai Ding; Wan Ding; Jian Peng; Jianfeng Xu | 📅 **Year:** 2023 | 🏢 **Venue:** Advanced Engineering Informatics <br>
+  > 🔑 **Keywords:** Online packing, Robotic packing, Deep reinforcement learning, Stability, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robotic packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height map, current item, and learned feasibility mask \| Action: choose placement position and orientation \| Reward: utilization with infeasible/unsafe-placement penalties <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: feasibility-masked deep reinforcement learning \| Data: simulation and robot packing trials \| Objective: maximize utilization and reliable placement success <br>
+
+- ❤️ **World-Model-Based Control for Industrial box-packing of Multiple Objects using NewtonianVAE** [![arXiv](https://img.shields.io/badge/arXiv-2308.02136-b31b1b.svg)](https://arxiv.org/abs/2308.02136)
   > 👨‍🔬 **Authors:** Y Kato, R Okumura, T Taniguchi | 📅 **Year:** 2023 | 🏢 **Venue:** arXiv <br>
-  > 🔑 **Keywords:** World model, NewtonianVAE, Industrial box-packing, Multiple objects <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **GOPT: Generalizable Online 3D Bin Packing via Transformer-Based Deep Reinforcement Learning** : "GOPT: Generalizable Online 3D Bin Packing via Transformer-Based Deep Reinforcement Learning". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10694688/) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Xiong5Heng/GOPT)
-  > 👨‍🔬 **Authors:** Xiong, Heng; Guo, Changrong; Peng, Jian; Ding, Kai; Chen, Wenjie; Qiu, Xuchong; Bai, Long; Xu, Jianfeng | 📅 **Year:** 2024 | 🏢 **Venue:** IEEE Robot. Autom. Lett. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Pattern based learning and optimisation through pricing for bin packing problem** : "Pattern based learning and optimisation through pricing for bin packing problem". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2409.04456)
-  > 👨‍🔬 **Authors:** Zhang, Huayan; Bai, Ruibin; Liu, Tie-Yan; Li, Jiawei; Lin, Bingchen; Ren, Jianfeng | 📅 **Year:** 2024 | 🏢 **Venue:** arXiv preprint arXiv:2409.04456 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Heuristics Integrated Deep Reinforcement Learning for Online 3D Bin Packing** : "Heuristics Integrated Deep Reinforcement Learning for Online 3D Bin Packing". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10018146/)
-  > 👨‍🔬 **Authors:** Yang, Shuo; Song, Shuai; Chu, Shilei; Song, Ran; Cheng, Jiyu; Li, Yibin; Zhang, Wei | 📅 **Year:** 2024 | 🏢 **Venue:** IEEE Trans. Autom. Sci. Eng. <br>
-  > 🔑 **Keywords:** Physics-based RL in Simulated Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Solving Offline 3D Bin Packing Problem with Large-sized Bin via Two-stage Deep Reinforcement Learning** : "Solving Offline 3D Bin Packing Problem with Large-sized Bin via Two-stage Deep Reinforcement Learning". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://ifmas.csc.liv.ac.uk/Proceedings/aamas2024/pdfs/p2576.pdf)
-  > 👨‍🔬 **Authors:** Hao Yin, Fan Chen, Hongjie He | 📅 **Year:** 2024 | 🏢 **Venue:** Eur. J. Oper. Res. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Efficient Reinforcement Learning of Task Planners for Robotic Palletization through Iterative Action Masking Learning** : "Efficient Reinforcement Learning of Task Planners for Robotic Palletization through Iterative Action Masking Learning". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10631682/)
-  > 👨‍🔬 **Authors:** Zheng Wu  Yichuan Li  Wei Zhan  Changliu Liu Yun-Hui Liu Masayoshi Tomizuka | 📅 **Year:** 2024 | 🏢 **Venue:** IEEE Robot. Autom. Lett. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **3D dynamic heterogeneous robotic palletization problem** : "3D dynamic heterogeneous robotic palletization problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0377221724000985)
-  > 👨‍🔬 **Authors:** Wenbin Zhu a ,  Ying Fu a b ,  You Zhou a c | 📅 **Year:** 2024 | 🏢 **Venue:** Eur. J. Oper. Res. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Simulation-Assisted Learning for Efficient Bin-Packing of Deformable Packages in a Bimanual Robotic Cell** : "Simulation-Assisted Learning for Efficient Bin-Packing of Deformable Packages in a Bimanual Robotic Cell". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10802246/)  [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/RROS-Lab/IROS2024-Bin-Packing)
-  > 👨‍🔬 **Authors:** Omey M. Manyar∗1 , Hantao Ye∗1 , Meghana Sagare1 , Siddharth Mayya2 , Fan Wang2 , and Satyandra K. Gupta1 | 📅 **Year:** 2024 | 🏢 **Venue:** arXiv preprint arXiv:2512.04415 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **An efficient DRL model for online 3D bin packing combining object rearrangement and stable placement** : "An efficient DRL model for online 3D bin packing combining object rearrangement and stable placement". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10773090/)
+  > 🔑 **Keywords:** Robotic packing, World model, NewtonianVAE, Vision, Industrial objects <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Sequential \| Single-box industrial robotic packing \| Multiple regular manufactured objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: in-hand RGB vision and learned world state \| Stability: learned Newtonian dynamics representation \| Execution: robot-manipulator placement control <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: NewtonianVAE world-model-based control \| Data: physical multi-object box-packing trials \| Objective: improve placement accuracy and task success <br>
+
+- ❤️ **3D dynamic heterogeneous robotic palletization problem** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ejor.2024.02.007-blue.svg)](https://doi.org/10.1016/j.ejor.2024.02.007)
+  > 👨‍🔬 **Authors:** Wenbin Zhu; Ying Fu; You Zhou | 📅 **Year:** 2024 | 🏢 **Venue:** European Journal of Operational Research <br>
+  > 🔑 **Keywords:** 3D bin packing, Dynamic packing, Palletization, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Dynamic \| Pallet loading \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: robot manipulator, gripper constraints, collision/reachability constraints, palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported benchmark/synthetic instances \| Objective: optimize paper-defined packing performance <br>
+
+- ❤️ **A Dynamic Multi-modal deep Reinforcement Learning framework for 3D Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.knosys.2024.111990-blue.svg)](https://doi.org/10.1016/j.knosys.2024.111990)
+  > 👨‍🔬 **Authors:** Anhao Zhao; Tianrui Li; Liangcai Lin | 📅 **Year:** 2024 | 🏢 **Venue:** Knowledge-Based Systems <br>
+  > 🔑 **Keywords:** 3D bin packing, Dynamic packing, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/dynamic \| Single variable-height 3D container \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: dynamic box features plus gradient height map \| Action: choose box and orientation; placement is heuristic \| Reward: stepwise reduction in bin gap ratio <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: height map \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: dynamic multimodal deep reinforcement learning with heuristic placement \| Data: generated cuboid instances \| Objective: minimize gap ratio and packing height <br>
+
+- ❤️ **An efficient DRL model for online 3D bin packing combining object rearrangement and stable placement** [![arXiv](https://img.shields.io/badge/arXiv-2408.09694-b31b1b.svg)](https://arxiv.org/abs/2408.09694)
   > 👨‍🔬 **Authors:** P Zhou, Z Gao, C Li, NY Chong | 📅 **Year:** 2024 | 🏢 **Venue:** IEEE International Conference on Automation Science and Engineering <br>
-  > 🔑 **Keywords:** DRL, Online 3D bin packing, Object rearrangement, Stable placement <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Solving offline 3D bin packing problem with large-sized bin via two-stage DRL** : "Solving offline 3D bin packing problem with large-sized bin via two-stage DRL". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://ifmas.csc.liv.ac.uk/Proceedings/aamas2024/pdfs/p2576.pdf)
-  > 👨‍🔬 **Authors:** H Yin, F Chen, H He | 📅 **Year:** 2024 | 🏢 **Venue:** AAMAS <br>
-  > 🔑 **Keywords:** Two-stage DRL, Offline 3D bin packing, BCP, Large-sized bin <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **A dynamic multi-modal deep reinforcement learning framework for 3D bin packing problem** : "A dynamic multi-modal deep reinforcement learning framework for 3D bin packing problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0950705124006245)
-  > 👨‍🔬 **Authors:** A Zhao, T Li, L Lin | 📅 **Year:** 2024 | 🏢 **Venue:** Knowl.-Based Syst. <br>
-  > 🔑 **Keywords:** Multi-modal DRL, 3D bin packing, Dynamic framework <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Dynamics simulation-based packing of irregular 3D objects** : "Dynamics simulation-based packing of irregular 3D objects". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0097849324001316)
-  > 👨‍🔬 **Authors:** Q Zhuang, Z Chen, K He, J Cao, W Wang | 📅 **Year:** 2024 | 🏢 **Venue:** Comput. Graph. <br>
-  > 🔑 **Keywords:** Dynamics simulation, Irregular objects, Rigid body, 3D packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Deep study on the application of machine learning in bin packing problems** : "Deep study on the application of machine learning in bin packing problems". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.scielo.org.mx/scielo.php?pid=S1405-55462024000301275&script=sci_arttext&tlng=en)
-  > 👨‍🔬 **Authors:** J González-San-Martín, L Cruz-Reyes | 📅 **Year:** 2024 | 🏢 **Venue:** Computación y Sistemas <br>
-  > 🔑 **Keywords:** Machine learning, Bin packing, Literature review, Survey <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Enhancing robotics online 3D bin packing: A comparative study of conventional heuristic and deep reinforcement learning approaches** : "Enhancing robotics online 3D bin packing: A comparative study of conventional heuristic and deep reinforcement learning approaches". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10711723/)
-  > 👨‍🔬 **Authors:** H Xiong, K Ding, W Ding, X Qiu | 📅 **Year:** 2024 | 🏢 **Venue:** IEEE International Conference on Automation Science and Engineering <br>
-  > 🔑 **Keywords:** Comparative study, Heuristics, DRL, Online 3D bin packing <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-  
-- ❤️ **Online Three-Dimensional Bin Packing: A DRL Algorithm with the Buffer Zone** : "Online Three-Dimensional Bin Packing: A DRL Algorithm with the Buffer Zone". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://sciendo.com/pdf/10.2478/fcds-2024-0005)
-  > 👨‍🔬 **Authors:** J Zhang, T Shuai | 📅 **Year:** 2024 | 🏢 **Venue:** Found. Comput. Decis. Sci. <br>
-  > 🔑 **Keywords:** DRL, Buffer zone, Online 3D bin packing, Wasted space <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Robotic Tight Packaging using a Hybrid gripper with Variable Stiffness** : "Robotic Tight Packaging using a Hybrid gripper with Variable Stiffness". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/chapter/10.1007/978-3-031-72059-8_27)
-  > 👨‍🔬 **Authors:** M Moroni, AEH Martin, L Klüpfel, AM Sundaram | 📅 **Year:** 2024 | 🏢 **Venue:** International Symposium on Experimental Robotics <br>
-  > 🔑 **Keywords:** Hybrid gripper, Variable stiffness, Tight packaging, Robotic system <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **A deep reinforcement learning approach for online and concurrent 3D bin packing optimisation with bin replacement strategies** : "A deep reinforcement learning approach for online and concurrent 3D bin packing optimisation with bin replacement strategies". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0166361524001301)
-  > 👨‍🔬 **Authors:** Tsang, Y. P.; Mo, D. Y.; Chung, K. T.; Lee, C. K. M. | 📅 **Year:** 2025 | 🏢 **Venue:** Comput. Ind. <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Improved Approximation Algorithms for Three-Dimensional Bin Packing** : "Improved Approximation Algorithms for Three-Dimensional Bin Packing". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2503.08863)
-  > 👨‍🔬 **Authors:** Kar, Debajyoti; Khan, Arindam; Rau, Malin | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2503.08863 <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **The semi-online robotic pallet loading problem** : "The semi-online robotic pallet loading problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0305054824003617)
-  > 👨‍🔬 **Authors:** Yao, Shaowen; Zhang, Tai; Zhang, Hao; Qiu, Jian; Leng, Jiewu; Liu, Qiang; Wei, Lijun | 📅 **Year:** 2025 | 🏢 **Venue:** Comput. Oper. Res. <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Improved Approximation Algorithms for Three-Dimensional Knapsack** : "Improved Approximation Algorithms for Three-Dimensional Knapsack". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2503.19365)
-  > 👨‍🔬 **Authors:** Jansen, Klaus; Kar, Debajyoti; Khan, Arindam; Sreenivas, K. V. N.; Tutas, Malte | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2503.19365 <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Deliberate Planning of 3D Bin Packing on Packing Configuration Trees** : "Deliberate Planning of 3D Bin Packing on Packing Configuration Trees". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2504.04421)
-  > 👨‍🔬 **Authors:** Zhao, Hang; Xu, Juzhan; Yu, Kexiong; Hu, Ruizhen; Zhu, Chenyang; Xu, Kai | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2504.04421 <br>
-  > 🔑 **Keywords:** RL in Digital Environments <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **3D Vision robot online packing platform for deep reinforcement learning** : "3D Vision robot online packing platform for deep reinforcement learning". [![ACM](https://img.shields.io/badge/ACM-Paper-yellow.svg)](https://www.sciencedirect.com/science/article/pii/S073658452400228X)
-  > 👨‍🔬 **Authors:** Mu, Xingyu; Kan, Quanmin; Jiang, Yong; Chang, Chao; Tian, Xincheng; Zhou, Lelai; Zhao, Yongguo | 📅 **Year:** 2025 | 🏢 **Venue:** Robot. Comput.-Integr. Manuf. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **LLM-Pack: Intuitive Grocery Handling for Logistics Applications** : "LLM-Pack: Intuitive Grocery Handling for Logistics Applications". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2503.08445)
-  > 👨‍🔬 **Authors:** Blei, Yannik; Krawez, Michael; Jülg, Tobias; Krack, Pierre; Walter, Florian; Burgard, Wolfram | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2503.08445 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Bin Packing Optimization via Deep Reinforcement Learning** : "Bin Packing Optimization via Deep Reinforcement Learning". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/10854610/)
-  > 👨‍🔬 **Authors:** Wang, Baoying; Lin, Zhaohui; Kong, Weijie; Dong, Huixu | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE Robot. Autom. Lett. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Online Bin Packing with Item Size Estimates** : "Online Bin Packing with Item Size Estimates". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2505.09321)
-  > 👨‍🔬 **Authors:** Gehnen, Matthias; Usdenski, Andreas | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2505.09321 <br>
-  > 🔑 **Keywords:** Digital Environment Heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **One4Many-StablePacker: An Efficient Deep Reinforcement Learning Framework for the 3D Bin Packing Problem** : "One4Many-StablePacker: An Efficient Deep Reinforcement Learning Framework for the 3D Bin Packing Problem". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2510.10057)
-  > 👨‍🔬 **Authors:** Lei Gao1, Shihong Huang2, Shengjie Wang2, Hong Ma2, Feng Zhang1, Hengda Bao1, Qichang Chen1, Weihua Zhou3 | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2510.10057 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Online 3D Bin Packing with Fast Stability Validation and Stable Rearrangement Planning** : "Online 3D Bin Packing with Fast Stability Validation and Stable Rearrangement Planning". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2507.09123)
-  > 👨‍🔬 **Authors:** Ziyan Gao1, Lijun Wang2, Yuntao Kong2, Nak Young Chong∗ | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2507.09123 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **RoboPacker: An Autonomous Robotic Packing System for General Objects** : "RoboPacker: An Autonomous Robotic Packing System for General Objects". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/11250632/)
-  > 👨‍🔬 **Authors:** Zhenyu Wu; Ziwei Wang; Sichao Huang; Zhan Liu; Xiuwei Xu; Haibin Yan | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE Trans. Autom. Sci. Eng. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Deep Reinforcement Learning Method with Integrated Rotation and Placement Strategies for Solving the 2D Bin Packing Problem** : "Deep Reinforcement Learning Method with Integrated Rotation and Placement Strategies for Solving the 2D Bin Packing Problem". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://link.springer.com/chapter/10.1007/978-981-95-4045-7_21)
-  > 👨‍🔬 **Authors:** Xiaoping Jiang Gang Xiao Xia Zhang Mu Yuan | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE Robot. Autom. Lett. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning packing-and-unpacking synergistic policy via LLM-guided DRL for robust online robotic packing Author links open overlay panel** : "Learning packing-and-unpacking synergistic policy via LLM-guided DRL for robust online robotic packing Author links open overlay panel". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S1474034625004653)
-  > 👨‍🔬 **Authors:** Shuai Song ~Shuai_Song1 , Shuo Yang, Ran Song, Shilei Chu, yibin Li, Wei Zhang | 📅 **Year:** 2025 | 🏢 **Venue:** Adv. Eng. Inform. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Collaborate sim and real: Robot Bin Packing Learning in Real-world and Physical Engine** : "Collaborate sim and real: Robot Bin Packing Learning in Real-world and Physical Engine". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2511.19932)
-  > 👨‍🔬 **Authors:** Lidi Zhang1\equalcontrib, Han Wu2\equalcontrib, Liyu Zhang3, Ruofeng Liu4, Haotian Wang2, Chao Li3, Desheng Zhang5, Yunhuai Liu1, Tian He2 | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2511.19932 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Physics-Aware Robotic Palletization with Online Masking Inference** : "Physics-Aware Robotic Palletization with Online Masking Inference". [![IEEE](https://img.shields.io/badge/IEEE-Paper-pink.svg)](https://ieeexplore.ieee.org/abstract/document/11128204/) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/tianqi-zh/palletization.)
-  > 👨‍🔬 **Authors:** Tianqi Zhang, Zheng Wu, Yuxin Chen, Yixiao Wang, Boyuan Liang, Scott Moura, Masayoshi Tomizuka, Mingyu Ding†, Wei Zhan | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE Robot. Autom. Lett. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Physical question, virtual answer: Optimized real-time physical simulations and physics-informed learning approaches for cargo loading stability** : "Physical question, virtual answer: Optimized real-time physical simulations and physics-informed learning approaches for cargo loading stability". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S2214716025000053)
-  > 👨‍🔬 **Authors:** Philipp Gabriel Mazur ∗, Johannes Werner Melsbach, Detlef Schoder | 📅 **Year:** 2025 | 🏢 **Venue:** Oper. Res. Perspect. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **OPA-Pack: Object-Property-Aware Robotic Bin Packing** : "OPA-Pack: Object-Property-Aware Robotic Bin Packing". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2505.13339)
-  > 👨‍🔬 **Authors:** Jia-Hui Pan, Yeok Tatt Cheah, Zhengzhe Liu, Ka-Hei Hui, Xiaojie Gao, Pheng-Ann Heng, Yun-Hui Liu, Chi-Wing Fu | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2505.13339 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **ASAP: Learning Generalizable Online Bin Packing via Adaptive Selection After Proposal** : "ASAP: Learning Generalizable Online Bin Packing via Adaptive Selection After Proposal". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2501.17377)
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Dynamic packing, Deep reinforcement learning, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container packing with rearrangement \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height map, incoming object, and rearrangeable placed objects \| Action: direct placement or stable rearrangement \| Reward: compactness/utilization plus placement stability <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deep reinforcement learning for direct placement/rearrangement \| Data: generated streams and benchmark comparisons \| Objective: maximize utilization with stable placements <br>
+
+- ❤️ **Dynamics simulation-based packing of irregular 3D objects** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cag.2024.103996-blue.svg)](https://doi.org/10.1016/j.cag.2024.103996)
+  > 👨‍🔬 **Authors:** Qiubing Zhuang; Zhonggui Chen; Keyu He; Juan Cao; Wenping Wang | 📅 **Year:** 2024 | 🏢 **Venue:** Computers & Graphics <br>
+  > 🔑 **Keywords:** 3D packing, Irregular objects, Rigid-body dynamics, Simulation <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container/open-dimension 3D packing \| Irregular rigid objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: robot manipulator, collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: rigid-body dynamics simulation and search \| Data: simulated irregular-shape instances \| Objective: maximize utilization / minimize required volume <br>
+
+- ❤️ **Efficient Reinforcement Learning of Task Planners for Robotic Palletization Through Iterative Action Masking Learning** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Flra.2024.3440731-blue.svg)](https://doi.org/10.1109/lra.2024.3440731)
+  > 👨‍🔬 **Authors:** Zheng Wu; Yichuan Li; Wei Zhan; Changliu Liu; Yun-Hui Liu; Masayoshi Tomizuka | 📅 **Year:** 2024 | 🏢 **Venue:** IEEE Robotics and Automation Letters <br>
+  > 🔑 **Keywords:** Palletization, Deep reinforcement learning, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Robotic pallet loading \| Rigid cuboid boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: pallet configuration and available boxes \| Action: select a box and masked placement pose \| Reward: utilization and stability, with invalid actions masked <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: collision/reachability constraints, palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deep reinforcement learning \| Data: paper-reported benchmark/synthetic instances \| Objective: optimize paper-defined packing performance <br>
+
+- ❤️ **Enhancing Robotics Online 3D Bin Packing: A Comparative Study of Conventional Heuristic and Deep Reinforcement Learning Approaches** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Fcase59546.2024.10711723-blue.svg)](https://doi.org/10.1109/case59546.2024.10711723)
+  > 👨‍🔬 **Authors:** Heng Xiong; Kai Ding; Wan Ding; Xuchong Qiu; Klaus Janschek; Jianfeng Xu | 📅 **Year:** 2024 | 🏢 **Venue:** 2024 IEEE 20th International Conference on Automation Science and Engineering (CASE) <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Offline packing, Deep reinforcement learning, Robotic packing, Vision <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robotic packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height map and incoming box \| Action: choose placement position/orientation \| Reward: packed-volume / utilization return used by the evaluated DRL baseline <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: comparative evaluation of conventional heuristics and deep reinforcement learning \| Data: simulated streams and robot-relevant cases \| Objective: maximize utilization <br>
+
+- ❤️ **FamiPacking: a diffusion model for guiding 3D bin packing** [![DOI](https://img.shields.io/badge/DOI-10.1049%2Ficp.2023.3199-blue.svg)](https://doi.org/10.1049/icp.2023.3199)
+  > 👨‍🔬 **Authors:** C. -J. Peng; L. Lo; H. Xie; C. -C. Chiu; W. -H. Hsueh; S. -C. Huang; H. -H. Shuai; W. -H. Cheng | 📅 **Year:** 2024 | 🏢 **Venue:** IET Conference Proceedings <br>
+  > 🔑 **Keywords:** 3D bin packing, Diffusion model, Offline packing, Industrial logistics <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: diffusion-based packing guidance \| Data: FamilyMart industrial orders plus generated instances \| Objective: reduce bin/material use and increase utilization <br>
+
+- ❤️ **GOPT: Generalizable Online 3D Bin Packing via Transformer-Based Deep Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Flra.2024.3468161-blue.svg)](https://doi.org/10.1109/lra.2024.3468161) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Xiong5Heng/GOPT)
+  > 👨‍🔬 **Authors:** Heng Xiong; Changrong Guo; Jian Peng; Kai Ding; Wenjie Chen; Xuchong Qiu; Long Bai; Jianfeng Xu | 📅 **Year:** 2024 | 🏢 **Venue:** IEEE Robotics and Automation Letters <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Deep reinforcement learning, Transformer, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container 3D packing across varying bin dimensions \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current item plus candidate subspaces from the Placement Generator \| Action: select a candidate placement/orientation \| Reward: packed-volume / space-utilization return <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: RGB-D/depth, vision \| Stability: geometric non-overlap only \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: placement generator plus Transformer deep-reinforcement-learning policy \| Data: generated in- and out-of-distribution bins plus robot deployment \| Objective: maximize utilization and cross-bin generalization <br>
+
+- ❤️ **Heuristics Integrated Deep Reinforcement Learning for Online 3D Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ftase.2023.3235742-blue.svg)](https://doi.org/10.1109/tase.2023.3235742)
+  > 👨‍🔬 **Authors:** Shuo Yang; Shuai Song; Shilei Chu; Ran Song; Jiyu Cheng; Yibin Li; Wei Zhang | 📅 **Year:** 2024 | 🏢 **Venue:** IEEE Transactions on Automation Science and Engineering <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Irregular objects, Deep reinforcement learning, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robotic packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height map and current item \| Action: choose among heuristic-generated placement candidates \| Reward: incremental packed volume / final utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deep reinforcement learning integrating physics, packing, and unpacking heuristics \| Data: simulated episodes and a real logistics system \| Objective: maximize utilization and reliable completion <br>
+
+- ❤️ **Key point is key in resolving the offline three-dimensional bin packing problem** [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/forum?id=4Y4hPWUppN)
+  > 👨‍🔬 **Authors:** X Tian, H Qi | 📅 **Year:** 2024 | 🏢 **Venue:** OpenReview <br>
+  > 🔑 **Keywords:** Offline packing, 3D bin packing, Key points, Action masking, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container/open-height 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: dimensions of unpacked boxes plus current packed-bin layout \| Action: choose orientation and a masked key-point placement \| Reward: final loading rate / utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: key-point action masking integrated with existing reinforcement-learning solvers \| Data: generated offline cuboid instances \| Objective: improve loading rate, convergence speed, and scalable box count <br>
+
+- ❤️ **Online computation with untrusted advice** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.jcss.2024.103545-blue.svg)](https://doi.org/10.1016/j.jcss.2024.103545)
+  > 👨‍🔬 **Authors:** Spyros Angelopoulos; Christoph Dürr; Shendan Jin; Shahin Kamali; Marc Renault | 📅 **Year:** 2024 | 🏢 **Venue:** Journal of Computer and System Sciences <br>
+  > 🔑 **Keywords:** Online algorithms, Untrusted advice, Robustness, 1D bin packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with advice \| Multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: advice-augmented online algorithms with consistency/robustness guarantees \| Data: adversarial theoretical sequences \| Objective: minimize bin count despite untrusted predictions <br>
+
+- ❤️ **Online Three-Dimensional Bin Packing: A DRL Algorithm with the Buffer Zone** [![DOI](https://img.shields.io/badge/DOI-10.2478%2Ffcds-2024-0005-blue.svg)](https://doi.org/10.2478/fcds-2024-0005)
+  > 👨‍🔬 **Authors:** Jiawei Zhang; Tianping Shuai | 📅 **Year:** 2024 | 🏢 **Venue:** Foundations of Computing and Decision Sciences <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with buffer \| Single-container sequential 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin grid/height state, current item, and buffer state \| Action: choose a front-left-bottom placement or buffer the item \| Reward: item-volume gain minus normalized wasted space <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: buffer-zone deep reinforcement learning with front-left-bottom placement \| Data: generated online streams \| Objective: maximize packed volume and reduce wasted space <br>
+
+- ❤️ **Pattern Based Learning and Optimisation Through Pricing for Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.2139%2Fssrn.4822673-blue.svg)](https://doi.org/10.2139/ssrn.4822673)
+  > 👨‍🔬 **Authors:** Huayan Zhang; Ruibin Bai; Tie-Yan Liu; Jiawei Li; Bingchen Lin; Jianfeng Ren | 📅 **Year:** 2024 | 🏢 **Venue:** arXiv preprint arXiv:2409.04456 <br>
+  > 🔑 **Keywords:** Online packing, Pattern learning, Column generation, Pricing, Scalar items <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online stochastic \| Multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: learned packing patterns and dual-pricing optimization \| Data: generated/distributional item streams \| Objective: minimize bin count and expected packing cost <br>
+
+- ❤️ **Simulation-Assisted Learning for Efficient Bin-Packing of Deformable Packages in a Bimanual Robotic Cell** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Firos58592.2024.10802246-blue.svg)](https://doi.org/10.1109/iros58592.2024.10802246) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/RROS-Lab/IROS2024-Bin-Packing)
+  > 👨‍🔬 **Authors:** Omey M. Manyar; Hantao Ye; Meghana Sagare; Siddharth Mayya; Fan Wang; Satyandra K. Gupta | 📅 **Year:** 2024 | 🏢 **Venue:** 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) <br>
+  > 🔑 **Keywords:** Robotic packing, Deformable packages, Bimanual manipulation, Supervised learning, Simulation <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-bin bimanual robotic packing \| Deformable packages <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (supervised packing-score prediction plus online numerical optimization, not RL) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: package/bin geometry and predicted packing score \| Stability: deformable-body simulation \| Execution: bimanual robotic cell <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: supervised packing-score prediction plus basin-hopping online optimization \| Data: simulated training data and real bimanual trials \| Objective: maximize packing score and execution efficiency <br>
+
+- ❤️ **Solving Offline 3D Bin Packing Problem with Large-sized Bin via Two-stage Deep Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.65109%2Fdgdy9293-blue.svg)](https://doi.org/10.65109/dgdy9293)
+  > 👨‍🔬 **Authors:** Hao Yin; Fan Chen; Hongjie He | 📅 **Year:** 2024 | 🏢 **Venue:** International Joint Conference on Autonomous Agents and Multiagent Systems <br>
+  > 🔑 **Keywords:** 3D bin packing, Offline packing, Deep reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single large variable-height 3D container \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: remaining-box features plus current spatial/bin state \| Action: jointly choose item index and orientation, then a BCP placement \| Reward: reduction in packing height / increase in utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: two-stage deep reinforcement learning plus bidirectional cooperative packing \| Data: generated offline instances \| Objective: maximize space utilization <br>
+
+- ❤️ **3D Vision robot online packing platform for deep reinforcement learning** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.rcim.2024.102941-blue.svg)](https://doi.org/10.1016/j.rcim.2024.102941)
+  > 👨‍🔬 **Authors:** Xingyu Mu; Quanmin Kan; Yong Jiang; Chao Chang; Xincheng Tian; Lelai Zhou; Yongguo Zhao | 📅 **Year:** 2025 | 🏢 **Venue:** Robotics and Computer-Integrated Manufacturing <br>
+  > 🔑 **Keywords:** Online packing, Robotic palletization, 3D vision, Deep reinforcement learning, Cuboids <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Robotic mixed-case pallet loading \| Rigid cuboid boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: 3D-vision item dimensions plus current pallet packing-configuration tree \| Action: choose a feasible placement node and orientation \| Reward: placed-item volume normalized by pallet capacity <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: vision \| Stability: explicit stability checks \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: 3D-vision packing-configuration tree with ACKTR policy learning \| Data: simulated and physical palletizing trials \| Objective: maximize pallet utilization <br>
+
+- ❤️ **A deep reinforcement learning approach for online and concurrent 3D bin packing optimisation with bin replacement strategies** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.compind.2024.104202-blue.svg)](https://doi.org/10.1016/j.compind.2024.104202)
+  > 👨‍🔬 **Authors:** Y.P. Tsang; D.Y. Mo; K.T. Chung; C.K.M. Lee | 📅 **Year:** 2025 | 🏢 **Venue:** Computers in Industry <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Dynamic packing, Palletization, Deep reinforcement learning, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/concurrent \| Multi-bin 3D packing with active-bin replacement \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: active-bin height maps, current item, and concurrent/buffer state \| Action: choose placement/orientation and when to replace the active bin \| Reward: utilization balanced against bin-replacement cost <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deep reinforcement learning with concurrency/buffer and bin-replacement decisions \| Data: discrete-event simulation and generated streams \| Objective: balance utilization against replacement cost <br>
+
+- ❤️ **ASAP: Learning Generalizable Online Bin Packing via Adaptive Selection After Proposal** [![arXiv](https://img.shields.io/badge/arXiv-2501.17377-b31b1b.svg)](https://arxiv.org/abs/2501.17377)
   > 👨‍🔬 **Authors:** Han Fang Joint Institute of Michigan Shanghai Jiao Tong University Shanghai, China han.fang@sjtu.edu.cn &Paul Weng Duke Kunshan University Jiangsu, China paul.weng@dukekunshan.edu.cn &Yutong Ban Joint Institute of Michigan Shanghai Jiao Tong University Shanghai, China yban@sjtu.edu.cn | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2501.17377 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **SDT-6D: Fully Sparse Depth-Transformer for Staged End-to-End 6D Pose Estimation in Industrial Multi-View Bin Picking** : "SDT-6D: Fully Sparse Depth-Transformer for Staged End-to-End 6D Pose Estimation in Industrial Multi-View Bin Picking". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://openaccess.thecvf.com/content/WACV2026/html/Leuze_SDT-6D_Fully_Sparse_Depth-Transformer_for_Staged_End-to-End_6D_Pose_Estimation_WACV_2026_paper.html)
-  > 👨‍🔬 **Authors:** Nico Leuze, Maximilian Hoh, Samed Doğan, Nicolas R. -Peña, Alfred Schoettl | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2501.17377 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Container loading planning using reinforcement learning based on curriculum learning.** : "Container loading planning using reinforcement learning based on curriculum learning.". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.citedrive.com/en/discovery/container-loading-planning-using-reinforcement-learning-based-on-curriculum-learning/   https://academic.oup.com/jcde/article/12/8/45/8210389?login=false)
-  > 👨‍🔬 **Authors:** Y Kim, K Lee, Y Han, C Ryu | 📅 **Year:** 2025 | 🏢 **Venue:** Journal of Computational Design and Engineering <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **GFPack++: Improving 2D irregular packing by learning gradient field with attention.  GFPack++: Attention-Driven Gradient Fields for Optimizing 2D Irregula packing** : "GFPack++: Improving 2D irregular packing by learning gradient field with attention.  GFPack++: Attention-Driven Gradient Fields for Optimizing 2D Irregula packing". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://openaccess.thecvf.com/content/ICCV2025/papers/Xue_GFPack_Attention-Driven_Gradient_Fields_for_Optimizing_2D_Irregular_Packing_ICCV_2025_paper.pdf) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/TimHsue/GFPack-pp)
-  > 👨‍🔬 **Authors:** T Xue, L Lu, Y Liu, M Wu, H Dong, Y Zhang | 📅 **Year:** 2025 | 🏢 **Venue:** ICCV <br>
-  > 🔑 **Keywords:** 2D irregular packing, Gradient field learning, Attention mechanism, Diffusion model <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Physical question, virtual answer: Optimized real-time physical simulations and physics-informed learning for cargo loading stability.** : "Physical question, virtual answer: Optimized real-time physical simulations and physics-informed learning for cargo loading stability.". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S2214716025000053)
-  > 👨‍🔬 **Authors:** PG Mazur, JW Melsbach, D Schoder | 📅 **Year:** 2025 | 🏢 **Venue:** Oper. Res. Perspect. <br>
-  > 🔑 **Keywords:** Cargo stability, Physical simulation, Physics-informed learning, RNN <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **DeepPack3D: A Python package for online 3D bin packing optimization** : "DeepPack3D: A Python package for online 3D bin packing optimization". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S2665963824001209) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/yptsang/DeepPack3D)
-  > 👨‍🔬 **Authors:** YP Tsang, DY Mo, KT Chung, CKM Lee | 📅 **Year:** 2025 | 🏢 **Venue:** Software Impacts <br>
-  > 🔑 **Keywords:** Python package, Online 3D bin packing, DRL, Constructive heuristics <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **HERB: Human-augmented efficient reinforcement learning for bin-packing.** : "HERB: Human-augmented efficient reinforcement learning for bin-packing.". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2504.16595) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/NunoDuarte/herb)
+  > 🔑 **Keywords:** Online packing, 3D bin packing, Deep reinforcement learning, Meta-learning, Adaptation <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container sequential packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current item plus current bin/candidate-action state \| Action: proposal policy suggests placements; selection policy chooses one \| Reward: terminal space utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: proposal/selection policies with pre-training, post-training, and meta-learning \| Data: generated in- and out-of-distribution discrete/continuous instances \| Objective: maximize utilization with rapid test-distribution adaptation <br>
+
+- ❤️ **Bin Packing Optimization via Deep Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Flra.2025.3534070-blue.svg)](https://doi.org/10.1109/lra.2025.3534070)
+  > 👨‍🔬 **Authors:** Baoying Wang; Zhaohui Lin; Weijie Kong; Huixu Dong | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE Robotics and Automation Letters <br>
+  > 🔑 **Keywords:** 2D packing, 3D bin packing, Deep reinforcement learning, Robotic packing, Height map <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin 2D/3D packing with robotic validation \| Regular rectangles and cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current bin height map plus remaining/current item features \| Action: choose item and placement \| Reward: utilization / bin-cost objective <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: height map \| Stability: geometric non-overlap only \| Execution: gripper constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: pointer-network actor-critic for order plus height-map placement \| Data: generated instances and a robot demonstration \| Objective: maximize compactness and minimize bin count <br>
+
+- ❤️ **Collaborate sim and real: Robot Bin Packing Learning in Real-world and Physical Engine** [![arXiv](https://img.shields.io/badge/arXiv-2511.19932-b31b1b.svg)](https://arxiv.org/abs/2511.19932)
+  > 👨‍🔬 **Authors:** Lidi Zhang1\equalcontrib, Han Wu2\equalcontrib, Liyu Zhang3, Ruofeng Liu4, Haotian Wang2, Chao Li3, Desheng Zhang5, Yunhuai Liu1, Tian He2 | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2511.19932 <br>
+  > 🔑 **Keywords:** Online packing, Robotic packing, Sim-to-real, Physics engine, Deep reinforcement learning, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robot packing with sim-to-real training \| Rigid packages with physical properties <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: item physical properties, current container packing, and feasible EMS candidates \| Action: choose a robot-feasible placement pose \| Reward: stepwise placed-item volume; terminal failure receives zero <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: item geometry and randomized physical properties \| Stability: gravity-driven physics simulation and collapse feedback \| Execution: real logistics robot with online feedback <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: physics-engine reinforcement learning with domain randomization and real-world fine-tuning \| Data: simulated episodes and production feedback \| Objective: reduce packing collapse while maintaining utilization <br>
+
+- ❤️ **Container loading planning using reinforcement learning based on curriculum learning** [![DOI](https://img.shields.io/badge/DOI-10.1093%2Fjcde%2Fqwaf070-blue.svg)](https://doi.org/10.1093/jcde/qwaf070)
+  > 👨‍🔬 **Authors:** Youngsu Kim; Kyungho Lee; Youngsoo Han; Cheolho Ryu | 📅 **Year:** 2025 | 🏢 **Venue:** Journal of Computational Design and Engineering <br>
+  > 🔑 **Keywords:** Container stowage, Vessel bay planning, Deep reinforcement learning, Curriculum learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Vessel-bay container stowage, not packing inside a container \| ISO containers with weight and port-of-discharge attributes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bay-slot grid with loadability, weight, port-of-discharge, and selected-container features \| Action: move, select, or drop a container \| Reward: drop-only reward subject to loading, balance, and unloading constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known bay slots and container attributes \| Stability: vessel balance and loadability constraints \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: PPO reinforcement learning with curriculum learning \| Data: generated vessel-bay scenarios \| Objective: produce adaptable loading plans satisfying balance and unloading constraints <br>
+
+- ❤️ **GFPack++: Attention-Driven Gradient Fields for Optimizing 2D Irregular Packing** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ficcv51701.2025.01674-blue.svg)](https://doi.org/10.1109/iccv51701.2025.01674) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/TimHsue/GFPack-pp)
+  > 👨‍🔬 **Authors:** Tianyang Xue; Lin Lu; Yang Liu; Mingdong Wu; Hao Dong; Yanbin Zhang; Renmin Han; Baoquan Chen | 📅 **Year:** 2025 | 🏢 **Venue:** 2025 IEEE/CVF International Conference on Computer Vision (ICCV) <br>
+  > 🔑 **Keywords:** 2D packing, Irregular objects <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container geometric packing \| Irregular/general 3D objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported datasets/benchmark instances \| Objective: maximize utilization/minimize waste <br>
+
+- ❤️ **HERB: Human-augmented efficient reinforcement learning for bin-packing** [![arXiv](https://img.shields.io/badge/arXiv-2504.16595-b31b1b.svg)](https://arxiv.org/abs/2504.16595) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/NunoDuarte/herb)
   > 👨‍🔬 **Authors:** G Perovic, NF Duarte, A Dehban, G Teixeira | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv <br>
-  > 🔑 **Keywords:** Human-augmented RL, Irregular objects, Packing sequence, Visual placement <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning packing-and-unpacking synergistic policy via LLM-guided DRL for robust online robotic packing.** : "Learning packing-and-unpacking synergistic policy via LLM-guided DRL for robust online robotic packing.". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S1474034625004653)
-  > 👨‍🔬 **Authors:** S Yang, S Song, R Song, J Cheng, Y Li | 📅 **Year:** 2025 | 🏢 **Venue:** Adv. Eng. Inform. <br>
-  > 🔑 **Keywords:** LLM-guided DRL, Packing-and-unpacking, Online robotic packing, PUSNet <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Effective Online 3D Bin Packing with Lookahead Parcels Using Monte Carlo Tree Search** : "Effective Online 3D Bin Packing with Lookahead Parcels Using Monte Carlo Tree Search". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2601.02649)
+  > 🔑 **Keywords:** Irregular objects, Deep reinforcement learning, Robotic packing, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Single-container 3D packing with human augmentation \| Irregular rigid objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height map plus top-down projection of the next irregular object \| Action: continuous planar position and rotation \| Reward: simple success, compactness, or compactness-plus-stability variants <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: height map, vision \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: human-augmented continuous-control reinforcement learning \| Data: simulated irregular objects and human interventions \| Objective: improve sample efficiency, compactness, and stability <br>
+
+- ❤️ **Improved Approximation Algorithms for Three-Dimensional Bin Packing** [![arXiv](https://img.shields.io/badge/arXiv-2503.08863-b31b1b.svg)](https://arxiv.org/abs/2503.08863)
+  > 👨‍🔬 **Authors:** Debajyoti Kar; Arindam Khan; Malin Rau | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2503.08863 <br>
+  > 🔑 **Keywords:** 3D bin packing, 3D strip packing, Minimum-volume bounding box, Approximation algorithms <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| 3D bin packing, strip packing, and minimum-volume bounding-box variants \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: polynomial-time approximation algorithms \| Data: theoretical instances \| Objective: improve approximation ratios for bin count, height, and bounding volume <br>
+
+- ❤️ **Improved Approximation Algorithms for Three-Dimensional Knapsack** [![arXiv](https://img.shields.io/badge/arXiv-2503.19365-b31b1b.svg)](https://arxiv.org/abs/2503.19365)
+  > 👨‍🔬 **Authors:** Jansen, Klaus; Kar, Debajyoti; Khan, Arindam; Sreenivas, K. V. N.; Tutas, Malte | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2503.19365 <br>
+  > 🔑 **Keywords:** 3D bin packing, Cuboids, Approximation algorithms <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-bin three-dimensional knapsack \| Profit-weighted rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: container-structured approximation algorithms \| Data: theoretical instances \| Objective: maximize packed profit with improved approximation ratios <br>
+
+- ❤️ **Learning packing-and-unpacking synergistic policy via LLM-guided DRL for robust online robotic packing** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.aei.2025.103572-blue.svg)](https://doi.org/10.1016/j.aei.2025.103572)
+  > 👨‍🔬 **Authors:** Shuo Yang; Shuai Song; Ran Song; Jiyu Cheng; Yibin Li; Wei Zhang | 📅 **Year:** 2025 | 🏢 **Venue:** Advanced Engineering Informatics <br>
+  > 🔑 **Keywords:** Online packing, Robotic packing, Deep reinforcement learning, Large language model, Packing and unpacking <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robotic packing with corrective unpacking \| Rigid/general objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: bin height/voxel state plus incoming and placed-item features \| Action: pack or unpack/reorder items, including placement pose \| Reward: compactness and stability with invalid-action penalties <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: LLM-guided deep reinforcement learning for pack/unpack decisions \| Data: simulated and physical robot episodes \| Objective: improve compactness, stability, and robustness <br>
+
+- ❤️ **LLM-Pack: Intuitive Grocery Handling for Logistics Applications** [![arXiv](https://img.shields.io/badge/arXiv-2503.08445-b31b1b.svg)](https://arxiv.org/abs/2503.08445)
+  > 👨‍🔬 **Authors:** Blei, Yannik; Krawez, Michael; Jülg, Tobias; Krack, Pierre; Walter, Florian; Burgard, Wolfram | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2503.08445 <br>
+  > 🔑 **Keywords:** Dynamic packing, Palletization, Robotic packing, Vision <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Dynamic \| Pallet loading \| Heterogeneous grocery objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: RGB-D/depth \| Stability: geometric non-overlap only \| Execution: robot manipulator, palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported datasets/benchmark instances \| Objective: optimize paper-defined packing performance <br>
+
+- ❤️ **One4Many-StablePacker: An Efficient Deep Reinforcement Learning Framework for the 3D Bin Packing Problem** [![arXiv](https://img.shields.io/badge/arXiv-2510.10057-b31b1b.svg)](https://arxiv.org/abs/2510.10057)
+  > 👨‍🔬 **Authors:** Lei Gao1, Shihong Huang2, Shengjie Wang2, Hong Ma2, Feng Zhang1, Hengda Bao1, Qichang Chen1, Weihua Zhou3 | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2510.10057 <br>
+  > 🔑 **Keywords:** 3D bin packing, Offline packing, Dynamic packing, Deep reinforcement learning, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container 3D packing across varied item distributions \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current item plus height-map/empty-space representation \| Action: choose a stable placement candidate and orientation \| Reward: compactness/utilization with stability and feasibility terms <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: general-purpose stable-packing deep reinforcement learning \| Data: multiple generated and real-world distributions \| Objective: maximize utilization while preserving stability <br>
+
+- ❤️ **Online 3D Bin Packing with Fast Stability Validation and Safe Rearrangement Planning** [![DOI](https://img.shields.io/badge/DOI-10.2139%2Fssrn.5669305-blue.svg)](https://doi.org/10.2139/ssrn.5669305)
+  > 👨‍🔬 **Authors:** ZIYAN GAO; Lijun Wang; Yuntao Kong; Nak Young Chong | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2507.09123 <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-bin sequential packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: heuristic search \| Data: real-world/industrial data with paper-reported evaluation \| Objective: maximize utilization/minimize waste, maintain stability <br>
+
+- ❤️ **Online Bin Packing with Item Size Estimates** [![arXiv](https://img.shields.io/badge/arXiv-2505.09321-b31b1b.svg)](https://arxiv.org/abs/2505.09321)
+  > 👨‍🔬 **Authors:** Gehnen, Matthias; Usdenski, Andreas | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2505.09321 <br>
+  > 🔑 **Keywords:** Online packing, Item-size estimates, Competitive analysis, Scalar items <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online with size estimates \| Multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: prediction-augmented online algorithms with competitive guarantees \| Data: theoretical/adversarial sequences with estimates \| Objective: minimize bin count <br>
+
+- ❤️ **OPA-Pack: Object-Property-Aware Robotic Bin Packing** [![arXiv](https://img.shields.io/badge/arXiv-2505.13339-b31b1b.svg)](https://arxiv.org/abs/2505.13339)
+  > 👨‍🔬 **Authors:** Jia-Hui Pan, Yeok Tatt Cheah, Zhengzhe Liu, Ka-Hei Hui, Xiaojie Gao, Pheng-Ann Heng, Yun-Hui Liu, Chi-Wing Fu | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2505.13339 <br>
+  > 🔑 **Keywords:** Robotic packing, Object properties, Deep reinforcement learning, Everyday objects, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container robotic packing with compatibility/pressure constraints \| Heterogeneous everyday objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: height map \| Stability: explicit stability checks \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: object-property-aware deep Q-learning with retrieval support \| Data: simulated and physical everyday-object sets \| Objective: compact packing while separating incompatible items and limiting pressure <br>
+
+- ❤️ **Physical question, virtual answer: Optimized real-time physical simulations and physics-informed learning approaches for cargo loading stability** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.orp.2025.100329-blue.svg)](https://doi.org/10.1016/j.orp.2025.100329)
+  > 👨‍🔬 **Authors:** Philipp Gabriel Mazur; Johannes Werner Melsbach; Detlef Schoder | 📅 **Year:** 2025 | 🏢 **Venue:** Operations Research Perspectives <br>
+  > 🔑 **Keywords:** Cargo stability, Pallet loading, Physics simulation, Physics-informed learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Evaluation/prediction \| Cargo/pallet loading stability, not a packing policy \| Rigid cuboid cargo <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: cargo geometry and physical parameters \| Stability: real-time rigid-body simulation and physics-informed recurrent prediction \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: calibrated real-time physics engine plus physics-informed recurrent model \| Data: simulated and paper-reported cargo configurations \| Objective: predict dynamic loading stability accurately and quickly <br>
+
+- ❤️ **Physics-Aware Robotic Palletization With Online Masking Inference** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ficra55743.2025.11128204-blue.svg)](https://doi.org/10.1109/icra55743.2025.11128204) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/tianqi-zh/palletization)
+  > 👨‍🔬 **Authors:** Tianqi Zhang; Zheng Wu; Yuxin Chen; Yixiao Wang; Boyuan Liang; Scott Moura; Masayoshi Tomizuka; Mingyu Ding; Wei Zhan | 📅 **Year:** 2025 | 🏢 **Venue:** 2025 IEEE International Conference on Robotics and Automation (ICRA) <br>
+  > 🔑 **Keywords:** Online packing, Robotic palletization, Deep reinforcement learning, Action masking, Physics, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Robotic pallet loading \| Cuboid boxes with size, density, and rigidity attributes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: pallet configuration plus selected-box size, density, and rigidity \| Action: choose a placement from the learned stability mask \| Reward: stable placed-volume fraction <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: physics/dynamics simulation, explicit stability checks \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: reinforcement-learning task planner with online-learned action masks \| Data: simulated training and real robotic palletizer trials \| Objective: maximize stable packed volume across varying box properties <br>
+
+- ❤️ **RoboPacker: An Autonomous Robotic Packing System for General Objects** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Ftase.2025.3633306-blue.svg)](https://doi.org/10.1109/tase.2025.3633306)
+  > 👨‍🔬 **Authors:** Zhenyu Wu; Ziwei Wang; Sichao Huang; Zhan Liu; Xiuwei Xu; Haibin Yan; Jiwen Lu | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE Transactions on Automation Science and Engineering <br>
+  > 🔑 **Keywords:** Robotic packing, General objects, Point clouds, Hierarchical reinforcement learning <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-shipping-box robotic packing \| General/irregular rigid objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: object point cloud/shape features plus bin height map \| Action: choose object and placement pose \| Reward: packing utilization and successful robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: point cloud \| Stability: geometric non-overlap only \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: point-cloud hierarchical reinforcement learning and robot execution pipeline \| Data: simulated training sets and physical object trials \| Objective: maximize utilization and successful execution <br>
+
+- ❤️ **Robotic Tight Packaging Using a Hybrid Gripper with Variable Stiffness** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-3-031-72059-8_27-blue.svg)](https://doi.org/10.1007/978-3-031-72059-8_27)
+  > 👨‍🔬 **Authors:** Michele Moroni; Ana Elvira Huezo Martin; Leonard Klüpfel; Ashok M. Sundaram; Werner Friedl; Francesco Braghin; Máximo A. Roa | 📅 **Year:** 2025 | 🏢 **Venue:** Lecture Notes in Computer Science <br>
+  > 🔑 **Keywords:** Robotic packing, Tight packaging, Compliant manipulation, Variable-stiffness gripper <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Execution study \| Tight insertion into a known single-container arrangement \| Regular rigid items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known target poses and item geometry \| Stability: passive compliance limits error propagation \| Execution: variable-stiffness hybrid gripper on a real robot <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: compliant insertion strategy and full robotic packaging pipeline \| Data: real-robot tight-packaging trials \| Objective: improve insertion success and robustness at minimum clearance <br>
+
+- ❤️ **The semi-online robotic pallet loading problem** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cor.2024.106889-blue.svg)](https://doi.org/10.1016/j.cor.2024.106889)
+  > 👨‍🔬 **Authors:** Shaowen Yao; Tai Zhang; Hao Zhang; Jian Qiu; Jiewu Leng; Qiang Liu; Lijun Wei | 📅 **Year:** 2025 | 🏢 **Venue:** Computers & Operations Research <br>
+  > 🔑 **Keywords:** Online packing, Palletization, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Semi-online \| Multi-pallet loading with a finite buffer \| Rigid cuboid boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: robot manipulator, palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: buffer-aware greedy pallet-loading heuristics \| Data: generated semi-online instances \| Objective: minimize pallet count and improve utilization <br>
+
+- ❤️ **Deep Reinforcement Learning Method with Integrated Rotation and Placement Strategies for Solving the 2D Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-981-95-4045-7_21-blue.svg)](https://doi.org/10.1007/978-981-95-4045-7_21)
+  > 👨‍🔬 **Authors:** Xiaoping Jiang; Gang Xiao; Xia Zhang; Mu Yuan; Zhenhui Lou; Jiangtao Ye; Fengjie Li; Zhenbo Cheng | 📅 **Year:** 2026 | 🏢 **Venue:** Lecture Notes in Electrical Engineering <br>
+  > 🔑 **Keywords:** 2D packing, Deep reinforcement learning, Rotation, Placement <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single variable-height 2D container \| Rectangles <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: item states plus depth-, empty-space-, and height-map container features \| Action: choose item with rotation, then a candidate placement \| Reward: stepwise reduction in unused container area <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deep reinforcement learning with integrated item rotation and placement \| Data: generated rectangle instances \| Objective: minimize unused area and packing height <br>
+
+- ❤️ **Deliberate planning of 3D bin packing on packing configuration trees** [![DOI](https://img.shields.io/badge/DOI-10.1177%2F02783649251380619-blue.svg)](https://doi.org/10.1177/02783649251380619)
+  > 👨‍🔬 **Authors:** Hang Zhao; Juzhan Xu; Kexiong Yu; Ruizhen Hu; Chenyang Zhu; Bo Du; Kai Xu | 📅 **Year:** 2026 | 🏢 **Venue:** The International Journal of Robotics Research <br>
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Offline packing, Palletization, Deep reinforcement learning, Robotic packing, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container sequential 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: packing-configuration tree and current partial packing \| Action: deliberately select/expand a placement node \| Reward: incremental compactness and terminal utilization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deliberate planning/learning on packing-configuration trees \| Data: generated, industrial-distribution, and robot-relevant instances \| Objective: maximize utilization and stable feasibility <br>
+
+- ❤️ **Effective Online 3D Bin Packing with Lookahead Parcels Using Monte Carlo Tree Search** [![arXiv](https://img.shields.io/badge/arXiv-2601.02649-b31b1b.svg)](https://arxiv.org/abs/2601.02649)
   > 👨‍🔬 **Authors:** Jiangyi Fang1,4, Bowen Zhou2, Haotian Wang3, Xin Zhu3, Leye Wang1,4∗ | 📅 **Year:** 2026 | 🏢 **Venue:** arXiv preprint arXiv:2601.02649 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **The inventory routing problem with two-dimensional loading constraints** : "The inventory routing problem with two-dimensional loading constraints". [![Paper](https://img.shields.io/badge/Paper-4682B4.svg)](https://www.sciencedirect.com/science/article/pii/S0360835225007521)
-  > 👨‍🔬 **Authors:** Pedro H.B. Hokama a ,  Kamyla Ferreira b ,  Pedro Munari b , Reinaldo Morabito b, Flavio Miyazawa c | 📅 **Year:** 2026 | 🏢 **Venue:** Comput. Ind. Eng. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **GENPACK: KPI-Guided Multi-Objective Genetic Algorithm for Industrial 3D Bin Packing** : "GENPACK: KPI-Guided Multi-Objective Genetic Algorithm for Industrial 3D Bin Packing". [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2601.11325)
+  > 🔑 **Keywords:** 3D bin packing, Online packing, Dynamic packing, Deep reinforcement learning, Tree search, Robotic packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-bin sequential packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (Monte Carlo tree search planning, not RL) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: robot manipulator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: Monte Carlo tree search, tree search, deep reinforcement learning \| Data: real-world/industrial data with paper-reported evaluation \| Objective: maximize utilization/minimize waste <br>
+
+- ❤️ **GENPACK: KPI-Guided Multi-Objective Genetic Algorithm for Industrial 3D Bin Packing** [![arXiv](https://img.shields.io/badge/arXiv-2601.11325-b31b1b.svg)](https://arxiv.org/abs/2601.11325)
   > 👨‍🔬 **Authors:** Dheeraj Poolavaram, Carsten Markgraf, Sebastian Dorn | 📅 **Year:** 2026 | 🏢 **Venue:** arXiv preprint arXiv:2601.11325 <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Learning based 2D Irregular Shape Packing** : "Learning based 2D Irregular Shape Packing". [![ACM](https://img.shields.io/badge/ACM-Paper-yellow.svg)](https://dl.acm.org/doi/abs/10.1145/3618348)
-  > 👨‍🔬 **Authors:** Zeshi Yang, Zherong Pan, Manyi Li, Kui Wu, Xifeng Gao | 📅 **Year:** N/A | 🏢 **Venue:** ACM Trans. Graph. <br>
-  > 🔑 **Keywords:** N/A <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
-- ❤️ **Key point is key in resolving the offline three-dimensional bin packing problem** : "Key point is key in resolving the offline three-dimensional bin packing problem". [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/forum?id=4Y4hPWUppN)
-  > 👨‍🔬 **Authors:** X Tian, H Qi | 📅 **Year:** N/A | 🏢 **Venue:** OpenReview <br>
-  > 🔑 **Keywords:** Key points, Offline 3D bin packing, Action space <br>
-  > ⚙️ **Settings & Setup:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:**  N/A | N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** N/A <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** N/A <br>
+  > 🔑 **Keywords:** 3D bin packing, Palletization, Genetic algorithm, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Industrial pallet/3D-bin packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: KPI-guided multi-objective hybrid genetic algorithm \| Data: 1,500 BED-BPP real-world orders \| Objective: jointly improve utilization, surface support, balance, and handling feasibility <br>
+
+- ❤️ **SDT-6D: Fully Sparse Depth-Transformer for Staged End-to-End 6D Pose Estimation in Industrial Multi-View Bin Picking** [![DOI](https://img.shields.io/badge/DOI-10.1109%2Fwacv61042.2026.00811-blue.svg)](https://doi.org/10.1109/wacv61042.2026.00811)
+  > 👨‍🔬 **Authors:** Nico Leuze; Maximilian Hoh; Samed Doğan; Nicolas R. Peña; Alfred Schoettl | 📅 **Year:** 2026 | 🏢 **Venue:** 2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) <br>
+  > 🔑 **Keywords:** Dynamic packing, Transformer, Robotic packing, Vision <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Scope-adjacent bin picking/perception \| Not a packing policy \| General objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: point cloud, RGB-D/depth, signed-distance field \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: Transformer, signed-distance optimization \| Data: paper-reported datasets/benchmark instances \| Objective: estimate 6D object poses <br>
+
+- ❤️ **The inventory routing problem with two-dimensional loading constraints** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cie.2025.111606-blue.svg)](https://doi.org/10.1016/j.cie.2025.111606)
+  > 👨‍🔬 **Authors:** Pedro H.B. Hokama; Kamyla Ferreira; Pedro Munari; Reinaldo Morabito; Flavio Miyazawa | 📅 **Year:** 2026 | 🏢 **Venue:** Computers & Industrial Engineering <br>
+  > 🔑 **Keywords:** Inventory routing, 2D loading, Branch-and-cut, Constraint programming, Vehicle routing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Inventory routing with 2D loading constraints across multiple vehicles \| Rectangular palletized cargo <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: mixed-integer formulation with branch-and-cut/constraint-programming components \| Data: generated inventory-routing instances \| Objective: minimize combined inventory, routing, and loading cost <br>
