@@ -128,6 +128,15 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: Varies across reviewed studies \| Stability: Reviewed when in scope \| Execution: No single robotic setup <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: systematic literature synthesis/taxonomy, heuristic search \| Data: reviewed literature and reported benchmarks \| Objective: optimize paper-defined packing performance <br>
 
+- ❤️ **Formulations and solutions of pallet loading problems in smart logistics** [![DOI](https://img.shields.io/badge/DOI-10.1080%2F00207543.2025.2566955-blue.svg)](https://doi.org/10.1080/00207543.2025.2566955) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1080%2F00207543.2025.2566955)](https://scholar.google.com/scholar?q=Formulations%20and%20solutions%20of%20pallet%20loading%20problems%20in%20smart%20logistics)
+  > 👨‍🔬 **Authors:** Chenyang Zhang; Zijie Chen; Bochen Zhang; Mengchu Zhou | 📅 **Year:** 2026 | 🏢 **Venue:** International Journal of Production Research <br>
+  > 🔑 **Keywords:** Survey, Pallet loading, Robotic palletization, Stability, Smart logistics <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Survey \| Pallet-loading formulations, constraints, and solution methods \| Palletized packages and robotic loading scenarios <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (survey paper) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: varies across reviewed studies \| Stability: practical pallet-load stability is reviewed \| Execution: robotic palletization and real-time deployment constraints are reviewed <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: structured survey and taxonomy of pallet-loading formulations and algorithms \| Data: reviewed mathematical, heuristic, learning-based, and robotic-palletizing literature \| Objective: synthesize problem variants, constraints, solution methods, and future research directions <br>
+
 ## Benchmarks of Bin Packing with Robotic Arms
 
 - ❤️ **Benchmarking Dynamic Three-Dimensional Bin Packing Problems Using Discrete-Event Simulation** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-3-319-31153-1_18-blue.svg)](https://doi.org/10.1007/978-3-319-31153-1_18) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1007%2F978-3-319-31153-1_18)](https://scholar.google.com/scholar?q=Benchmarking%20Dynamic%20Three-Dimensional%20Bin%20Packing%20Problems%20Using%20Discrete-Event%20Simulation)
@@ -156,6 +165,15 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: candidate cargo dimensions plus bin height maps \| Action: choose candidate/orientation/placement in the included DRL solver \| Reward: compactness / space utilization <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: software package containing a Deep Q-network and four constructive heuristics \| Data: customizable item lists and bundled benchmark examples \| Objective: compare online utilization across solvers <br>
+
+- ❤️ **MixedPalletBoxes Dataset: A Synthetic Benchmark Dataset for Warehouse Applications** [![DOI](https://img.shields.io/badge/DOI-10.3390%2Fasi9010014-blue.svg)](https://doi.org/10.3390/asi9010014) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.3390%2Fasi9010014)](https://scholar.google.com/scholar?q=MixedPalletBoxes%20Dataset%3A%20A%20Synthetic%20Benchmark%20Dataset%20for%20Warehouse%20Applications) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Robotics-Logistics/MixedPalletBoxes)
+  > 👨‍🔬 **Authors:** Adamos Daios; Ioannis Kostavelis | 📅 **Year:** 2026 | 🏢 **Venue:** Applied System Innovation <br>
+  > 🔑 **Keywords:** Benchmark, Palletization, Synthetic dataset, Warehouse logistics, Object properties <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Benchmark \| Mixed-palletizing datasets and dynamic picking-list generation \| Rigid cuboid boxes with geometric, material, load, environmental, and handling attributes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (benchmark and dataset paper) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: structured tabular box attributes rather than camera observations \| Stability: load capacity, fragility, and stackability-related attributes are provided \| Execution: intended for robotic mixed-palletizing evaluation; no single robot execution pipeline <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: parameterized synthetic-data generator, seven fixed datasets, FastAPI picking-list generator, and multi-algorithm validation \| Data: seven datasets containing 500 to 100,000 records plus released generation and evaluation code \| Objective: enable reproducible, scalable, and attribute-aware benchmarking of mixed-palletizing algorithms <br>
 
 - ❤️ **RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation** [![arXiv](https://img.shields.io/badge/arXiv-2512.04415-b31b1b.svg)](https://arxiv.org/abs/2512.04415) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://robot-bin-packing-benchmark.github.io/)
   > 👨‍🔬 **Authors:** Zhoufeng Wang1 Hang Zhao3 Juzhan Xu4 Shishun Zhang1 Zeyu Xiong1 Ruizhen Hu4 Chenyang Zhu1 Zecui Zeng5 | 📅 **Year:** 2026 | 🏢 **Venue:** arXiv preprint arXiv:2512.04415 <br>
@@ -608,6 +626,15 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current bin configuration plus incoming/buffered items \| Action: pack an item or unpack/reorder placed items \| Reward: compactness/utilization with invalid-action penalties <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: synergistic pack/unpack deep reinforcement learning \| Data: simulated streams and robot evaluation \| Objective: improve utilization and recover from poor placements <br>
+
+- ❤️ **A Constructive Heuristic Algorithm for 3D Bin Packing of Irregular Shaped Items** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-3-031-15644-1_29-blue.svg)](https://doi.org/10.1007/978-3-031-15644-1_29) [![arXiv](https://img.shields.io/badge/arXiv-2206.15116-b31b1b.svg)](https://arxiv.org/abs/2206.15116)
+  > 👨‍🔬 **Authors:** Qiruyi Zuo; Xinglu Liu; Wai Kin Victor Chan | 📅 **Year:** 2022 | 🏢 **Venue:** City, Society, and Digital Transformation <br>
+  > 🔑 **Keywords:** 3D packing, Irregular objects, Deformable items, Constructive heuristics <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container 3D packing \| Irregular and shape-changing items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (constructive heuristic method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item and container geometry \| Stability: geometric non-overlap and container-boundary feasibility only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: dynamic-volume constructive heuristic with an item shape-changing factor \| Data: generated irregular-item instances \| Objective: maximize space utilization while accommodating irregular or deformable item geometry <br>
 
 - ❤️ **Adjustable Robust Reinforcement Learning for Online 3D Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.52202%2F075280-2262-blue.svg)](https://doi.org/10.52202/075280-2262) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/panyxy/ar2l_bpp)
   > 👨‍🔬 **Authors:** Yuxin Pan; Yize Chen; Fangzhen Lin | 📅 **Year:** 2023 | 🏢 **Venue:** Advances in Neural Information Processing Systems 36 <br>
@@ -1113,6 +1140,222 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: four embedded static-stability constraints (full-base support, partial-base support, center-of-gravity polygon support, and a novel partial-base polygon support), benchmarked against static mechanical equilibrium conditions \| Execution: no robotic execution <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: computational study embedding alternative stability constraints into online packing heuristics \| Data: real-world instances with paper-reported evaluation \| Objective: characterize the trade-off between bin count and cargo stability for real-time online packing <br>
 
+- ❤️ **A Hierarchical Bin Packing Framework with Dual Manipulators via Heuristic Search and Deep Reinforcement Learning** [![arXiv](https://img.shields.io/badge/arXiv-2506.01628-b31b1b.svg)](https://arxiv.org/abs/2506.01628)
+  > 👨‍🔬 **Authors:** Beomjoon Lee; Changjoo Nam | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2506.01628 <br>
+  > 🔑 **Keywords:** 2D packing, Dual manipulators, Deep reinforcement learning, Heuristic search, Rearrangement <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/semi-online \| Dual-manipulator packing with packing, unpacking, and repacking \| Rectangular objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: padded binary bin occupancy and the rotated dimensions of the active item \| Action: choose the precise top-left placement location \| Reward: compactness and occupancy-adjacency score for the resulting layout <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item dimensions and discretized bin occupancy \| Stability: geometric non-overlap only \| Execution: dual-manipulator simulation with motion-planning and reachability checks <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: low-level placement RL combined with high-level depth-first/selective beam search over sequence, orientation, buffering, and rearrangement \| Data: generated packing tasks and robot-simulation evaluation \| Objective: improve utilization and recover from poor online decisions while coordinating two manipulators <br>
+
+- ❤️ **A Large Neighborhood Search Algorithm Based on Q-Learning for Multi-Container Loading Problem** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.eswa.2025.126429-blue.svg)](https://doi.org/10.1016/j.eswa.2025.126429)
+  > 👨‍🔬 **Authors:** Hongbing Yang; Wei Zhou; Jian Zhang; Xinyu Zhang; Yexi Jin | 📅 **Year:** 2025 | 🏢 **Venue:** Expert Systems with Applications <br>
+  > 🔑 **Keywords:** Container loading, Multi-container packing, Q-learning, Large neighborhood search <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-container loading \| Heterogeneous rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: three features describing the incumbent loading solution and search status \| Action: select a destroy-and-repair operator combination for large-neighborhood search \| Reward: objective improvement produced by the selected operator combination <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item and container geometry \| Stability: practical loading constraints handled by the underlying feasibility model \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: Q-learning-guided adaptive large-neighborhood search \| Data: benchmark and real-world multi-container-loading instances reported in the paper \| Objective: improve loaded volume and solution quality across multiple containers <br>
+
+- ❤️ **A Novel Incremental Approach for Large-Scale Three-Dimensional Open-Dimension Rectangular Packing Problems** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cie.2025.111527-blue.svg)](https://doi.org/10.1016/j.cie.2025.111527)
+  > 👨‍🔬 **Authors:** Jung-Fa Tsai; Dinh-Hieu Tran; Ming-Hua Lin | 📅 **Year:** 2025 | 🏢 **Venue:** Computers & Industrial Engineering <br>
+  > 🔑 **Keywords:** 3D packing, Open-dimension packing, Mathematical programming, Large-scale optimization <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Large-scale open-dimension rectangular packing with optional pre-existing items \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (mixed-integer optimization and incremental solution method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item and container geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: mixed-integer formulation with problem reduction and incremental solution construction \| Data: generated large-scale instances including cases with 100–150 items and preallocated objects \| Objective: minimize the open container dimension while preserving feasible packing <br>
+
+- ❤️ **An In-Depth Study of LLM Contributions to the Bin Packing Problem** [![arXiv](https://img.shields.io/badge/arXiv-2510.27353-b31b1b.svg)](https://arxiv.org/abs/2510.27353)
+  > 👨‍🔬 **Authors:** Julien Herrmann; Guillaume Pallez | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2510.27353 <br>
+  > 🔑 **Keywords:** Online packing, 1D bin packing, Large language models, Heuristic analysis, Generalization <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/evaluation \| Multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (empirical and analytical study of LLM-generated heuristics) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: scalar item sizes and current bin residual capacities \| Stability: not applicable to one-dimensional packing \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: interpretability and generalization analysis of LLM-designed online bin-packing rules, with simpler comparison algorithms \| Data: synthetic streams including uniform and Weibull item-size distributions \| Objective: assess whether LLM-generated heuristics are novel, interpretable, and robust across distributions <br>
+
+- ❤️ **Arc-Flow Formulation and Branch-and-Price-and-Cut Algorithm for the Bin-Packing Problem with Fragile Objects** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cor.2024.106878-blue.svg)](https://doi.org/10.1016/j.cor.2024.106878)
+  > 👨‍🔬 **Authors:** Sunkanghong Wang; Shaowen Yao; Hao Zhang; Qiang Liu; Lijun Wei | 📅 **Year:** 2025 | 🏢 **Venue:** Computers & Operations Research <br>
+  > 🔑 **Keywords:** 1D bin packing, Fragile objects, Arc-flow formulation, Branch-and-price-and-cut <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin one-dimensional packing with fragility relations \| Scalar-sized items with stacking/compatibility restrictions <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (exact branch-and-price-and-cut method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item sizes and fragility relations \| Stability: fragility-induced compatibility and placement-order constraints \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: arc-flow formulation, label-setting pricing, and branch-and-price-and-cut \| Data: literature and generated fragile-object benchmark instances \| Objective: minimize bin count subject to fragile-object restrictions <br>
+
+- ❤️ **Automated Pallet Loading of Irregularly Shaped Objects: A Deep Reinforcement Learning and Multi-Criteria Optimization Method** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.jmsy.2025.04.014-blue.svg)](https://doi.org/10.1016/j.jmsy.2025.04.014)
+  > 👨‍🔬 **Authors:** Nikolaos Theodoropoulos; Dionisis Andronas; Emmanouil Kampourakis; Sotiris Makris | 📅 **Year:** 2025 | 🏢 **Venue:** Journal of Manufacturing Systems <br>
+  > 🔑 **Keywords:** Palletization, Irregular objects, Deep reinforcement learning, Multi-criteria optimization, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Robotic pallet loading \| Irregular rigid industrial products <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: pallet-surface height grid plus the types and quantities of available objects \| Action: select the next object to palletize \| Reward: successful-placement reward augmented by inverse palletization fitness so difficult objects receive greater priority <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known or reconstructed object geometry and pallet state \| Stability: explicit stability assessment and constraint filtering \| Execution: automated palletization workflow for industrial aluminum-profile objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: PPO object-sequence policy, constraint-satisfaction candidate filtering, and multi-criteria placement/orientation selection \| Data: simulated training instances and an industrial aluminum-profile case study \| Objective: maximize pallet utilization and stable feasibility while reducing planning complexity <br>
+
+- ❤️ **Beyond the Hype: Benchmarking LLM-Evolved Heuristics for Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-3-031-90065-5_24-blue.svg)](https://doi.org/10.1007/978-3-031-90065-5_24) [![arXiv](https://img.shields.io/badge/arXiv-2501.11411-b31b1b.svg)](https://arxiv.org/abs/2501.11411)
+  > 👨‍🔬 **Authors:** Kevin Sim; Quentin Renau; Emma Hart | 📅 **Year:** 2025 | 🏢 **Venue:** Applications of Evolutionary Computation (EvoApplications 2025) <br>
+  > 🔑 **Keywords:** Online packing, 1D bin packing, Large language models, Heuristic benchmarking, Instance-space analysis <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/evaluation \| Multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (benchmarking and instance-space analysis study) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: scalar item streams and bin residual capacities \| Stability: not applicable to one-dimensional packing \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: broad benchmark comparison of LLM-evolved heuristics, evolved counter-instances, and instance-space analysis \| Data: a large suite of public and evolved online-bin-packing instances \| Objective: measure generalization, solution quality, and the cost-benefit of specialized LLM-designed heuristics <br>
+
+- ❤️ **Developing Hybrid Metaheuristics for the Three-Dimensional Pallet Loading Considering Multiple-Size Pallet and Heterogeneous Box** [![DOI](https://img.shields.io/badge/DOI-10.1080%2F23302674.2025.2492219-blue.svg)](https://doi.org/10.1080/23302674.2025.2492219)
+  > 👨‍🔬 **Authors:** Yu-Chung Tsao; Ting-Jie Chen; Thuy-Linh Vu; Lu-Wen Liao | 📅 **Year:** 2025 | 🏢 **Venue:** International Journal of Systems Science: Operations & Logistics <br>
+  > 🔑 **Keywords:** 3D packing, Palletization, Heterogeneous boxes, Hybrid metaheuristics <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-pallet loading with multiple pallet sizes \| Heterogeneous rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (hybrid metaheuristic method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item and pallet geometry \| Stability: practical pallet-loading feasibility constraints \| Execution: palletization planning without a reported robot-control pipeline <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: fast loading heuristic combined with simulated annealing and differential evolution \| Data: generated and paper-reported pallet-loading instances \| Objective: reduce pallet use/cost and improve utilization under heterogeneous box and pallet choices <br>
+
+- ❤️ **Digital Model-Driven Optimization for Robot-Assisted Palletization: Addressing Real-World Constraints in Autonomous Warehousing** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ifacol.2025.09.338-blue.svg)](https://doi.org/10.1016/j.ifacol.2025.09.338)
+  > 👨‍🔬 **Authors:** Anan Ashrabi Ananno; Marie Jonsson | 📅 **Year:** 2025 | 🏢 **Venue:** IFAC-PapersOnLine <br>
+  > 🔑 **Keywords:** Palletization, Digital twin, Genetic algorithm, Robot constraints, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Robot-assisted pallet loading \| Rigid cuboid boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (genetic optimization with digital robot validation) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known box/pallet geometry and a digital robot model \| Stability: dynamic and load-stability constraints are included \| Execution: reachability, collision, and robot-motion feasibility are evaluated in the digital model <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: custom genetic algorithm integrated with a digital robot model \| Data: simulated warehouse palletization scenarios \| Objective: balance space utilization with robot reachability, collision avoidance, and load stability <br>
+
+- ❤️ **Evaluating LLMs for Combinatorial Optimization: One-Phase and Two-Phase Heuristics for 2D Bin-Packing** [![arXiv](https://img.shields.io/badge/arXiv-2509.22255-b31b1b.svg)](https://arxiv.org/abs/2509.22255) [![Paper](https://img.shields.io/badge/Paper-Link-4682B4.svg)](https://nips.cc/virtual/2025/122441)
+  > 👨‍🔬 **Authors:** Syed Mahbubul Huq; Daniel Brito-Pacheco; Daniel Sikar; Rajesh Mojumder; Chris Child; Tillman Weyde | 📅 **Year:** 2025 | 🏢 **Venue:** NeurIPS 2025 Workshop on Evaluating the Evolving LLM Lifecycle: Benchmarks, Emergent Abilities, and Scaling <br>
+  > 🔑 **Keywords:** 2D packing, Large language models, Evolutionary algorithms, Heuristic generation, Workshop <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/evaluation \| Multi-bin two-dimensional packing \| Rectangles <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (LLM-guided heuristic-generation framework) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known rectangle dimensions and current bin layouts \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: iterative LLM-plus-evolution generation of one-phase and two-phase packing heuristics \| Data: paper-defined 2D bin-packing test instances and classical heuristic baselines \| Objective: reduce bin usage and increase space utilization while evaluating LLM optimization capability <br>
+
+- ❤️ **Intelligent Optimization of E-Commerce Order Packing Using Deep Reinforcement Learning with Heuristic Strategies** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.asoc.2025.113283-blue.svg)](https://doi.org/10.1016/j.asoc.2025.113283)
+  > 👨‍🔬 **Authors:** Kaibo Liang; Man Shan; Huwei Liu; Jianglong Yang; Chenxi Gu; Xiangyu Yin | 📅 **Year:** 2025 | 🏢 **Venue:** Applied Soft Computing <br>
+  > 🔑 **Keywords:** E-commerce packing, Variable-sized bins, Deep reinforcement learning, Heuristic selection, Industrial data <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Multi-bin e-commerce order packing with multiple carton types \| Heterogeneous rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: order, item, available-carton, and current packing-status features \| Action: select the next item/order decision and a packing heuristic or strategy combination \| Reward: loading-efficiency and packing-cost improvement <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known product and carton dimensions \| Stability: practical packing feasibility handled by heuristic constraints \| Execution: no robotic-arm execution reported <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: order-packing-optimization DRL and packing-combination-strategy DRL integrated with constructive heuristics \| Data: JD.com order data and generated training/evaluation instances \| Objective: improve loading rate, carton selection, and computational efficiency <br>
+
+- ❤️ **Interval-Tree Based Multi-Objective 3D Bin Packing Using Evolutionary Extreme Point Heuristic** [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3712255.3726760-blue.svg)](https://doi.org/10.1145/3712255.3726760)
+  > 👨‍🔬 **Authors:** Hermann Foot | 📅 **Year:** 2025 | 🏢 **Venue:** GECCO 2025 Companion <br>
+  > 🔑 **Keywords:** 3D packing, Multi-objective optimization, Evolutionary algorithms, Extreme points, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container/open-height 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (evolutionary heuristic method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known box and container geometry \| Stability: support/stability quality is an explicit objective \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: evolutionary search with an extreme-point placement heuristic and interval-tree acceleration \| Data: public three-dimensional bin-packing benchmark instances \| Objective: jointly reduce packing height and improve load stability <br>
+
+- ❤️ **LLM-Driven Instance-Specific Heuristic Generation and Selection** [![arXiv](https://img.shields.io/badge/arXiv-2506.00490-b31b1b.svg)](https://arxiv.org/abs/2506.00490)
+  > 👨‍🔬 **Authors:** Shaofeng Zhang; Shengcai Liu; Ning Lu; Jiahao Wu; Ji Liu; Yew-Soon Ong; Ke Tang | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2506.00490 <br>
+  > 🔑 **Keywords:** Online packing, 1D bin packing, Large language models, Hyper-heuristics, Instance-specific optimization <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/evaluation \| Multi-bin one-dimensional packing \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (LLM-driven hyper-heuristic method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: item-stream and instance-feature representations \| Stability: not applicable to one-dimensional packing \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: instance-feature partitioning, LLM/evolution generation of subclass-specific heuristics, and heuristic selection \| Data: 4,500 online-bin-packing subclasses plus additional CVRP evaluation subclasses \| Objective: reduce optimality gap by matching specialized heuristics to heterogeneous instance regions <br>
+
+- ❤️ **LOOP: Language Oriented Object Packing with Diffusion Models** [![Paper](https://img.shields.io/badge/Paper-Link-4682B4.svg)](https://iros-2025-ai4roboticsmanufacturing.github.io/)
+  > 👨‍🔬 **Authors:** Anurag Maurya; Shashwat Gupta; Sandip Das; Shivam Vats; Ravi Prakash | 📅 **Year:** 2025 | 🏢 **Venue:** IROS 2025 Workshop on Generative AI for Robotics and Smart Manufacturing <br>
+  > 🔑 **Keywords:** Irregular objects, Diffusion models, Large language models, Physics simulation, Workshop <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Single-container irregular-object packing with language preferences \| Irregular rigid objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (diffusion sampling and physics-based optimization) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known object/container geometry plus natural-language preferences \| Stability: simulator-based physics plausibility and barrier-function constraints \| Execution: no archival real-robot execution report <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: diffusion-based layout sampling, simulator physics integration, LLM preference interpretation, and barrier functions \| Data: paper-defined simulated irregular-object packing tasks \| Objective: generate physically plausible layouts satisfying customizable natural-language preferences <br>
+
+- ❤️ **Low Resolution Next Best View for Robot Packing** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ifacol.2025.10.228-blue.svg)](https://doi.org/10.1016/j.ifacol.2025.10.228) [![arXiv](https://img.shields.io/badge/arXiv-2505.04228-b31b1b.svg)](https://arxiv.org/abs/2505.04228)
+  > 👨‍🔬 **Authors:** Giuseppe Fabio Preziosa; Chiara Castellano; Andrea Maria Zanchettin; Marco Faroni; Paolo Rocco | 📅 **Year:** 2025 | 🏢 **Venue:** IFAC-PapersOnLine <br>
+  > 🔑 **Keywords:** Scope-adjacent, Active perception, Next-best view, Robot packing, 3D reconstruction <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Scope-adjacent active perception \| Not a packing policy; next-best-view selection for robot packing \| General objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (sampling-based active-perception method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: very-low-resolution 3D sensing and partial object reconstructions \| Stability: not evaluated \| Execution: sensor-view planning intended for scalable robotic packing cells <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: low-resolution next-best-view utility balancing pose redundancy and acquisition density, with RRT exploration \| Data: experimental low-resolution reconstruction trials \| Objective: obtain packing-sufficient object geometry with fewer sensor poses <br>
+
+- ❤️ **Multi-Heuristic Robotic Bin Packing of Regular and Irregular Objects** [![DOI](https://img.shields.io/badge/DOI-10.1109%2FICRA55743.2025.11128421-blue.svg)](https://doi.org/10.1109/ICRA55743.2025.11128421)
+  > 👨‍🔬 **Authors:** Tim Nickel; Richard Bormann; Kai Oliver Arras | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE International Conference on Robotics and Automation (ICRA) <br>
+  > 🔑 **Keywords:** Robotic packing, Irregular objects, Multi-heuristic planning, Stability, Retail objects <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Single-container robotic packing \| Regular and irregular rigid retail objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (weighted multi-heuristic planning method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known or reconstructed object geometry \| Stability: task-specific packing and support criteria are evaluated through multiple heuristics \| Execution: real robotic packing applications <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: So-Pack generalist irregular-object heuristic integrated into a weighted multi-heuristic planner \| Data: a newly introduced retail-object dataset and real-world application trials \| Objective: maximize packing quality while adapting to user- and task-specific packing rules <br>
+
+- ❤️ **Multi-Objective 3D Bin Packing Strategies Through Meta Reinforcement Learning** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ifacol.2025.09.422-blue.svg)](https://doi.org/10.1016/j.ifacol.2025.09.422)
+  > 👨‍🔬 **Authors:** Hermann Foot; Benedikt Mättig | 📅 **Year:** 2025 | 🏢 **Venue:** IFAC-PapersOnLine <br>
+  > 🔑 **Keywords:** 3D packing, Multi-objective optimization, Meta reinforcement learning, Stability, Weight distribution <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Single-container 3D packing across changing objective preferences \| Rigid cuboids with weight attributes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current packing configuration, remaining items, and objective-preference information \| Action: select packing decisions under the current trade-off \| Reward: weighted combination of volume efficiency, stability, and weight-distribution objectives <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/container geometry and weights \| Stability: explicit stability and weight-distribution objectives \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: meta-reinforcement-learning policy for adapting across multi-objective packing preferences \| Data: simulated three-dimensional bin-packing instances \| Objective: learn transferable trade-offs among utilization, stability, and load distribution <br>
+
+- ❤️ **Multi-Objective Dynamic Feedback Algorithm for Solving the Multi-Drop Three-Dimensional Multiple Bin-Size Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cie.2025.111059-blue.svg)](https://doi.org/10.1016/j.cie.2025.111059)
+  > 👨‍🔬 **Authors:** Yi Liu; Xiaoyun Jiang | 📅 **Year:** 2025 | 🏢 **Venue:** Computers & Industrial Engineering <br>
+  > 🔑 **Keywords:** 3D packing, Multi-drop loading, Variable-sized bins, Multi-objective optimization, Logistics <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin loading with multiple bin sizes and unloading order \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (multi-stage heuristic optimization method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known box/bin geometry and destination order \| Stability: geometric and logistics feasibility constraints \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: three-stage multi-objective dynamic-feedback algorithm \| Data: generated multi-drop and multiple-bin-size instances \| Objective: improve utilization while reducing container cost and unloading obstruction <br>
+
+- ❤️ **Multi-Objective Evolution of Heuristic Using Large Language Model** [![DOI](https://img.shields.io/badge/DOI-10.1609%2Faaai.v39i25.34922-blue.svg)](https://doi.org/10.1609/aaai.v39i25.34922)
+  > 👨‍🔬 **Authors:** Shunyu Yao; Fei Liu; Xi Lin; Zhichao Lu; Zhenkun Wang; Qingfu Zhang | 📅 **Year:** 2025 | 🏢 **Venue:** AAAI Conference on Artificial Intelligence <br>
+  > 🔑 **Keywords:** Online packing, 1D bin packing, Large language models, Evolution of heuristics, Multi-objective optimization <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/evaluation \| Multi-bin one-dimensional packing within a multi-domain heuristic-design framework \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (LLM-guided evolutionary heuristic design) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: scalar item streams and current bin states \| Stability: not applicable to one-dimensional packing \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: multi-objective evolution of executable heuristics generated and revised by a large language model \| Data: online-bin-packing and additional combinatorial-optimization benchmarks \| Objective: jointly optimize solution quality, runtime efficiency, and scalability <br>
+
+- ❤️ **Neural-Driven Constructive Heuristic for 2D Robotic Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.3390%2Felectronics14101956-blue.svg)](https://doi.org/10.3390/electronics14101956)
+  > 👨‍🔬 **Authors:** Mariusz Kaleta; Tomasz Śliwiński | 📅 **Year:** 2025 | 🏢 **Venue:** Electronics <br>
+  > 🔑 **Keywords:** 2D packing, Robotic packing, Neural heuristic, Constructive methods, Insertability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-bin two-dimensional robotic packing \| Rectangles <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (neural scoring model trained for constructive heuristic selection) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: engineered features of the current layout and candidate placement \| Stability: geometric non-overlap only \| Execution: robot insertability/accessibility is considered in candidate feasibility <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: neural candidate scorer optimized with CMA-ES inside a constructive packing heuristic \| Data: 2DCPackGen instances and FMCG logistics data \| Objective: minimize bin count while preserving robot-packable insertion sequences <br>
+
+- ❤️ **On the Multiple Optimal Solutions and Patterns of the Pallet Loading Problem** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cor.2025.107182-blue.svg)](https://doi.org/10.1016/j.cor.2025.107182)
+  > 👨‍🔬 **Authors:** Junmin Yi; Mingming Li; Yiping Lu | 📅 **Year:** 2025 | 🏢 **Venue:** Computers & Operations Research <br>
+  > 🔑 **Keywords:** Pallet loading, Exact optimization, Packing patterns, Multiple optima <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Manufacturer's pallet loading \| Identical rectangular boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (exact enumeration and pattern-analysis method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known pallet and box dimensions \| Stability: layer-based geometric feasibility \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: characterization and enumeration of multiple optimal pallet-loading solutions and patterns \| Data: standard pallet-loading benchmark instances \| Objective: maximize the number of loaded boxes and analyze diversity among equal-quality optimal patterns <br>
+
+- ❤️ **RASP: Revisiting 3D Anamorphic Art for Shadow-Guided Packing of Irregular Objects** [![DOI](https://img.shields.io/badge/DOI-10.1109%2FCVPR52734.2025.00549-blue.svg)](https://doi.org/10.1109/CVPR52734.2025.00549) [![arXiv](https://img.shields.io/badge/arXiv-2504.02465-b31b1b.svg)](https://arxiv.org/abs/2504.02465)
+  > 👨‍🔬 **Authors:** Soumyaratna Debnath; Ashish Tiwari; Kaustubh Sadekar; Shanmuganathan Raman | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) <br>
+  > 🔑 **Keywords:** 3D packing, Irregular objects, Differentiable rendering, Signed-distance fields, Continuous pose optimization <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container geometric packing and part assembly \| Irregular 3D mesh objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (differentiable optimization method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known 3D meshes and rendered silhouettes \| Stability: geometric intersection and container-extrusion constraints; no physical stability model \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: shadow/silhouette-guided differentiable rendering with SDF-based intersection and boundary losses \| Data: irregular-object packing and part-assembly datasets reported in the paper \| Objective: minimize inter-object spacing and maximize occupancy while preventing overlap and extrusion <br>
+
+- ❤️ **Robotic Manipulation Framework Based on Semantic Keypoints for Packing Shoes of Different Sizes, Shapes, and Softness** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.robot.2025.105174-blue.svg)](https://doi.org/10.1016/j.robot.2025.105174)
+  > 👨‍🔬 **Authors:** Yi Dong; Yangjun Liu; Jinjun Duan; Yang Li; Zhendong Dai | 📅 **Year:** 2025 | 🏢 **Venue:** Robotics and Autonomous Systems <br>
+  > 🔑 **Keywords:** Robotic packing, Deformable objects, Semantic keypoints, Contact-rich manipulation, Shoes <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Sequential \| Single-container robotic shoe packing \| Paired irregular and deformable shoes with varying sizes and softness <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (semantic-keypoint perception and task-planning framework) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: vision-derived semantic keypoints and shoe state \| Stability: object state and placement feasibility are checked during manipulation \| Execution: UR5e robot, soft gripper, and environment-assisted reorientation using table and box contacts <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: semantic-keypoint perception, state recognition, grasp inference, contact-assisted reorientation, and packing task planning \| Data: physical shoes spanning different sizes, shapes, and softness \| Objective: robustly orient and pack shoe pairs under object variation and deformation <br>
+
+- ❤️ **Snuggle-Pack: Speeding Up Multi-Heuristic Packing Planning of Complex Objects** [![DOI](https://img.shields.io/badge/DOI-10.1109%2FIROS60139.2025.11246900-blue.svg)](https://doi.org/10.1109/IROS60139.2025.11246900)
+  > 👨‍🔬 **Authors:** Tim Nickel; Richard Bormann; Kai Oliver Arras | 📅 **Year:** 2025 | 🏢 **Venue:** IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) <br>
+  > 🔑 **Keywords:** Robotic packing, Irregular objects, Multi-heuristic planning, Fast 3D matching, Task constraints <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Single-container robotic packing \| Complex regular and irregular rigid objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (accelerated multi-heuristic planning method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known or reconstructed 3D object geometry \| Stability: support and task-specific criteria can be incorporated in heuristic scoring \| Execution: designed for robot-executable packing plans <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: accelerated multi-heuristic packing planner using fast volumetric/3D matching for candidate evaluation \| Data: complex-object benchmark and robot-relevant packing scenarios \| Objective: reduce planning time while retaining flexible, high-quality packing layouts <br>
+
 - ❤️ **Deep Reinforcement Learning Method with Integrated Rotation and Placement Strategies for Solving the 2D Bin Packing Problem** [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978-981-95-4045-7_21-blue.svg)](https://doi.org/10.1007/978-981-95-4045-7_21)
   > 👨‍🔬 **Authors:** Xiaoping Jiang; Gang Xiao; Xia Zhang; Mu Yuan; Zhenhui Lou; Jiangtao Ye; Fengjie Li; Zhenbo Cheng | 📅 **Year:** 2026 | 🏢 **Venue:** Lecture Notes in Electrical Engineering <br>
   > 🔑 **Keywords:** 2D packing, Deep reinforcement learning, Rotation, Placement <br>
@@ -1256,3 +1499,273 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: pallet heightmap plus up to 2K candidate actions, each a 15-dimensional anchor-orientation feature vector with a feasibility mask \| Action: rank and select one admissible candidate placement with the masked actor \| Reward: shaped reward combining density increment, bottom support, support-region centering, placement effort, stack-load risk, height terms, low placement, wall proximity, and lateral support <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit bottom-support, stack-load, and fragility feasibility checks in candidate generation \| Execution: industrial palletizing with operational KPIs and inference-latency evaluation <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: OPAL — Operationally Guided EMS (OG-EMS) candidate generation plus an xLSTM Placement Encoder and LRAM masked ranking policy trained with PPO \| Data: 1500 real-world BED-BPP grocery-logistics orders \| Objective: maximize absolute density/space utilization together with support, balance, and center-of-gravity KPIs; mean space utilization 0.49, +15.1% from guided candidate generation and +6.3% from learned ranking <br>
+
+- ❤️ **A Branch-and-Cut Algorithm for the Pallet-Loading Vehicle Routing Problem Considering Load Balance of Semi-Trailer Trucks** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cor.2025.107258-blue.svg)](https://doi.org/10.1016/j.cor.2025.107258)
+  > 👨‍🔬 **Authors:** Xiangbin Xu; Haoxing Ouyang | 📅 **Year:** 2026 | 🏢 **Venue:** Computers & Operations Research <br>
+  > 🔑 **Keywords:** Vehicle routing, Pallet loading, 2D packing, Load balance, Branch-and-cut <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Split-delivery vehicle routing with two-dimensional pallet loading and truck-balance constraints \| Rectangular palletized cargo <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (mixed-integer programming, adaptive large-neighborhood search, and branch-and-cut) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known orders, pallet geometry, truck layout, and axle/load information \| Stability: semi-trailer load balance and axle-related constraints \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: mixed-integer formulation, adaptive large-neighborhood upper-bound search, and branch-and-cut \| Data: modified routing and loading benchmark instances \| Objective: minimize transportation cost subject to route, pallet-loading, and vehicle-balance feasibility <br>
+
+- ❤️ **A Combinatorial Algorithm for Three Dimensional Multi-Container Loading Problem with Different Capacity Constraints** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cie.2025.111779-blue.svg)](https://doi.org/10.1016/j.cie.2025.111779)
+  > 👨‍🔬 **Authors:** Zhao-hong Jia; Zhong-jun Gao; Chuang Liu; Yun Yang; Tao Fang; Kai Li | 📅 **Year:** 2026 | 🏢 **Venue:** Computers & Industrial Engineering <br>
+  > 🔑 **Keywords:** 3D packing, Multi-container loading, Capacity constraints, Combinatorial heuristics, Multi-drop loading <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Multi-container loading with heterogeneous capacities and operational constraints \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (combinatorial heuristic and metaheuristic method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known items, container dimensions, capacities, and delivery/load-bearing attributes \| Stability: load-bearing and practical loading constraints \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: two-stage combinatorial loading algorithm with greedy/refined search, space recycling, and metaheuristic improvement \| Data: RAND and OR-library-style loading instances reported in the paper \| Objective: maximize loaded value/volume while satisfying heterogeneous capacity and operational constraints <br>
+
+- ❤️ **A Real-Time Heuristic 3D Bin Packing Algorithm for Robotic Mixed Palletizing with Kinematic and Stability Constraints** [![DOI](https://img.shields.io/badge/DOI-10.1109%2FICMTIM69588.2026.11526704-blue.svg)](https://doi.org/10.1109/ICMTIM69588.2026.11526704)
+  > 👨‍🔬 **Authors:** Y. Sun; K. Sun; W. Yan; Y. Cai; Z. Liao | 📅 **Year:** 2026 | 🏢 **Venue:** 7th International Conference on Mechatronics Technology and Intelligent Manufacturing (ICMTIM) <br>
+  > 🔑 **Keywords:** 3D packing, Robotic palletization, Real-time heuristics, Kinematic constraints, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/sequential \| Robotic mixed pallet loading \| Rigid cuboid boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (real-time constructive heuristic) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known box and pallet geometry \| Stability: minimum 75% bottom-support-area rule \| Execution: top-down end-effector clearance and robot kinematic feasibility checks <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: Guillotine-Split free-space management with physical support and top-down clearance guardrails \| Data: paper-reported mixed-palletizing instances and robot implementation \| Objective: generate fast, stable, and robot-executable pallet layouts <br>
+
+- ❤️ **AI-Enabled Digital Twin Framework for Reconfigurable Robotic Palletizing of Irregularly Shaped Products** [![DOI](https://img.shields.io/badge/DOI-10.1007%2Fs00170-026-18109-2-blue.svg)](https://doi.org/10.1007/s00170-026-18109-2)
+  > 👨‍🔬 **Authors:** Nikolaos Theodoropoulos; Andres Castro; Stella Dimitra Tragianni; Dionisis Andronas; Isiah Zaplana; Bengisu Ayan; Raul Suarez; Michael Suppa; Sotiris Makris | 📅 **Year:** 2026 | 🏢 **Venue:** International Journal of Advanced Manufacturing Technology <br>
+  > 🔑 **Keywords:** Robotic palletization, Irregular objects, Digital twin, Deep learning, Reconfigurable systems <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Reconfigurable dual-arm robotic pallet loading \| Irregular industrial products <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: pallet-surface representation and available-object inventory used by the learning-based sequencing component \| Action: select the next object for palletization \| Reward: placement success and palletization-fitness signal promoting difficult-object prioritization <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: CAD-derived geometry and deep-learning-based perception \| Stability: stable-placement and product-handling constraints \| Execution: digital-twin validation and dual-arm physical demonstrator <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: CAD grasp generation, learned perception, learning-assisted sequence optimization, digital-twin validation, and robot execution \| Data: simulated/digital-twin data and an irregular aluminum-product demonstrator \| Objective: support reconfigurable, stable, and executable palletization across robot-cell configurations <br>
+
+- ❤️ **CMDRL: A Cavity-Aware Deep Reinforcement Learning Framework with Spatiotemporal Attention for 3D Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.1177%2F09544054261427648-blue.svg)](https://doi.org/10.1177/09544054261427648)
+  > 👨‍🔬 **Authors:** Sirui Wang; Yunqing Rao; Nai Li; Peng Qi; Xusheng Zhao | 📅 **Year:** 2026 | 🏢 **Venue:** Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture <br>
+  > 🔑 **Keywords:** 3D packing, Deep reinforcement learning, Cavity representation, Spatiotemporal attention, Online packing <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/sequential \| Single-container 3D packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: cavity map encoding empty-space topology plus temporal features of arriving or remaining items \| Action: select the item and its placement/orientation \| Reward: gap-ratio reduction and space-utilization improvement <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item dimensions and cavity-aware spatial representation \| Stability: geometric feasibility; no physical dynamics model reported \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: cavity-map representation with spatiotemporal-attention deep reinforcement learning \| Data: generated three-dimensional bin-packing instances \| Objective: reduce inaccessible cavities and improve final utilization <br>
+
+- ❤️ **Column (and Row) Generation Algorithms for the Pallet Loading Problem** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.disopt.2025.100927-blue.svg)](https://doi.org/10.1016/j.disopt.2025.100927)
+  > 👨‍🔬 **Authors:** Javier Marenco | 📅 **Year:** 2026 | 🏢 **Venue:** Discrete Optimization <br>
+  > 🔑 **Keywords:** Pallet loading, Column generation, Row generation, Exact optimization, Packing patterns <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Manufacturer's pallet loading \| Identical rectangular boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (exact decomposition and generation algorithms) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known box and pallet dimensions \| Stability: layer-based geometric feasibility \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: column generation and simultaneous row-and-column generation formulations \| Data: standard pallet-loading benchmark instances \| Objective: maximize the number of boxes packed on a pallet <br>
+
+- ❤️ **Differentiable Packing of Irregular 3D Objects with Adaptive Container Estimation** [![arXiv](https://img.shields.io/badge/arXiv-2606.16333-b31b1b.svg)](https://arxiv.org/abs/2606.16333)
+  > 👨‍🔬 **Authors:** Palak Gupta; Shanmuganathan Raman | 📅 **Year:** 2026 | 🏢 **Venue:** arXiv preprint arXiv:2606.16333 <br>
+  > 🔑 **Keywords:** 3D packing, Irregular objects, Differentiable optimization, Adaptive containers, Continuous pose optimization <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Joint object-placement and container-dimension optimization \| Irregular 3D mesh objects <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (gradient-based differentiable optimization) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known 3D object geometry and differentiable geometric proxies \| Stability: overlap and container-boundary losses; no physical stability model \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: a single differentiable optimization loop over 6-DoF object poses and three container dimensions \| Data: paper-reported irregular-object mesh sets \| Objective: minimize overlap, boundary violation, empty space, and container volume <br>
+
+- ❤️ **Dynamic Dense Packing of Unknown Objects Based on Perception** [![DOI](https://img.shields.io/badge/DOI-10.1109%2FTASE.2026.3691769-blue.svg)](https://doi.org/10.1109/TASE.2026.3691769)
+  > 👨‍🔬 **Authors:** Shichen Cao; Jing Xiao | 📅 **Year:** 2026 | 🏢 **Venue:** IEEE Transactions on Automation Science and Engineering <br>
+  > 🔑 **Keywords:** Online packing, Robotic packing, Unknown objects, Perception, Force feedback <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/dynamic \| Single-container robotic packing of continuously arriving objects \| Unknown rigid and selected non-rigid objects, including piled scenes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (perception, volumetric optimization, and robot-control framework) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: online visual perception and rapid object modeling under sensing uncertainty \| Stability: dense volumetric placement with physical execution feedback \| Execution: real robot picking/packing with force-torque pose correction <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: concurrent perception, rapid modeling, volumetric placement optimization, motion execution, and force/torque correction \| Data: real experiments with diverse previously unknown objects \| Objective: achieve high-density and reliable online packing under perception, modeling, and motion uncertainty <br>
+
+- ❤️ **Green Bin Packing** [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3788093-blue.svg)](https://doi.org/10.1145/3788093)
+  > 👨‍🔬 **Authors:** Jackson Bibbens; Cooper Sigrist; Bo Sun; Shahin Kamali; Mohammad Hajiesmaili | 📅 **Year:** 2026 | 🏢 **Venue:** Proceedings of the ACM on Measurement and Analysis of Computing Systems <br>
+  > 🔑 **Keywords:** Online packing, 1D bin packing, Energy cost, Competitive analysis, Cloud systems <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Multi-bin one-dimensional packing with threshold-dependent overfilling cost \| Scalar-sized items <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (online-algorithm design and competitive analysis) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: arriving scalar item sizes and current bin loads \| Stability: not applicable to one-dimensional packing \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: online algorithms and competitive analysis for a bin-opening plus green-overfill cost model \| Data: adversarial/theoretical sequences and empirical cloud-workload-inspired tests \| Objective: minimize the combined number of opened bins and excess high-utilization cost <br>
+
+- ❤️ **Nest Smarter, Not Harder: A Hybrid Vision-Based Deep Reinforcement Learning Agent for Packing 2D Irregular Geometries by Rotational Placement** [![DOI](https://img.shields.io/badge/DOI-10.1007%2Fs10845-025-02620-6-blue.svg)](https://doi.org/10.1007/s10845-025-02620-6)
+  > 👨‍🔬 **Authors:** Kirolos Abdou; Amgad Fakhry Ibrahim; Kai Binder; Marco F. Huber | 📅 **Year:** 2026 | 🏢 **Venue:** Journal of Intelligent Manufacturing <br>
+  > 🔑 **Keywords:** 2D packing, Irregular objects, Deep reinforcement learning, Rotation, Vision-based representation <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Single-sheet/open-dimension 2D irregular packing \| Irregular planar geometries <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: visual/geometric representation of the partial layout and remaining part \| Action: choose rotational placement parameters, coupled with deterministic translation/placement logic \| Reward: weighted compactness/adherence and utilization score <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: rasterized or vision-based geometry representation \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: hybrid vision-based reinforcement-learning agent with rotational placement and geometric translation logic \| Data: open irregular-nesting datasets and paper-reported instances \| Objective: improve nesting utilization while learning transferable rotation decisions <br>
+
+- ❤️ **PackingGPT: 3D Packing Agent for Real Furniture in Last-Mile Delivery** [![arXiv](https://img.shields.io/badge/arXiv-2608.01427-b31b1b.svg)](https://arxiv.org/abs/2608.01427)
+  > 👨‍🔬 **Authors:** Yi You; Hui Li | 📅 **Year:** 2026 | 🏢 **Venue:** arXiv preprint arXiv:2608.01427 <br>
+  > 🔑 **Keywords:** 3D packing, Furniture logistics, Irregular containers, Learning-based planning, Center of mass <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Furniture-box packing into partially occupied vehicle cargo spaces \| Heterogeneous weighted furniture packages and irregular sedan/SUV trunks <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (learning-guided sequential placement framework; no RL formulation reported) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: vehicle cargo-space geometry, existing load, package dimensions, weights, and center-of-mass features \| Stability: weight and center-of-mass constraints \| Execution: last-mile vehicle-loading planning; no robotic execution reported <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: PackingGPT sequential Lego-style placement agent with learned packing/center-of-mass guidance \| Data: real furniture-package records and simulated sedan/SUV cargo environments \| Objective: improve vehicle-space utilization while maintaining load-balance feasibility <br>
+
+- ❤️ **Practical Mixed Palletizing Manipulator System: Incorporating Practical Reinforcement Learning and Configuration-Space Motion Planning** [![DOI](https://img.shields.io/badge/DOI-10.1109%2FTASE.2025.3637854-blue.svg)](https://doi.org/10.1109/TASE.2025.3637854)
+  > 👨‍🔬 **Authors:** Woo-Jin Ahn; Kyuwon Choi; Seong-Woo Kang; Cheol-Kyun Rho; Dong-Sung Pae; Myo-Taeg Lim | 📅 **Year:** 2026 | 🏢 **Venue:** IEEE Transactions on Automation Science and Engineering <br>
+  > 🔑 **Keywords:** Online packing, Robotic palletization, Deep reinforcement learning, Motion planning, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online/sequential \| Robotic mixed pallet loading \| Rigid cuboid boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: pallet configuration and available/current-box features \| Action: choose a box placement satisfying practical feasibility \| Reward: pallet-volume utilization with practical stability-enhancing terms <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: camera-based box recognition and known pallet state \| Stability: practical reward terms and placement checks promote stable layouts \| Execution: CMPNet configuration-space collision-free motion planning on a real conveyor-fed manipulator system <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: PMP-RL palletizing policy plus behavior-cloned CMPNet motion planner \| Data: simulation and real-world palletizing experiments \| Objective: maximize utilization, placement stability, and collision-free execution efficiency <br>
+
+- ❤️ **Robot-human coordination for pallet loading in a parts-to-picker order-picking system** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cie.2026.112067-blue.svg)](https://doi.org/10.1016/j.cie.2026.112067)
+  > 👨‍🔬 **Authors:** António Galrão Ramos; Andreia Correia; Frederico M. Borges | 📅 **Year:** 2026 | 🏢 **Venue:** Computers & Industrial Engineering <br>
+  > 🔑 **Keywords:** Scope-adjacent, Pallet loading, Human-robot coordination, Warehouse scheduling, AMR <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Scope-adjacent warehouse coordination \| Uses predefined pallet-loading sequences, not a packing-layout policy \| Palletized retail goods <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (mixed-integer warehouse coordination model) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known orders, stock pallets, AMR availability, and predefined loading sequences \| Stability: inherited from the predefined pallet-loading plan \| Execution: coordinates AMRs and human operators in a parts-to-picker system <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: mixed-integer programming with a lexicographic multi-objective function \| Data: 81 computational warehouse instances \| Objective: minimize makespan and stock-pallet use while maximizing AMR–pallet pairing continuity <br>
+
+- ❤️ **Solving a Large-Scale 3D Packing Problem with Robot Constraints** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.cor.2025.107373-blue.svg)](https://doi.org/10.1016/j.cor.2025.107373)
+  > 👨‍🔬 **Authors:** Liang Chen; Sheng Zhang; Mengmeng Ding; Huimin Chen; Jiacheng Ren; Xiaoli Yue | 📅 **Year:** 2026 | 🏢 **Venue:** Computers & Operations Research <br>
+  > 🔑 **Keywords:** 3D packing, Robotic packing, Large-scale optimization, Robot constraints, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/sequential \| Large-scale single-container/pallet packing with continuous robot loading \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (industrial-scale constructive and search algorithm) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known items, container/pallet geometry, order groups, weights, and robot workspace \| Stability: support, load-bearing, and center-of-gravity constraints \| Execution: robot workspace, end-effector crossover depth, placement sequence, and continuous-loading constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: industrial-scale sequence-and-assignment construction with robot-feasibility filtering and improvement search \| Data: industrial and generated instances containing up to thousands of boxes \| Objective: achieve high loading rate rapidly while satisfying robot, stability, order, and balance constraints <br>
+
+- ❤️ **The Three-Dimensional Bin Packing Problem with Variable Box Size** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.tre.2026.105038-blue.svg)](https://doi.org/10.1016/j.tre.2026.105038)
+  > 👨‍🔬 **Authors:** Xiangbin Xu; Boyu Wu; Zhongqiang Ma; Yugang Yu | 📅 **Year:** 2026 | 🏢 **Venue:** Transportation Research Part E: Logistics and Transportation Review <br>
+  > 🔑 **Keywords:** 3D packing, Variable box size, Mathematical programming, Beam search, Packaging optimization <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Joint package-dimension design and three-dimensional packing \| Rigid cuboids packed into a variable-dimension outer box <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (mixed-integer formulation and beam-search method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item geometry and constraints on the outer box dimensions/volume \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: mixed-integer programming formulation and tailored beam search \| Data: generated and paper-reported benchmark instances \| Objective: jointly choose feasible outer-box dimensions and item layout to reduce packaging size/cost <br>
+
+- ❤️ **Voxelization-Based Variable Neighborhood Tabu Search Strategy for Three-Dimensional Irregular Strip Packing** [![DOI](https://img.shields.io/badge/DOI-10.3390%2Fmath14091570-blue.svg)](https://doi.org/10.3390/math14091570)
+  > 👨‍🔬 **Authors:** Yue He; Shishun Cheng; Zhuo Xie; Shaowen Yao; Lijun Wei | 📅 **Year:** 2026 | 🏢 **Venue:** Mathematics <br>
+  > 🔑 **Keywords:** 3D packing, Irregular objects, Voxelization, Variable neighborhood search, Tabu search <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Three-dimensional irregular strip packing \| Irregular rigid objects with discrete rotations <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (variable-neighborhood tabu-search method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: voxelized object and strip geometry \| Stability: geometric non-overlap and boundary feasibility only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: adaptive-resolution voxelization with largest-volume-first construction and variable-neighborhood tabu search \| Data: Chess, Engine, Merged, and paper-reported irregular-object benchmarks \| Objective: minimize strip height while maintaining collision-free packing <br>
+
+- ❤️ **An integrated simulation framework enabling flexible robotic palletizing** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.rcim.2026.103347-blue.svg)](https://doi.org/10.1016/j.rcim.2026.103347)
+  > 👨‍🔬 **Authors:** Martina Salami; Pietro Bilancia; Marcello Pellicciari | 📅 **Year:** 2027 | 🏢 **Venue:** Robotics and Computer-Integrated Manufacturing <br>
+  > 🔑 **Keywords:** Robotic palletization, Simulation framework, Digital twin, Heuristics, Robot code generation <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline/batch \| Robotic Europallet loading and executable process generation \| Rigid cuboid boxes <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (constructive heuristic and simulation-based engineering framework) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known box/pallet data and a 3D digital model of the robotic cell \| Stability: layer mass ordering and center-of-gravity balancing \| Execution: RoboDK validation, KUKA code generation, and online instruction streaming <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: layered Guillotine-plus-Best-Fit packing, load-balancing logic, RoboDK simulation, and automatic robot-code deployment \| Data: industrially representative KUKA palletizing scenarios and released reproduction data \| Objective: accelerate layout generation, virtual validation, programming, and deployment while preserving pallet fill and balance <br>
+
+## Existing README Metadata Updates
+
+The following corrections apply to records already present in the repository. They are **not included in the count of 52 new candidate records**.
+
+### 1. One4Many-StablePacker: update from arXiv-only metadata to IJCAI-ECAI 2026
+
+**Current issue**
+
+- The README lists the work as a 2025 arXiv preprint.
+- The author field contains affiliation markers.
+- The paper has since been accepted by the International Joint Conference on Artificial Intelligence and European Conference on Artificial Intelligence 2026.
+
+**Replace the identity fields with**
+
+```text
+Title: One4Many-StablePacker: An Efficient Deep Reinforcement Learning Framework for the 3D Bin Packing Problem
+Authors: Lei Gao; Shihong Huang; Shengjie Wang; Hong Ma; Feng Zhang; Hengda Bao; Qichang Chen; Weihua Zhou
+Year: 2026
+Venue: International Joint Conference on Artificial Intelligence and European Conference on Artificial Intelligence (IJCAI-ECAI 2026)
+arXiv: 2510.10057
+Official acceptance page: https://2026.ijcai.org/accepted-papers/
+```
+
+The arXiv link should be retained as the accessible manuscript link until formal proceedings metadata becomes available.
+
+### 2. RoboBPP: correct canonical year and latest arXiv author list
+
+**Current issue**
+
+- The README labels the arXiv work as 2026 even though arXiv:2512.04415 was first released in December 2025 and no later formal venue is currently cited.
+- The author field contains affiliation numerals and does not match the latest arXiv metadata.
+
+**Replace the identity fields with**
+
+```text
+Title: RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation
+Authors: Zhoufeng Wang; Hang Zhao; Juzhan Xu; Shishun Zhang; Zeyu Xiong; Ruizhen Hu; Chenyang Zhu; Kai Xu
+Year: 2025
+Venue: arXiv preprint arXiv:2512.04415
+arXiv: 2512.04415
+Project: https://robot-bin-packing-benchmark.github.io/
+```
+
+### 3. ASAP: resolve title-version drift and clean the author field
+
+**Current issue**
+
+- The README author field includes affiliations and email addresses.
+- Different versions expose different titles. Earlier arXiv metadata uses `ASAP: Learning Generalizable Online Bin Packing via Adaptive Selection After Pruning`, while the latest manuscript title page uses `ASAP: Exploiting the Satisficing Generalization Edge in Neural Combinatorial Optimization`.
+- The README title `Adaptive Selection After Proposal` is therefore neither the exact earlier metadata title nor the complete latest title-page title.
+
+**Recommended canonical identity under the repository's title-page-first rule**
+
+```text
+Title: ASAP: Exploiting the Satisficing Generalization Edge in Neural Combinatorial Optimization
+Authors: Han Fang; Paul Weng; Yutong Ban
+Year: 2025
+Venue: arXiv preprint arXiv:2501.17377
+arXiv: 2501.17377
+```
+
+Before merging, recheck the latest arXiv version and preserve an alternate-title note if the abstract-page metadata has not yet caught up with the manuscript title page.
+
+### 4. Collaborate sim and real: remove contribution and affiliation markup from authors
+
+**Replace**
+
+```text
+Authors: Lidi Zhang1\equalcontrib, Han Wu2\equalcontrib, Liyu Zhang3, Ruofeng Liu4, Haotian Wang2, Chao Li3, Desheng Zhang5, Yunhuai Liu1, Tian He2
+```
+
+**With**
+
+```text
+Authors: Lidi Zhang; Han Wu; Liyu Zhang; Ruofeng Liu; Haotian Wang; Chao Li; Desheng Zhang; Yunhuai Liu; Tian He
+```
+
+Keep:
+
+```text
+Year: 2025
+Venue: arXiv preprint arXiv:2511.19932
+```
+
+### 5. GFPack++: correct the task dimension, geometry, and execution fields
+
+**Current issue**
+
+The README describes this 2D irregular-packing paper as a 3D/general-object packing task and associates it with robot collision or reachability constraints. The ICCV paper is a geometric 2D irregular-packing method and does not present robotic execution.
+
+**Replace the affected fields with**
+
+```text
+Task: Offline | Single-sheet/container 2D irregular packing | Irregular planar shapes with continuous rotation
+RL Formulation: Not applicable (gradient-field optimization method)
+Physics & Vision: Observation: known 2D shape and container geometry | Stability: geometric non-overlap only | Execution: no robotic execution
+Algo & Data: Method: attention-driven learned gradient fields with constrained gradients and adaptive weighting | Data: public 2D irregular-packing datasets and arbitrary-boundary tests | Objective: maximize utilization while reducing overlap and boundary violation
+```
+
+### 6. Deliberate planning of 3D bin packing on packing configuration trees: use published author and date metadata
+
+**Current issue**
+
+- The arXiv version lists six authors, whereas the final journal publication includes **Bo Du**.
+- The journal record was first published online on October 15, 2025 and assigned to the July 2026 issue. The existing `Year: 2026` is suitable for the canonical journal record, but the publication timeline should be noted to prevent duplicate 2025/2026 records.
+
+**Use**
+
+```text
+Authors: Hang Zhao; Juzhan Xu; Kexiong Yu; Ruizhen Hu; Chenyang Zhu; Bo Du; Kai Xu
+Year: 2026
+Venue: The International Journal of Robotics Research
+DOI: 10.1177/02783649251380619
+arXiv: 2504.04421
+Publication note: OnlineFirst 2025-10-15; issue published 2026-07
+```
