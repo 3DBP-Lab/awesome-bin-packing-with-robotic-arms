@@ -166,6 +166,15 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: software package containing a Deep Q-network and four constructive heuristics \| Data: customizable item lists and bundled benchmark examples \| Objective: compare online utilization across solvers <br>
 
+- ❤️ **RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation** [![arXiv](https://img.shields.io/badge/arXiv-2512.04415-b31b1b.svg)](https://arxiv.org/abs/2512.04415) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://robot-bin-packing-benchmark.github.io/)
+  > 👨‍🔬 **Authors:** Zhoufeng Wang; Hang Zhao; Juzhan Xu; Shishun Zhang; Zeyu Xiong; Ruizhen Hu; Chenyang Zhu; Kai Xu | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2512.04415 <br>
+  > 🔑 **Keywords:** Benchmark, Online packing, Robotic packing, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-bin robotic packing \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: physics/dynamics simulation, explicit stability checks \| Execution: robot manipulator, collision/reachability constraints <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: benchmark/environment design, simulation \| Data: real-world/industrial data with paper-reported evaluation \| Objective: maintain stability <br>
+
 - ❤️ **MixedPalletBoxes Dataset: A Synthetic Benchmark Dataset for Warehouse Applications** [![DOI](https://img.shields.io/badge/DOI-10.3390%2Fasi9010014-blue.svg)](https://doi.org/10.3390/asi9010014) [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.3390%2Fasi9010014)](https://scholar.google.com/scholar?q=MixedPalletBoxes%20Dataset%3A%20A%20Synthetic%20Benchmark%20Dataset%20for%20Warehouse%20Applications) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/Robotics-Logistics/MixedPalletBoxes)
   > 👨‍🔬 **Authors:** Adamos Daios; Ioannis Kostavelis | 📅 **Year:** 2026 | 🏢 **Venue:** Applied System Innovation <br>
   > 🔑 **Keywords:** Benchmark, Palletization, Synthetic dataset, Warehouse logistics, Object properties <br>
@@ -174,15 +183,6 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (benchmark and dataset paper) <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: structured tabular box attributes rather than camera observations \| Stability: load capacity, fragility, and stackability-related attributes are provided \| Execution: intended for robotic mixed-palletizing evaluation; no single robot execution pipeline <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: parameterized synthetic-data generator, seven fixed datasets, FastAPI picking-list generator, and multi-algorithm validation \| Data: seven datasets containing 500 to 100,000 records plus released generation and evaluation code \| Objective: enable reproducible, scalable, and attribute-aware benchmarking of mixed-palletizing algorithms <br>
-
-- ❤️ **RoboBPP: Benchmarking Robotic Online Bin Packing with Physics-based Simulation** [![arXiv](https://img.shields.io/badge/arXiv-2512.04415-b31b1b.svg)](https://arxiv.org/abs/2512.04415) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://robot-bin-packing-benchmark.github.io/)
-  > 👨‍🔬 **Authors:** Zhoufeng Wang1 Hang Zhao3 Juzhan Xu4 Shishun Zhang1 Zeyu Xiong1 Ruizhen Hu4 Chenyang Zhu1 Zecui Zeng5 | 📅 **Year:** 2026 | 🏢 **Venue:** arXiv preprint arXiv:2512.04415 <br>
-  > 🔑 **Keywords:** Benchmark, Online packing, Robotic packing, Stability <br>
-  > ⚙️ **Settings & Evidence:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-bin robotic packing \| Rigid cuboids <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: physics/dynamics simulation, explicit stability checks \| Execution: robot manipulator, collision/reachability constraints <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: benchmark/environment design, simulation \| Data: real-world/industrial data with paper-reported evaluation \| Objective: maintain stability <br>
 
 ## Algorithms and Methods
 
@@ -915,8 +915,8 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: palletization execution <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: deep reinforcement learning with concurrency/buffer and bin-replacement decisions \| Data: discrete-event simulation and generated streams \| Objective: balance utilization against replacement cost <br>
 
-- ❤️ **ASAP: Learning Generalizable Online Bin Packing via Adaptive Selection After Proposal** [![arXiv](https://img.shields.io/badge/arXiv-2501.17377-b31b1b.svg)](https://arxiv.org/abs/2501.17377)
-  > 👨‍🔬 **Authors:** Han Fang Joint Institute of Michigan Shanghai Jiao Tong University Shanghai, China han.fang@sjtu.edu.cn &Paul Weng Duke Kunshan University Jiangsu, China paul.weng@dukekunshan.edu.cn &Yutong Ban Joint Institute of Michigan Shanghai Jiao Tong University Shanghai, China yban@sjtu.edu.cn | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2501.17377 <br>
+- ❤️ **ASAP: Exploiting the Satisficing Generalization Edge in Neural Combinatorial Optimization** [![arXiv](https://img.shields.io/badge/arXiv-2501.17377-b31b1b.svg)](https://arxiv.org/abs/2501.17377)
+  > 👨‍🔬 **Authors:** Han Fang; Paul Weng; Yutong Ban | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2501.17377 <br>
   > 🔑 **Keywords:** Online packing, 3D bin packing, Deep reinforcement learning, Meta-learning, Adaptation <br>
   > ⚙️ **Settings & Evidence:** <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container sequential packing \| Rigid cuboids <br>
@@ -934,7 +934,7 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: pointer-network actor-critic for order plus height-map placement \| Data: generated instances and a robot demonstration \| Objective: maximize compactness and minimize bin count <br>
 
 - ❤️ **Collaborate sim and real: Robot Bin Packing Learning in Real-world and Physical Engine** [![arXiv](https://img.shields.io/badge/arXiv-2511.19932-b31b1b.svg)](https://arxiv.org/abs/2511.19932)
-  > 👨‍🔬 **Authors:** Lidi Zhang1\equalcontrib, Han Wu2\equalcontrib, Liyu Zhang3, Ruofeng Liu4, Haotian Wang2, Chao Li3, Desheng Zhang5, Yunhuai Liu1, Tian He2 | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2511.19932 <br>
+  > 👨‍🔬 **Authors:** Lidi Zhang; Han Wu; Liyu Zhang; Ruofeng Liu; Haotian Wang; Chao Li; Desheng Zhang; Yunhuai Liu; Tian He | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2511.19932 <br>
   > 🔑 **Keywords:** Online packing, Robotic packing, Sim-to-real, Physics engine, Deep reinforcement learning, Stability <br>
   > ⚙️ **Settings & Evidence:** <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container robot packing with sim-to-real training \| Rigid packages with physical properties <br>
@@ -955,10 +955,10 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > 👨‍🔬 **Authors:** Tianyang Xue; Lin Lu; Yang Liu; Mingdong Wu; Hao Dong; Yanbin Zhang; Renmin Han; Baoquan Chen | 📅 **Year:** 2025 | 🏢 **Venue:** 2025 IEEE/CVF International Conference on Computer Vision (ICCV) <br>
   > 🔑 **Keywords:** 2D packing, Irregular objects <br>
   > ⚙️ **Settings & Evidence:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-container geometric packing \| Irregular/general 3D objects <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: geometric non-overlap only \| Execution: collision/reachability constraints <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported datasets/benchmark instances \| Objective: maximize utilization/minimize waste <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Offline \| Single-sheet/container 2D irregular packing \| Irregular planar shapes with continuous rotation <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (gradient-field optimization method) <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known 2D shape and container geometry \| Stability: geometric non-overlap only \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: attention-driven learned gradient fields with constrained gradients and adaptive weighting \| Data: public 2D irregular-packing datasets and arbitrary-boundary tests \| Objective: maximize utilization while reducing overlap and boundary violation <br>
 
 - ❤️ **HERB: Human-augmented efficient reinforcement learning for bin-packing** [![arXiv](https://img.shields.io/badge/arXiv-2504.16595-b31b1b.svg)](https://arxiv.org/abs/2504.16595) [![Code](https://img.shields.io/badge/Code-GitHub-green.svg)](https://github.com/NunoDuarte/herb)
   > 👨‍🔬 **Authors:** G Perovic, NF Duarte, A Dehban, G Teixeira | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv <br>
@@ -1004,15 +1004,6 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (non-RL method) <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: RGB-D/depth \| Stability: geometric non-overlap only \| Execution: robot manipulator, palletization execution <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: paper-specific optimization/learning method \| Data: paper-reported datasets/benchmark instances \| Objective: optimize paper-defined packing performance <br>
-
-- ❤️ **One4Many-StablePacker: An Efficient Deep Reinforcement Learning Framework for the 3D Bin Packing Problem** [![arXiv](https://img.shields.io/badge/arXiv-2510.10057-b31b1b.svg)](https://arxiv.org/abs/2510.10057)
-  > 👨‍🔬 **Authors:** Lei Gao1, Shihong Huang2, Shengjie Wang2, Hong Ma2, Feng Zhang1, Hengda Bao1, Qichang Chen1, Weihua Zhou3 | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2510.10057 <br>
-  > 🔑 **Keywords:** 3D bin packing, Offline packing, Dynamic packing, Deep reinforcement learning, Stability <br>
-  > ⚙️ **Settings & Evidence:** <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container 3D packing across varied item distributions \| Rigid cuboids <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current item plus height-map/empty-space representation \| Action: choose a stable placement candidate and orientation \| Reward: compactness/utilization with stability and feasibility terms <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
-  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: general-purpose stable-packing deep reinforcement learning \| Data: multiple generated and real-world distributions \| Objective: maximize utilization while preserving stability <br>
 
 - ❤️ **Online 3D Bin Packing with Fast Stability Validation and Safe Rearrangement Planning** [![DOI](https://img.shields.io/badge/DOI-10.2139%2Fssrn.5669305-blue.svg)](https://doi.org/10.2139/ssrn.5669305)
   > 👨‍🔬 **Authors:** ZIYAN GAO; Lijun Wang; Yuntao Kong; Nak Young Chong | 📅 **Year:** 2025 | 🏢 **Venue:** arXiv preprint arXiv:2507.09123 <br>
@@ -1643,6 +1634,15 @@ The catalog includes 1D/2D/3D foundations when they directly define the methods 
   > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** Not applicable (variable-neighborhood tabu-search method) <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: voxelized object and strip geometry \| Stability: geometric non-overlap and boundary feasibility only \| Execution: no robotic execution <br>
   > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: adaptive-resolution voxelization with largest-volume-first construction and variable-neighborhood tabu search \| Data: Chess, Engine, Merged, and paper-reported irregular-object benchmarks \| Objective: minimize strip height while maintaining collision-free packing <br>
+
+- ❤️ **One4Many-StablePacker: An Efficient Deep Reinforcement Learning Framework for the 3D Bin Packing Problem** [![arXiv](https://img.shields.io/badge/arXiv-2510.10057-b31b1b.svg)](https://arxiv.org/abs/2510.10057)
+  > 👨‍🔬 **Authors:** Lei Gao; Shihong Huang; Shengjie Wang; Hong Ma; Feng Zhang; Hengda Bao; Qichang Chen; Weihua Zhou | 📅 **Year:** 2026 | 🏢 **Venue:** International Joint Conference on Artificial Intelligence and European Conference on Artificial Intelligence (IJCAI-ECAI 2026) <br>
+  > 🔑 **Keywords:** 3D bin packing, Offline packing, Dynamic packing, Deep reinforcement learning, Stability <br>
+  > ⚙️ **Settings & Evidence:** <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 📦 **Task:** Online \| Single-container 3D packing across varied item distributions \| Rigid cuboids <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 🎯 **RL Formulation:** State: current item plus height-map/empty-space representation \| Action: choose a stable placement candidate and orientation \| Reward: compactness/utilization with stability and feasibility terms <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; 👁️ **Physics & Vision:** Observation: known item/bin geometry \| Stability: explicit stability checks \| Execution: no robotic execution <br>
+  > &nbsp;&nbsp;&nbsp;&nbsp; ⚖️ **Algo & Data:** Method: general-purpose stable-packing deep reinforcement learning \| Data: multiple generated and real-world distributions \| Objective: maximize utilization while preserving stability <br>
 
 - ❤️ **An integrated simulation framework enabling flexible robotic palletizing** [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.rcim.2026.103347-blue.svg)](https://doi.org/10.1016/j.rcim.2026.103347)
   > 👨‍🔬 **Authors:** Martina Salami; Pietro Bilancia; Marcello Pellicciari | 📅 **Year:** 2027 | 🏢 **Venue:** Robotics and Computer-Integrated Manufacturing <br>
